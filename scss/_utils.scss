@@ -96,7 +96,6 @@
     }
   }
 }
-
 // Nav Bar Animation Classes
 .navBar-container.ShowNavBar {
   animation: navMenuShow 750ms ease-in-out forwards;
@@ -125,152 +124,6 @@
 .navBar-container .navBarBtn button span.arrowHideR {
   animation: arrowHideR 750ms ease-in-out forwards,
     navMenuActive 750ms 300ms ease-out forwards;
-}
-.themeToggles {
-  .modeBtn {
-    z-index: 10;
-    position: fixed;
-    @include shadowSm-inset;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    width: 55px;
-    height: 30px;
-    border-radius: 30px;
-    background-color: #e3e3e3;
-    .toggle {
-      @include shadowSm;
-      cursor: pointer;
-      width: 22px;
-      height: 22px;
-      margin: 3px;
-      border-radius: 50%;
-      outline: none;
-      border: none;
-      background-color: #e3e3e3;
-    }
-  }
-  .colorMode {
-    top: 15px;
-    left: 15px;
-  }
-  .colorThemes {
-    position: fixed;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    top: 50px;
-    left: 20px;
-    li {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background-color: #e3e3e3;
-      margin: 10px;
-    }
-    .themeDots {
-      display: none;
-      opacity: 0;
-      cursor: pointer;
-      content: "";
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-    }
-    #default {
-      background-color: black;
-      box-shadow: 0px 0px 5px black;
-    }
-    #red {
-      background-color: orangered;
-      box-shadow: 0px 0px 5px red;
-    }
-    #blue {
-      background-color: blue;
-      box-shadow: 0px 0px 5px blue;
-    }
-    #pink {
-      background-color: pink;
-      box-shadow: 0px 0px 5px pink;
-    }
-    #yellow {
-      background-color: yellow;
-      box-shadow: 0px 0px 5px yellow;
-    }
-  }
-  .topBtn{
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: fixed;
-      bottom: 15px;
-      right: 15px;
-      @include darkMode;
-      cursor: pointer;
-      width: 25px;
-      height: 25px;
-      border-radius: 25px;
-      outline: none;
-      border: none;
-      text-decoration: none;
-      font-size: x-large;
-      color: var(--themeTxtClr);
-      background-color: var(--darkModeBg);
-      z-index: 10;
-    
-  }
-  // Theme Animation Classes
-  .themeDots.dots {
-    display: block;
-  }
-  #default.dots {
-    animation: dots 500ms ease-out forwards;
-  }
-  #red.dots {
-    animation: dots 500ms 200ms ease-out forwards;
-  }
-  #blue.dots {
-    animation: dots 500ms 400ms ease-out forwards;
-  }
-  #pink.dots {
-    animation: dots 500ms 600ms ease-out forwards;
-  }
-  #yellow.dots {
-    animation: dots 500ms 800ms ease-out forwards;
-  }
-
-  .darkMode {
-    top: 15px;
-    right: 15px;
-  }
-}
-// Toggle Animations
-.toggle.toggleAnim {
-  animation: darkModeAnim 400ms linear both;
-}
-.toggle.toggleAnimRev {
-  animation: darkModeAnimRev 400ms linear both;
-}
-@keyframes darkModeAnim {
-  0% {
-    transform: translateX(2.5px);
-  }
-  100% {
-    transform: translateX(25px);
-  }
-}
-@keyframes darkModeAnimRev {
-  0% {
-    transform: translateX(25px);
-  }
-  100% {
-    transform: translateX(2.5px);
-  }
 }
 // Nav Bar Animation
 @keyframes navMenuShow {
@@ -369,6 +222,155 @@
     color: var(--darkModeTxtClr);
   }
 }
+.themeToggles {
+  .modeBtn {
+    z-index: 10;
+    position: fixed;
+    @include shadowSm-inset;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 55px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #e3e3e3;
+    .toggle {
+      @include shadowSm;
+      cursor: pointer;
+      width: 22px;
+      height: 22px;
+      margin: 3px;
+      border-radius: 50%;
+      outline: none;
+      border: none;
+      background-image: url("img/icon/color-wheel-complementary-colors-color-scheme-png-favpng-bKTeQu9z4rjk6VQjV9mWDPYCm.jpg");
+      background-size: cover;
+    }
+  }
+  .colorMode {
+    top: 15px;
+    left: 15px;
+  }
+  .colorThemes {
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    top: 50px;
+    left: 20px;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #e3e3e3;
+      margin: 10px;
+    }
+    .themeDots {
+      display: none;
+      opacity: 0;
+      cursor: pointer;
+      content: "";
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
+    #default {
+      background-color: black;
+      box-shadow: 0px 0px 5px black;
+    }
+    #red {
+      background-color: orangered;
+      box-shadow: 0px 0px 5px red;
+    }
+    #blue {
+      background-color: blue;
+      box-shadow: 0px 0px 5px blue;
+    }
+    #pink {
+      background-color: pink;
+      box-shadow: 0px 0px 5px pink;
+    }
+    #yellow {
+      background-color: yellow;
+      box-shadow: 0px 0px 5px yellow;
+    }
+  }
+  .topBtn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    @include darkMode;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    font-size: x-large;
+    color: var(--themeTxtClr);
+    background-color: var(--darkModeBg);
+    z-index: 10;
+  }
+  // Theme Animation Classes
+  .themeDots.dots {
+    display: block;
+  }
+  #default.dots {
+    animation: dots 500ms ease-out forwards;
+  }
+  #red.dots {
+    animation: dots 500ms 200ms ease-out forwards;
+  }
+  #blue.dots {
+    animation: dots 500ms 400ms ease-out forwards;
+  }
+  #pink.dots {
+    animation: dots 500ms 600ms ease-out forwards;
+  }
+  #yellow.dots {
+    animation: dots 500ms 800ms ease-out forwards;
+  }
+  .darkMode {
+    top: 15px;
+    right: 15px;
+    .toggle {
+      background-image: url("img/icon/sun_light_mode_day-2-512.webp");
+      background-size: contain;
+    }
+  }
+}
+// Toggle Animations
+.toggle.toggleAnim {
+  animation: darkModeAnim 400ms linear both;
+}
+.toggle.toggleAnimRev {
+  animation: darkModeAnimRev 400ms linear both;
+}
+@keyframes darkModeAnim {
+  0% {
+    transform: translateX(2.5px);
+  }
+  100% {
+    transform: translateX(25px);
+  }
+}
+@keyframes darkModeAnimRev {
+  0% {
+    transform: translateX(25px);
+  }
+  100% {
+    transform: translateX(2.5px);
+  }
+}
 // Theme Dot Animation
 @keyframes dots {
   0% {
@@ -384,37 +386,3 @@
     transform: scale(1);
   }
 }
-/*.h2-outsideBoxL{
-        background-color: var(--primaryClrDark);
-        width: calc(2vw + 1rem);
-        clip-path: polygon(50% 0, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
-        transform: translate(-25%);
-    }
-    .h2-chevronL{
-        background-color: var(--primaryClrDark);
-        width: calc(2vw + 1rem);
-        clip-path: polygon(50% 0, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
-        transform: translate(75%);
-    }
-    .h2-midchevronL{
-        background-color: var(--primaryClrDark);
-        width: calc(2vw + 1rem);
-        clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0);
-    }
-    .h2-outsideBoxR{
-        background-color: var(--primaryClrDark);
-        width: calc(2vw + 1rem);
-        clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0);
-        transform: translate(25%);
-    }
-    .h2-chevronR{
-        background-color: var(--primaryClrDark);
-        width: calc(2vw + 1rem);
-        clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0);
-        transform: translate(-75%);
-    }
-    .h2-midchevronR{
-        background-color: var(--primaryClrDark);
-        width: calc(2vw + 1rem);
-        clip-path: polygon(50% 0, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%); 
-    }*/

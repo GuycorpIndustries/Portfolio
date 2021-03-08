@@ -123,5 +123,5 @@ footer span {
   box-shadow: inset -4px -4px 7px #fff, inset 4px 4px 7px rgba(#000, 0.4);
 }
 @mixin darkMode {
-  box-shadow: -3px -3px 5px #fff, 3px 3px 5px rgba(#000, 0.4);
+  box-shadow: inset -3px -3px 5px var(--darkModeBgOp), inset 3px 3px 5px var(--darkModeClrlgtOp);
 }

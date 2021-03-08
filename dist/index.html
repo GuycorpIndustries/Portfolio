@@ -81,14 +81,30 @@
       </div>
     </div>
   </header>
+  <h1>Hello</h1>
+  <p>welcome to my Web Page.</p>
+  <article class="landingPage-article article">
+    <picture class="landingPage-article__img">
+      <img src="img/tech_img/fotis-fotopoulos-6sAl6aQ4OWI-unsplash.jpg" alt="">
+    </picture>
+    <picture class="landingPage-article__img">
+      <img src="img/tech_img/thisisengineering-raeng-yhCHx8Mc-Kc-unsplash.jpg" alt="">
+    </picture>
+    <picture class="landingPage-article__img">
+      <img src="img/tech_img/florian-olivo-4hbJ-eymZ1o-unsplash.jpg" alt="">
+    </picture>
+    <div class="missionStatement">
+      <article class="art1">
+        <h2>What is "Self taught"</h2>
+        <p>Get with "The Program"</p>
+        <p>Learn To "Code"</p>
+      </article>
+    </div>
+  </article>
   <main>
-    <h1>Hello</h1>
-    <p>
-      welcome to my Web Page.
-    </p>
     <section class="dream" id="dream">
-      <section class="dream__secBanner secBanner">
-        <div class="bannerTop">
+      <section class="dream__banner banner">
+        <div class="banner__top">
           <div class="imgDiv">
             <picture>
               <p>“There is nothing like a dream to create the future.”</p>
@@ -100,14 +116,14 @@
             Bringing the Web, to <span><em>"life"</em></span>
           </h1>
         </div>
-        <div class="bannerTitle">
+        <div class="banner__title">
           <h2>Your Web</h2>
           <div class="profileImg">
             <img src="img/tech_img/tech_img1.jpg" alt="Selfie" width="300" height="300">
           </div>
         </div>
       </section>
-      <section class="dream__Container">
+      <section class="dream__container">
         <div class="dream__container__cardBox">
           <h2>Connecting You</h2>
           <h1>Safely</h1>
@@ -125,7 +141,7 @@
             </div>
           </div>
         </div>
-        <div class="future">
+        <div class="dream__container__future">
           <div>
             <img src="img/tech_img/possessed-photography-jIBMSMs4_kA-unsplash.jpg" alt="">
           </div>
@@ -142,8 +158,8 @@
       </section>
     </section>
     <section class="myProjects" id="projects">
-      <section class="myProjects__secBanner secBanner">
-        <div class="bannerTop">
+      <section class="myProjects__banner banner">
+        <div class="banner__top">
           <div class="imgDiv">
             <picture>
               <p>“My interest is in the future because I am going to spend the rest of my life there.”</p>
@@ -153,14 +169,14 @@
           </div>
           <h1>Frontend Web Development</h1>
         </div>
-        <div class="bannerTitle">
+        <div class="banner__title">
           <h2>My Projects</h2>
           <div class="profileImg">
             <img src="img/sliderImg/markus.jpg" alt="Selfie" width="300" height="300">
           </div>
         </div>
       </section>
-      <section class="myProjects__Cont-1 myProjects__Container">
+      <section class="myProjects__container">
         <div class="sectionHeader">
           <h1>Projects</h1>
         </div>
@@ -370,7 +386,7 @@
           </div>
         </section>
       </section>
-      <section class="aniMusic">
+      <section class="myProjects__aniMusic aniMusic">
         <div class="aniMusic__lyric">
           <p class="lyric-line1">"<span>Time</span> keeps on</p>
           <p class="lyric-line2">slippin,</p>
@@ -411,9 +427,9 @@
         </div>
       </section>
     </section>
-    <section class="projects about" id="about">
-      <section class="about__secBanner secBanner">
-        <div class="bannerTop">
+    <section class="about" id="about">
+      <section class="about__banner banner">
+        <div class="banner__top">
           <div class="imgDiv">
             <picture>
               <p>“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.”
@@ -424,20 +440,31 @@
           </div>
           <h1>Christopher T. Guy</h1>
         </div>
-        <div class="bannerTitle">
+        <div class="banner__title">
           <h2>About</h2>
           <div class="profileImg">
             <img src="img/tech_img/diego-ph-fIq0tET6llw-unsplash.jpg" alt="Selfie" width="250" height="400">
           </div>
         </div>
       </section>
-      <div class="bio">
+      <div class="about__bio">
         <div class="profile">
           <p class="p1">
-            Hello, my name is
+           <span>Hello</span>, my name is
           </p>
+          <div class="seal1 seal"><img src="img/icon/red_seal-1.svg" alt=""></div>
           <h3>Christopher T. Guy.</h3>
+          <div class="seal2 seal"><img src="img/icon/AIT-logo3-300x200.png" alt=""></div>
           <p class="p2">
+            I'm a Certified <span>Red Seal</span> Electrician
+          </p>
+          <div class="logo-bar__img">
+            <img src="img/HTML5_logo.svg.png" alt="HTML Logo" width="100px">
+            <img src="img/CSS.3b.svg.png" alt="CSS Logo" width="71px">
+            <img src="img/sass-1.svg" alt="" width="110px">
+            <img src="img/Javascript-logo.svg.png" alt="javaScript Logo" width="90px">
+          </div>
+          <p class="p3">
             I started writing computer
             code and learning frontend web development at the
             age of 50.
@@ -447,56 +474,53 @@
             <img src="img/profile_img.jpg" alt="Selfie">
           </div>
         </div>
-        <p>I started in the electrical trade 2 days before my 20th birthday. I thought I was making a decision that I
-          would never have to make again.
-        </p>
         <div class="solar container">
-          <h3>"Make hay while the sun shines"</h3>
+          <article class="solar__article">
+            <p>I started in the electrical trade 2 days before my 20th birthday. </p>
+            <p> I thought I was making a decision that I would never have to make again.</p>
+            <p>That was 30 years ago!!!</p>
+          </article>
+          <picture class="solar__img">
+            <h3>"Make hay while the sun shines"</h3>
+          </picture>
+          <article class="solar__article">
+            <p>So I built things for 30 years</p>
+            <p>I learned how to Structure, Plan and Build Construction Projects</p>
+            <p>I had to grow with my Industry</p>
+          </article>
         </div>
-        <p>
-          I've built things for 30 years
-        </p>
-        <p>
-          I learned how to structure and design Construction Projects
-        </p>
-        <p>
-          I've have had to grow with my Industry
-        </p>
-        
         <div class="change container">
-            <p>
-              I knew the world was Changing.
-            </p>
-            <p>
-              I needed to change with it.
-            </p>
-            <picture class="homeWork-article__img">
-              <img src="img/tech_img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="">
-            </picture>
-            <picture class="homeWork-article__img">
-              <img src="img/tech_img/exclusive-OR-function-built.webp" alt="" width="200" height="200">
-            </picture>
-            <picture class="homeWork-article__img">
-              <img src="img/tech_img/sai-kiran-anagani-5Ntkpxqt54Y-unsplash.jpg" alt="">
-            </picture>
-
-            <p>
-              HOW?
-            </p>
-            <p>
-              When I heard someone say "Computer Programming", I heard
-              gobbledygook <a href="https://en.wikipedia.org/wiki/Gibberish" target="_blank">Gibberish</a>
-              , Computer Programming was a bunch of symbols, letters and numbers
-              which mean absolutely nothing to me. I had some training in logic circuits as an Electrician but nothing
-              indepth, just basic theory with a little Electronics in the mix.
-            </p>
-            <picture class="homeWork-article__img">
-              <img src="img/tech_img/jerry-wang-jfnUC7s3iuw-unsplash.jpg" alt="">
-            </picture>
-            <picture class="homeWork-article__img">
-              <img src="img/tech_img/69bfd52bbd063c93940798932ca470d7.jpg" alt="">
-            </picture>
+          <p>I knew the world was Changing.</p>
+          <picture class="change__img">
+            <img src="img/tech_img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="">
+          </picture>
+          <picture class="change__img">
+            <img src="img/tech_img/exclusive-OR-function-built.webp" alt="">
+          </picture>
+          <picture class="change__img">
+            <img src="img/tech_img/sai-kiran-anagani-5Ntkpxqt54Y-unsplash.jpg" alt="">
+          </picture>
+          <p>I needed to change with it.</p>
+          <p>HOW?</p>
+          <picture class="change__img">
+            <img src="img/tech_img/jerry-wang-jfnUC7s3iuw-unsplash.jpg" alt="">
+          </picture>
+          <picture class="change__img">
+            <img src="img/tech_img/69bfd52bbd063c93940798932ca470d7.jpg" alt="">
+          </picture>
         </div>
+        <article class="about__bio__article">
+          <p>
+            When I heard someone say "Computer Programming", </p>
+          <p> I heard
+            gobbledygook <a href="https://en.wikipedia.org/wiki/Gibberish" target="_blank">Gibberish</a>
+            , </p>
+          <p> Computer Programming was a bunch of symbols, letters and numbers
+            which mean absolutely nothing to me. </p>
+          <p> I had some training and experience in logic circuits as an Electrician but nothing
+            indepth, just basic theory with a little Electronics in the mix.
+          </p>
+        </article>
         <div class="growth container">
           <div class="p1">
             <h3> "Get with the Program"</h3>
@@ -524,10 +548,9 @@
           </article>
         </div>
       </div>
-      <div class="contactModal">
+      <div class="about__contactModal">
         <button type="button">Contact</button>
       </div>
-
     </section>
   </main>
   <footer>Copyright &copy; 2021, Christopher T. Guy <span>O/A</span> Guycorp Industries</footer>
