@@ -255,7 +255,7 @@
         font-size: calc(0.5vw + 0.75rem);
         border-radius: 1rem;
         background-color: var(--darkModeBgblk);
-        text-shadow: 0px 0px 1px var(--darkModeTxtClr);
+        text-shadow: 0px 0px 2px black;
         letter-spacing: 0.25rem;
         border: 2px solid var(--themeBdr);
         a {
@@ -377,6 +377,8 @@
         text-align: center;
         font-family: "audiowide";
         font-size: 40px;
+        color: var(--darkModeBg);
+        text-shadow: 0px 0px 3px var(--darkModeTxtClr)
       }
       .p2 {
         @include darkMode;
@@ -391,9 +393,10 @@
         line-height: 1.5rem;
         border-radius: 1.5rem;
         color: var(--themeTxtClr);
+        text-shadow: 0px 0px 2px black;
         span {
           color: red;
-          text-shadow: 0px 0px 3px var(--darkModeTxtClr);
+          text-shadow: 0px 0px 2px black;
         }
       }
       .p3 {
