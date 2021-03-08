@@ -1,0 +1,197 @@
+
+.mainHeader {
+  height: 100vh;
+  position: relative;
+  .backgroundImg {
+    background-size: cover;
+    background-position: center;
+    background-image: url("img/mountains_1500.jpg");
+    height: 100vh;
+    opacity: 0.8;
+  }
+  p {
+    position: absolute;
+    bottom: calc(1vw + 1rem);
+    left: calc(1vw + 1rem);
+    color: whitesmoke;
+    opacity: 1;
+  }
+  .nameBanner {
+    position: absolute;
+    top: 35%;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: calc(2.25vw + 0.75rem);
+    letter-spacing: 0.1rem;
+    color: var(--darkModeTxtClr);
+    text-shadow: 0px 0px 20px var(--darkModeBg);
+    z-index: 1;
+  }
+  // DEVBAR STYLE //
+  .devBar-bar {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: "audiowide", cursive;
+    width: calc(17vw + 17rem);
+    &__btn {
+      border: 2px solid var(--themeBdr);
+      cursor: pointer;
+      font-size: calc(1vw + 0.75rem);
+      font-weight: 700;
+      letter-spacing: 0.1rem;
+      text-align: center;
+      border-radius: 2rem;
+      width: 100%;
+      height: auto;
+      padding: 0.5rem 1.5rem;
+      color: var(--darkModeTxtClr);
+      text-shadow: 0px 0px 15px var(--darkModeBg);
+      background-color: var(--darkModeClrlgtOp);
+    }
+    &__btn:hover {
+      color: var(--darkModeBg);
+      background-color: var(--darkModeBgOp);
+      box-shadow: 0px 0px 30px rgb(255, 255, 255);
+      background-image: none;
+    }
+  }
+  .devBar-list {
+    .listItem img {
+      width: 100px;
+    }
+    &__html {
+      position: absolute;
+      top: 47%;
+      left: 35%;
+    }
+    &__css {
+      position: absolute;
+      top:  47%;
+      right: 35%;
+    }
+    &__sass {
+      position: absolute;
+      top: 76%;
+      left: 18%;
+    }
+    &__javaScript {
+      position: absolute;
+      top: 73%;
+      right: 18%;
+    }
+  }
+}
+
+// DEVBAR ANIMATION WITH JS SCRIPT //
+// HIDE AND SHOW
+.devBar-list .listItem {
+  display: none; // hide
+}
+.openFrontEnd ~ .devBar-list .listItem {
+  display: block; // show
+}
+// SELECTORS WITH EVENT CLASS ADDED FROM JS SCRIPT
+.devBar-bar.openFrontEnd .devBar-bar__btn {
+  color: var(--darkModeBg);
+  background-color: var(--darkModeBgOp);
+  box-shadow: 0px 0px 30px rgb(255, 255, 255);
+  background-image: none;
+}
+// DEVBAR KEYFRAMES
+.openFrontEnd {
+  perspective: 1000px;
+  ~ .devBar-list .listItem {
+    opacity: 0;
+    transform-origin: top;
+  }
+  @for $i from 1 through 4 {
+    ~ .devBar-list .listItem:nth-child(#{$i}) {
+      animation: frontEnd 300ms ease-in forwards;
+      animation-delay: (150ms * $i) - 300ms;
+    }
+  }
+}
+@keyframes frontEnd {
+  0% {
+    opacity: 0;
+    transform: scale(0.4) rotatex(90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotatex(0deg);
+  }
+}
+
+// MEDIA QUERIES
+// Tablet Portrait
+@media (max-width: 1000px) {
+  .devBar-list__html {
+    top: 27%;
+    left: 15%;
+  }
+  .devBar-list__css {
+    top: 27%;
+    left: 70%;
+  }
+  .devBar-list__sass {
+    top: 78%;
+    left: 17%;
+  }
+}
+
+@media (max-width: 700px) {
+  .nameBanner {
+    position: absolute;
+    top: 2%;
+    left: -40%;
+  }
+}
+
+// Phone Portrait
+@media (max-width: 450px) {
+  .devBar-bar__btn {
+    top: 75%;
+  }
+
+  .devBar-list__html {
+    top: 20%;
+    left: 2%;
+  }
+  .devBar-list__css {
+    top: 30%;
+    left: 2%;
+  }
+  .devBar-list__sass {
+    left: 2%;
+    top: 40%;
+  }
+  .devBar-list__javaScript {
+    top: 50%;
+    left: 2%;
+  }
+}
+
+// Phone Landscape
+@media (max-height: 450px) {
+  .devBar-bar {
+    top: 87%;
+  }
+  .devBar-list__html {
+    top: 18%;
+    left: 2%;
+  }
+  .devBar-list__css {
+    top: 33%;
+    left: 9.5%;
+  }
+  .devBar-list__sass {
+    left: 17%;
+    top: 48%;
+  }
+  .devBar-list__javaScript {
+    top: 63%;
+    left: 2%;
+  }
+}

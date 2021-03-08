@@ -1,0 +1,420 @@
+.navBar-container {
+  position: fixed;
+  top: -79px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  width: 70%;
+  clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%);
+  margin-bottom: 55px;
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid var(--themeBdr);
+    background-color: var(--darkModeClrlgtOp);
+    li {
+      cursor: pointer;
+      border-right: 1.6px solid var(--themeBdr);
+      margin: 4px 0;
+      padding: 0.25rem 1rem;
+      width: 175px;
+      a {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        color: var(--darkModeTxtClr);
+        font-weight: 800;
+        letter-spacing: 0.1rem;
+      }
+      a:active {
+        color: black;
+      }
+      .activePage {
+        color: var(--themeTxtClr);
+        text-shadow: 0px 0px 3px var(--darkModeTxtClr);
+      }
+    }
+    li:hover a {
+      color: var(--themeTxtClr);
+      text-shadow: 0px 0px 5px var(--darkModeTxtClr);
+    }
+    li:last-child {
+      border-right: none;
+    }
+  }
+  .navBarPage {
+    margin: auto;
+    &__list {
+      height: 40px;
+    }
+  }
+  .navBarSite {
+    margin: auto;
+    &__list {
+      height: 40px;
+    }
+  }
+  .navBarBtn {
+    margin: auto;
+    width: 100%;
+    margin-top: -1px;
+    clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%);
+    button {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+      height: 30px;
+      font-weight: 800;
+      letter-spacing: 0.25rem;
+      border: 2px solid var(--themeBdr);
+      outline: none;
+      background-color: var(--darkModeClrlgtOp);
+      color: var(--darkModeTxtClr);
+      text-shadow: 0px 0px 3px var(--darkModeTxtClr);
+      span {
+        content: "";
+        background-color: var(--darkModeTxtClr);
+        width: calc(0.75vw + 0.75rem);
+        min-width: 17px;
+        height: 25px;
+        clip-path: polygon(
+          75% 0%,
+          100% 50%,
+          75% 100%,
+          50% 100%,
+          75% 50%,
+          50% 0
+        );
+        transform: rotateZ(90deg);
+        transform-origin: center;
+        margin-bottom: 0.65rem;
+      }
+    }
+  }
+}
+
+// Nav Bar Animation Classes
+.navBar-container.ShowNavBar {
+  animation: navMenuShow 750ms ease-in-out forwards;
+}
+.navBar-container.HideNavBar {
+  animation: navMenuHide 750ms ease-in-out forwards;
+}
+.navBar-container .navBarBtn button.activeMenu {
+  animation: navMenuActive 750ms ease-out forwards;
+}
+.navBar-container .navBarBtn button.nonactiveMenu {
+  animation: navMenuHidden 750ms ease-out forwards;
+}
+.navBar-container .navBarBtn button span.arrowShowL {
+  animation: arrowShowL 750ms ease-in-out forwards,
+    navMenuActive 750ms 300ms ease-out forwards;
+}
+.navBar-container .navBarBtn button span.arrowShowR {
+  animation: arrowShowR 750ms ease-in-out forwards,
+    navMenuActive 750ms 300ms ease-out forwards;
+}
+.navBar-container .navBarBtn button span.arrowHideL {
+  animation: arrowHideL 750ms ease-in-out forwards,
+    navMenuActive 750ms 300ms ease-out forwards;
+}
+.navBar-container .navBarBtn button span.arrowHideR {
+  animation: arrowHideR 750ms ease-in-out forwards,
+    navMenuActive 750ms 300ms ease-out forwards;
+}
+.themeToggles {
+  .modeBtn {
+    z-index: 10;
+    position: fixed;
+    @include shadowSm-inset;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 55px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #e3e3e3;
+    .toggle {
+      @include shadowSm;
+      cursor: pointer;
+      width: 22px;
+      height: 22px;
+      margin: 3px;
+      border-radius: 50%;
+      outline: none;
+      border: none;
+      background-color: #e3e3e3;
+    }
+  }
+  .colorMode {
+    top: 15px;
+    left: 15px;
+  }
+  .colorThemes {
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    top: 50px;
+    left: 20px;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #e3e3e3;
+      margin: 10px;
+    }
+    .themeDots {
+      display: none;
+      opacity: 0;
+      cursor: pointer;
+      content: "";
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
+    #default {
+      background-color: black;
+      box-shadow: 0px 0px 5px black;
+    }
+    #red {
+      background-color: orangered;
+      box-shadow: 0px 0px 5px red;
+    }
+    #blue {
+      background-color: blue;
+      box-shadow: 0px 0px 5px blue;
+    }
+    #pink {
+      background-color: pink;
+      box-shadow: 0px 0px 5px pink;
+    }
+    #yellow {
+      background-color: yellow;
+      box-shadow: 0px 0px 5px yellow;
+    }
+  }
+  .topBtn{
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      @include darkMode;
+      cursor: pointer;
+      width: 25px;
+      height: 25px;
+      border-radius: 25px;
+      outline: none;
+      border: none;
+      text-decoration: none;
+      font-size: x-large;
+      color: var(--themeTxtClr);
+      background-color: var(--darkModeBg);
+      z-index: 10;
+    
+  }
+  // Theme Animation Classes
+  .themeDots.dots {
+    display: block;
+  }
+  #default.dots {
+    animation: dots 500ms ease-out forwards;
+  }
+  #red.dots {
+    animation: dots 500ms 200ms ease-out forwards;
+  }
+  #blue.dots {
+    animation: dots 500ms 400ms ease-out forwards;
+  }
+  #pink.dots {
+    animation: dots 500ms 600ms ease-out forwards;
+  }
+  #yellow.dots {
+    animation: dots 500ms 800ms ease-out forwards;
+  }
+
+  .darkMode {
+    top: 15px;
+    right: 15px;
+  }
+}
+// Toggle Animations
+.toggle.toggleAnim {
+  animation: darkModeAnim 400ms linear both;
+}
+.toggle.toggleAnimRev {
+  animation: darkModeAnimRev 400ms linear both;
+}
+@keyframes darkModeAnim {
+  0% {
+    transform: translateX(2.5px);
+  }
+  100% {
+    transform: translateX(25px);
+  }
+}
+@keyframes darkModeAnimRev {
+  0% {
+    transform: translateX(25px);
+  }
+  100% {
+    transform: translateX(2.5px);
+  }
+}
+// Nav Bar Animation
+@keyframes navMenuShow {
+  0% {
+    transform: translate(-50%, 0px);
+  }
+  100% {
+    transform: translate(-50%, 80px);
+  }
+}
+@keyframes navMenuHide {
+  0% {
+    transform: translate(-50%, 80px);
+  }
+  100% {
+    transform: translate(-50%, 0px);
+  }
+}
+@keyframes arrowShowL {
+  0% {
+    transform: rotate(90deg);
+    margin-bottom: 0.65rem;
+  }
+  60% {
+    background-color: var(--darkModeTxtClr);
+  }
+  100% {
+    transform: rotate(270deg);
+    margin-bottom: -0.65rem;
+    background-color: var(--themeTxtClr);
+  }
+}
+@keyframes arrowShowR {
+  0% {
+    transform: rotate(90deg);
+    margin-bottom: 0.65rem;
+  }
+  60% {
+    background-color: var(--darkModeTxtClr);
+  }
+  100% {
+    transform: rotate(-90deg);
+    margin-bottom: -0.65rem;
+    background-color: var(--themeTxtClr);
+  }
+}
+@keyframes arrowHideL {
+  0% {
+    transform: rotate(-90deg);
+    margin-bottom: -0.65rem;
+    background-color: var(--themeTxtClr);
+  }
+  60% {
+    background-color: var(--themeTxtClr);
+  }
+  100% {
+    transform: rotate(-270deg);
+    background-color: var(--darkModeTxtClr);
+    margin-bottom: 0.65rem;
+  }
+}
+@keyframes arrowHideR {
+  0% {
+    transform: rotate(-90deg);
+    margin-bottom: -0.65rem;
+    background-color: var(--themeTxtClr);
+  }
+  60% {
+    background-color: var(--themeTxtClr);
+  }
+  100% {
+    background-color: var(--darkModeTxtClr);
+    transform: rotate(90deg);
+    margin-bottom: 0.65rem;
+  }
+}
+@keyframes navMenuActive {
+  0% {
+    color: var(--darkModeTxtClr);
+  }
+  60% {
+    color: var(--darkModeTxtClr);
+  }
+  100% {
+    color: var(--themeTxtClr);
+  }
+}
+@keyframes navMenuHidden {
+  0% {
+    color: var(--themeTxtClr);
+  }
+  60% {
+    color: var(--themeTxtClr);
+  }
+  100% {
+    color: var(--darkModeTxtClr);
+  }
+}
+// Theme Dot Animation
+@keyframes dots {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/*.h2-outsideBoxL{
+        background-color: var(--primaryClrDark);
+        width: calc(2vw + 1rem);
+        clip-path: polygon(50% 0, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
+        transform: translate(-25%);
+    }
+    .h2-chevronL{
+        background-color: var(--primaryClrDark);
+        width: calc(2vw + 1rem);
+        clip-path: polygon(50% 0, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
+        transform: translate(75%);
+    }
+    .h2-midchevronL{
+        background-color: var(--primaryClrDark);
+        width: calc(2vw + 1rem);
+        clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0);
+    }
+    .h2-outsideBoxR{
+        background-color: var(--primaryClrDark);
+        width: calc(2vw + 1rem);
+        clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0);
+        transform: translate(25%);
+    }
+    .h2-chevronR{
+        background-color: var(--primaryClrDark);
+        width: calc(2vw + 1rem);
+        clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0);
+        transform: translate(-75%);
+    }
+    .h2-midchevronR{
+        background-color: var(--primaryClrDark);
+        width: calc(2vw + 1rem);
+        clip-path: polygon(50% 0, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%); 
+    }*/

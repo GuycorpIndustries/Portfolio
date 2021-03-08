@@ -1,0 +1,220 @@
+#about {
+  margin-bottom: 100px;
+  .secBanner .bannerTitle .profileImg {
+    top: calc(1.5vw + 1.5rem);
+    height: calc(4vw + 4rem);
+    width: calc(3.25vw + 3.25rem);
+  }
+  .bio {
+    a {
+      text-decoration: underline;
+    }
+    .container {
+      background-color: var(--darkModeBg);
+      opacity: 0.8;
+      color: var(--darkModeTxtClr);
+      margin-bottom: 50px;
+      border-radius: 1rem;
+    }
+    .profile {
+      @include shadowLg;
+      position: relative;
+      background-color: var(--darkModeBg);
+      opacity: 0.8;
+      margin: auto;
+      max-width:90%;
+      min-height: 400px;
+      height: calc(16vw + 16rem);
+      border-radius: 2rem;
+      margin-bottom: 100px;
+      p {
+        letter-spacing: 0.1rem;
+        line-height: 1.5;
+      }
+      .p1 {
+        position: absolute;
+        top: 4%;
+        font-size: calc(0.5vw + 0.75rem);
+        left: 3%;
+        font-weight: 600;
+        width: 100%;
+      }
+      h3 {
+        position: absolute;
+        width: 100%;
+        top: 18%;
+        text-align: center;
+        font-family: "audiowide";
+        font-size: calc(1vw + 1rem);
+      }
+      .p2 {
+        @include shadowSm;
+        padding: 0.5rem 0.75rem;
+        position: absolute;
+        top: calc(12.5vw + 12rem);
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 350px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 1.5rem;
+        border-radius: 1.5rem;
+      }
+
+      div {
+        @include shadowLg;
+        position: absolute;
+        top: calc(5.5vw + 5.5rem);
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 5rem;
+        overflow: hidden;
+        opacity: 0.8;
+        width: calc(5.25vw + 5.25rem);
+        height: calc(5.25vw + 5.25rem);
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .growth {
+      @include shadowSm;
+      position: relative;
+      margin: auto;
+      margin-bottom: 100px;
+      max-width: calc(21vw + 21rem);
+      height: calc(20vw + 15rem);
+      p {
+        margin: 5px auto;
+        font-size: calc(0.35vw + 0.5rem);
+        color: var(--themeTxtClr);
+        text-shadow: var(--darkModeBg) -3px 2px 5px;
+        font-weight: 700;
+        width: 80%;
+        text-align: center;
+      }
+      .p1 {
+        letter-spacing: 0.1rem;
+        position: absolute;
+        top: calc(1vw + 0.75rem);
+        left: -22%;
+        width: 325px;
+      }
+      .p2 {
+        letter-spacing: 0.1rem;
+        position: absolute;
+        bottom: calc(1vw + 0.75rem);
+        right: -22%;
+        width: 325px;
+      }
+      p span {
+        font-size: calc(0.5vw + 0.75rem);
+      }
+      p:first-letter {
+        font-size: xx-large;
+        color: var(--darkModeTxtClr);
+        text-shadow: var(--darkModeBg) -3px 2px 5px;
+      }
+      h3 {
+        text-align: center;
+        margin: auto;
+        font-size: calc(0.75vw + 0.75rem);
+        font-family: monospace;
+        color: var(--themeTxtClr);
+        text-shadow: var(--darkModeBg) -3px 2px 5px;
+      }
+      .quote {
+        position: absolute;
+        width: calc(8vw + 8rem);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .change {
+      @include shadowLg;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      margin-bottom: 100px;
+      gap: 20px;
+      max-width: calc(21vw + 21rem);
+      p {
+        padding: 1rem;
+        letter-spacing: 0.1rem;
+        line-height: 1.5;
+        font-weight: 500;
+      }
+      img {
+        width: auto;
+      }
+    }
+    .solar {
+      position: relative;
+      background-image: url("img/tech_img/manny-becerra-NgdhrwAx0J8-unsplash.jpg");
+      background-size: cover;
+      background-position: bottom;
+      max-width: calc(21vw + 21rem);
+      height: calc(15vw + 15rem);
+      background-color: var(--darkModeBg);
+      opacity: 0.8;
+      margin: 100px auto;
+      p {
+        margin: auto;
+        width: 80%;
+        text-align: center;
+        padding: 1rem;
+        letter-spacing: 0.1rem;
+        line-height: 1.5;
+        font-weight: 500;
+      }
+      h3 {
+        position: absolute;
+        width: 100%;
+        top: 10%;
+        text-align: center;
+        font-size: calc(1vw + 1rem);
+        color: var(--darkModeBg);
+        text-shadow: 0px 0px 5px var(--darkModeTxtClr);
+      }
+    }
+    .rome {
+      position: relative;
+      background-image: url("img/tech_img/tech_img3.jpg");
+      background-size: contain;
+      background-color: var(--darkModeBg);
+      opacity: 0.8;
+      margin: auto;
+      margin-bottom: 50px;
+      max-width: calc(21vw + 21rem);
+      height: calc(13vw + 13rem);
+      p {
+        text-align: center;
+        letter-spacing: 0.1rem;
+        line-height: 1.5;
+        font-weight: 700;
+      }
+      .p1 {
+        position: absolute;
+        top: 13%;
+        left: 15%;
+        color: var(--darkModeBg);
+      }
+      .p2 {
+        position: absolute;
+        top: 30%;
+        left: 47%;
+        color: var(--darkModeBg);
+      }
+      h3 {
+        position: absolute;
+        top: 70%;
+        left: 10%;
+        color: var(--darkModeBg);
+        font-size: calc(1vw + 1rem);
+      }
+    }
+  }
+}

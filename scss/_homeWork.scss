@@ -1,0 +1,1076 @@
+.homeWork-article {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-bottom: 100px;
+  gap: 20px;
+  &__img {
+    width: 300px;
+    height: 180px;
+    background-color: var(--primaryBackground);
+    border-radius: 1rem;
+    img {
+      border-radius: 1rem;
+      width: 100%;
+      height: 100%;
+      opacity: 0.8;
+    }
+  }
+}
+// Home Work Projects
+.HWprojects, .myProjects {
+  h1 {
+    text-align: center;
+    font-size: calc(2vw + 2rem);
+    margin-bottom: 50px;
+    color: var(--darkModeBg);
+    text-shadow: 0px 0px 5px var(--darkModeTxtClr);
+  }
+  .pContainer {
+    width: 95vw;
+    height: auto;
+    margin: auto;
+    background-color: #e9e9e9;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 10px var(--darkModeTxtClr);
+    margin-bottom: 100px;
+    p {
+      margin-bottom: 5px;
+    }
+    .wrapper {
+      @include shadowLg-inset;
+      width: 80%;
+      margin: auto;
+      padding: 2rem;
+      border-radius: 2rem;
+      margin-bottom: 50px;
+      background-color: #e9e9e9;
+      .shadowBox {
+        padding: 1rem;
+        background-color: #e9e9e9;
+        @include shadowLg;
+        border-radius: 2rem;
+        .tributeBox {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          margin: auto;
+          padding: 2rem;
+          &__video {
+            width: 400px;
+            height: 225px;
+            iframe {
+              width: 100%;
+              height: 100%;
+              border-radius: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .secBanner {
+    .bannerTop h1 {
+      margin-bottom: 0;
+    }
+  }
+}
+// Animations
+.animationProject__cont-1 {
+  &__wrapper1 {
+    &__container1 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      padding: 3rem;
+      gap: 50px;
+      margin: auto;
+      padding: 2rem;
+      border-radius: 0.75rem 0.75rem 0 0;
+      &__item1:hover .hoverBox {
+        translate: 100%;
+      }
+      &__item2 .hoverBox {
+        transition: translate 1s ease-in-out;
+      }
+      &__item2:hover .hoverBox {
+        translate: 100%;
+      }
+      &__item3:hover .hoverBox {
+        animation: aquarnd 1.5s ease-in-out forwards;
+      }
+      &__item {
+        margin: auto;
+        height: 300px;
+        width: 300px;
+        cursor: pointer;
+        background-color: var(--darkModeBgOp);
+        margin-bottom: 20px;
+        .hoverBox {
+          width: 50%;
+          height: 50%;
+          background-color: coral;
+        }
+      }
+      h3 {
+        text-align: center;
+        color: var(--darkModeBg);
+      }
+    }
+  }
+  &__wrapper2 {
+    &__container2 {
+      margin: auto;
+      padding: 2rem;
+      border-radius: 0.75rem 0.75rem 0 0;
+      overflow: hidden;
+      h3 {
+        text-align: center;
+        color: orangered;
+      }
+      &__item1 {
+        overflow: hidden;
+        cursor: pointer;
+        max-width: 600px;
+        height: 500px;
+        margin: auto;
+        background-color: var(--darkModeBg);
+        border-radius: 0.5rem;
+        margin-bottom: 30px;
+        .ninjaBox {
+          overflow: hidden;
+          margin: auto;
+          width: 300px;
+          height: 150px;
+          top: 160px;
+          transform-origin: 20px 175px;
+          background-color: var(--darkModeBgOp);
+          border-radius: 0.5rem;
+          opacity: 0;
+          .ninjaBox__header {
+            display: grid;
+            grid-template-columns: 30px auto 30px;
+            background-color: coral;
+            padding: 0.25rem;
+            h3 {
+              color: var(--darkModeBg);
+            }
+            .screw {
+              width: 18.75px;
+              height: 18.75px;
+              margin: auto;
+              color: black;
+              text-align: center;
+              background-color: silver;
+              border-radius: 50%;
+            }
+          }
+          h4 {
+            padding: 0.5rem;
+            opacity: 0;
+            color: var(--darkModeBg);
+          }
+          p {
+            font-size: 3rem;
+            text-align: right;
+            font-weight: 700;
+            letter-spacing: 0.1rem;
+            color: var(--darkModeTxtClr);
+            padding-right: 1rem;
+            padding-top: 1.5rem;
+            opacity: 0;
+          }
+        }
+      }
+    }
+    &__container2__item1:hover .ninjaBox {
+      animation: drop 750ms ease-in forwards,
+        swing 2.25s ease-in-out 2s forwards, fall 300ms 4.75s linear forwards;
+      opacity: 1;
+      &__header .screw {
+        animation: spin 650ms linear forwards 1s;
+      }
+      h4 {
+        animation: quality 500ms 600ms ease-in-out forwards;
+      }
+      p {
+        animation: counts 3.25s ease-in forwards;
+      }
+    }
+  }
+  // Project 1 WDS Animation Project
+  @keyframes aquarnd {
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    25% {
+      transform: translateY(100%) translateX(0);
+    }
+    50% {
+      background-color: aqua;
+      border-radius: 50%;
+    }
+    75% {
+      transform: translateY(100%) translateX(100%);
+    }
+    100% {
+      transform: translateY(0%) translateX(100%);
+    }
+  }
+  // Project 1 Net Ninja Project
+  @keyframes drop {
+    0% {
+      transform: translateY(-100px);
+    }
+    60% {
+      transform: translateY(160px);
+    }
+    90% {
+      transform: translateY(150px);
+    }
+    100% {
+      transform: translateY(160px);
+    }
+  }
+  @keyframes spin {
+    0% {
+      transform: rotateZ(0deg);
+    }
+    100% {
+      transform: rotateZ(600deg);
+    }
+  }
+  @keyframes swing {
+    0% {
+      transform: rotateZ(0deg) translateY(160px);
+    }
+    2% {
+      transform: rotateZ(1deg) translateY(160px);
+    }
+    10% {
+      transform: rotateZ(2deg) translateY(160px);
+    }
+    15% {
+      transform: rotateZ(5deg) translateY(160px);
+    }
+    20% {
+      transform: rotateZ(8deg) translateY(160px);
+    }
+    70% {
+      transform: rotateZ(70deg) translateY(160px);
+    }
+    100% {
+      transform: rotateZ(60deg) translateY(160px);
+    }
+  }
+  @keyframes fall {
+    0% {
+      transform: rotateZ(60deg) translateY(160px);
+    }
+    100% {
+      transform: translateY(600px) translateX(-30px);
+    }
+  }
+  @keyframes quality {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(20px);
+      opacity: 1;
+    }
+  }
+  @keyframes counts {
+    0% {
+      transform: translateY(50px);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+}
+// Buttons
+.buttonProject {
+  // One Button Class
+  &__Cont-1 {
+    &__wrapper1 {
+      width: calc(20vw + 7rem);
+      background-color: rgb(230, 230, 230);
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .html {
+        color: orangered;
+        margin-bottom: 15px;
+        h3 {
+          text-align: center;
+        }
+        p {
+          font-weight: 600;
+        }
+      }
+      .att {
+        color: green;
+        margin-bottom: 15px;
+        h3 {
+          text-align: center;
+        }
+        p {
+          font-weight: 600;
+        }
+      }
+      .css {
+        color: blue;
+        margin-bottom: 15px;
+        h3 {
+          text-align: center;
+        }
+        p {
+          font-weight: 600;
+        }
+      }
+      .jsScript {
+        color: yellow;
+        margin-bottom: 15px;
+        h3 {
+          text-align: center;
+        }
+        p {
+          font-weight: 600;
+        }
+      }
+    }
+    &__wrapper2 {
+      .btns {
+        .motto {
+          margin-bottom: 50px;
+        }
+        .btnReg {
+          h2 {
+            font-size: calc(1vw + 1.5rem);
+            text-align: center;
+            margin-bottom: 50px;
+          }
+          .btnDiv {
+            @include shadowLg;
+            background-color: #e3e3e3;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-bottom: 50px;
+            .messageBox {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+              gap: 30px;
+              margin-bottom: 30px;
+              .activeButton {
+                // display: none;
+                @include shadowLg;
+                border-radius: 1rem;
+                h4 {
+                  width: 100%;
+                  text-align: center;
+                  padding: 0.5rem;
+                }
+                ul {
+                  list-style: none;
+                  padding: 0.5rem;
+                  li {
+                    text-align: center;
+                    font-family: "montserrat";
+                    font-size: calc(0.5vw + 0.4rem);
+                  }
+                }
+              }
+            }
+            .btn-cont {
+              @include shadowLg-inset;
+              width: 100%;
+              height: 100px;
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+              background-color: #e3e3e3;
+              border-radius: 1rem;
+              .btn-box {
+                 display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                .btn {
+                  @include shadowSm;
+                  cursor: pointer;
+                  width: 125px;
+                  height: 30px;
+                  background-color: rgb(230, 230, 230);
+                  letter-spacing: 0.1rem;
+                  border: none;
+                  outline: none;
+                }
+                .btn:hover {
+                  @include shadowLg-inset;
+                }
+                .active {
+                  @include shadowLg-inset;
+                  border: none;
+                }
+              }
+              .btn-rndCorner {
+                border-radius: 1rem;
+              }
+              
+            .btn-caution {
+              color: yellow;
+            }
+            .btn-danger {
+              color: orangered;
+            }
+            .btn-active {
+              opacity: 0.7;
+            }
+          }
+          // Round Button Override Style
+          .btn-cont.Rnd-btn {
+            .btn-smRnd {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+              }
+              .btn-lgRnd {
+                width: 75px;
+                height: 75px;
+                border-radius: 50%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__Cont-2 {
+    // Project 2 Container 2 Wrapper 1 Toggle Buttons
+    &__wrapper1 {
+      .toggleBtns {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        .toggle-container {
+          @include shadowSm-inset;
+          margin: auto;
+          width: 300px;
+          height: 150px;
+          border-radius: 1.5rem;
+          h4 {
+            padding: 0.5rem;
+            text-align: center;
+          }
+          .toggle {
+            @include shadowSm-inset;
+            content: "";
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            width: 200px;
+            height: 100px;
+            margin: auto;
+            background-color: var(--darkModeBgOp);
+            border-radius: 100px;
+            &__btn {
+              @include shadowSm;
+              margin-left: 10px;
+              width: 85px;
+              height: 85px;
+              border-radius: 50%;
+              border: none;
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+    &__wrapper2{
+      .toggleInputs {
+        .toggle-container {
+          margin: auto;
+          width: 300px;
+          height: 150px;
+          background-color: lightgrey;
+          border-radius: 1.5rem;
+          h4 {
+            padding: 0.5rem;
+            text-align: center;
+          }
+          .toggleInput1 {
+            content: "";
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            width: 200px;
+            height: 100px;
+            margin: auto;
+            background-color: var(--darkModeBgOp);
+            border-radius: 100px;
+            input[type="checkbox"] {
+              width: 90px;
+              height: 90px;
+              border: none;
+              outline: none;
+              border-radius: 50%;
+            }
+            label {
+              content: "";
+              border-radius: 50%;
+              width: 90px;
+              height: 90px;
+              border: none;
+            }
+          }
+        }
+      }
+
+    }
+  }
+  &__Cont-3 {
+    // Project 2 Wrapper 4 Menu Buttons
+    &__wrapper1 {
+      .projectBox{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+      }
+      .card-container {
+        @include shadowSm-inset;
+        position: relative;
+        width: 300px;
+        height: 250px;
+        margin: 5% auto;
+        border-radius: 1rem;
+        .card {
+          h1 {
+            position: absolute;
+            width: 100%;
+            font-size: calc(0.75vw + 1rem);
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--darkModeTxtClr);
+          }
+          .btn {
+            position: absolute;
+            width: auto;
+            background: none;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+            .line {
+              background-color: var(--darkModeTxtClr);
+              width: 80px;
+              height: 6px;
+              border-radius: 1rem;
+            }
+            .lineTop {
+              transform: translateY(-5px);
+            }
+            .lineCenter {
+              background-color: var(--themeBdr);
+            }
+            .lineBottom {
+              transform: translateY(5px);
+            }
+          }
+          #menu2-btn .lineTop {
+            transform: translateY(-5px);
+          }
+          #menu2-btn .lineCenter {
+            background-color: orange;
+          }
+          #menu2-btn .lineBottom {
+            transform: translateY(5px);
+          }
+          #menu3-btn .lineTop {
+            transform: translateY(-5px);
+          }
+          #menu3-btn .lineBottom {
+            transform: translateY(5px);
+          }
+          .menuClicked .lineTop {
+            height: 6px;
+            transform: translateY(8.5px) rotate(45deg);
+          }
+          .menuClicked .lineBottom {
+            height: 6px;
+            transform: translateY(-8.5) rotate(-45deg);
+          }
+          .menuClicked .lineCenter {
+            opacity: 0;
+          }
+          .menuClicked.header3 {
+            background-color: var(--themeBdr);
+            transition: all 300ms ease-in-out;
+          }
+          .menu5B-items {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+    &__wrapper2{
+      .projectBox{
+        padding: 1rem;
+        .navBar2 {
+          height: 60px;
+          .navBar2-menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border: 2px solid var(--themeBdr);
+            box-shadow: 0px 0px 10px rgb(0, 0, 0);
+            transition: all 0.5s ease-in-out;
+            &__btn {
+              position: absolute;
+              width: 30px;
+              height: 4px;
+              border-radius: 5px;
+              background-color: var(--darkModeTxtClr);
+            }
+            &__btn::after,
+            &__btn::before {
+              content: "";
+              position: absolute;
+              width: 30px;
+              height: 4px;
+              border-radius: 25%;
+              background-color: var(--themeBdr);
+              transition: all 0.5s ease-in-out;
+            }
+            &__btn::before {
+              transform: translateY(-10px);
+            }
+            &__btn::after {
+              transform: translateY(10px);
+            }
+          }
+        }
+        .navBar2-list {
+          margin: var(--spacer);
+          .listItem {
+            display: grid;
+            align-items: center;
+            margin: 5px;
+            font-family: "audiowide", cursive;
+            font-size: calc(0.5vw + 1rem);
+            border: 2px solid var(--themeBdr);
+            border-radius: 1rem;
+            background-color: var(--darkModeClrlgtOp);
+            width: calc(6.5vw + 6.5rem);
+            text-align: center;
+            letter-spacing: 0.25rem;
+          }
+          a {
+            color: var(--darkModeTxtClr);
+            width: 100%;
+            height: calc(1vw + 1.2rem);
+            display: block;
+            text-decoration: none;
+          }
+    
+          .listItem:hover {
+            box-shadow: 0px 0px 20px var(--darkModeTxtClr);
+          }
+          a:hover {
+            color: var(--themeBdr);
+          }
+          .active a {
+            width: 100%;
+            font-weight: 600;
+            box-shadow: 0px 0px 30px var(--darkModeTxtClr);
+            color: var(--themeBdr);
+            border-radius: 1rem;
+            text-shadow: 0px 0px 10px var(--darkModeBg);
+          }
+        }
+        // Project 4 NAVBAR ANIMATION WITH JS SCRIPT
+        // Project 4 HIDE AND SHOW LIST
+        .navBar2-list .listItem {
+          display: none; // hide
+        }
+        .openNav ~ .navBar2-list .listItem {
+          /* NEW CLASS FROM JS */
+          display: block; // show
+        }
+        // ANIMATION TRIGGER SELECTORS WITH EVENT CLASS ADDED FROM JS SCRIPT
+        .navBar2-menu.openNav .navBar2-menu__btn {
+          background: transparent;
+          box-shadow: none;
+        }
+        .navBar2-menu.openNav .navBar2-menu__btn::before {
+          transform: rotate(45deg);
+          background-color: var(--themeBdr);
+        }
+        .navBar2-menu.openNav .navBar2-menu__btn::after {
+          transform: rotate(-45deg);
+          background-color: var(--themeBdr);
+        }
+        // Project 4 NAVBAR KEYFRAMES
+        .openNav {
+          perspective: 1000px;
+          ~ .navBar2-list .listItem {
+            opacity: 0;
+            transform-origin: top right;
+          }
+          @for $i from 1 through 4 {
+            ~ .navBar2-list .listItem:nth-child(#{$i}) {
+              animation: navBarAn 300ms ease-in forwards;
+              animation-delay: (150ms * $i) - 300ms;
+            }
+          }
+        }
+        @keyframes navBarAn {
+          0% {
+            opacity: 0;
+            transform: rotateY(90deg) translateY(-30px);
+          }
+          100% {
+            opacity: 1;
+            transform: rotateY(0deg) translateY(0px);
+          }
+        }
+
+      }
+
+    }
+  }
+}
+// Local Storage
+.localStorageProject {
+  &__cont-1 {
+    &__wrapper1 {
+      &__container1 {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        padding: 3rem;
+        gap: 50px;
+        margin: auto;
+        padding: 2rem;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        font-size: 1.5rem;
+        color: var(--darkModeTxtClr);
+        display: grid;
+        grid:
+          "header header header header" auto
+          "...... lists  active ......" auto /
+          1fr minmax(100px, 300px) minmax(250px, 500px) 1fr;
+        padding-bottom: 75px;
+        .title {
+          grid-area: header;
+          text-align: center;
+          font-size: calc(2vw + 2rem);
+          font-weight: 900;
+          color: var(--darkModeTxtClr);
+          background-color: var(--darkModeBg);
+          border-radius: 3rem;
+          letter-spacing: 2px;
+          margin: -0.2em 0 0.5em;
+        }
+        .all-tasks {
+          grid-area: lists;
+        }
+        .task-list {
+          font-size: 1.2rem;
+          line-height: 1.7;
+        }
+        .list-name {
+          cursor: pointer;
+        }
+        .list-name:hover {
+          opacity: 0.7;
+        }
+        form {
+          display: flex;
+        }
+        .btn {
+          cursor: pointer;
+          background: 0;
+          border: 0;
+          padding: 0;
+          color: inherit;
+        }
+        .btn.create {
+          font-size: 1.5rem;
+          font-weight: 900;
+          margin-right: 0.25em;
+          transition: opacity 250ms ease-in;
+        }
+        .btn.create:hover {
+          opacity: 0.7;
+        }
+        .btn.delete {
+          font-size: 1rem;
+          opacity: 0.7;
+          transition: color 200ms;
+        }
+        .btn.delete:hover {
+          color: var(--clr-warning);
+        }
+        .new {
+          background: transparent;
+          border: 0;
+          color: inherit;
+          border-bottom: 1px solid currentColor;
+          font-size: inherit;
+          outline: none;
+          padding: 0.25em;
+          transition: border-bottom 150ms ease-in;
+          order: 2;
+        }
+        .new::placeholder {
+          opacity: 0.35;
+        }
+        .new:focus {
+          border-bottom-width: 3px;
+        }
+        .new:focus::placeholder {
+          opacity: 0.15;
+        }
+        .new.list {
+          font-size: 1.2rem;
+        }
+        .new.task {
+          margin-bottom: 0;
+        }
+        .active-list {
+          font-weight: 700;
+        }
+        .todo-list {
+          grid-area: active;
+          background: var(--darkModeClrlgtOp);
+          color: var(--darkModeTxtClr);
+        }
+        .todo-header {
+          padding: var(--spacer);
+          background: #e4e4e4;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .list-title {
+          margin: 0 1em 0 0;
+        }
+        .task-count {
+          margin: 0;
+        }
+        .todo-body {
+          padding: var(--spacer);
+          position: relative;
+        }
+        .new-task-creator .create {
+          color: var(--darkModeTxtClr);
+        }
+        [type="checkbox"] {
+          opacity: 0;
+          position: absolute;
+        }
+        .task label {
+          display: inline-flex;
+          align-items: center;
+          position: relative;
+        }
+        .task {
+          position: relative;
+          margin-bottom: 1.25em;
+        }
+        .task::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          left: 0;
+          bottom: -0.5em;
+          height: 1px;
+          background: currentColor;
+          opacity: 0.1;
+        }
+        .custom-checkbox {
+          display: inline-block;
+          width: var(--spacer1);
+          height: var(--spacer1);
+          margin-right: var(--spacer1);
+          cursor: pointer;
+          border: 2px solid currentColor;
+          border-radius: 50%;
+          transform: scale(1);
+          transition: transform 200ms ease-in-out;
+        }
+        .task:hover .custom-checkbox,
+        [type="checkbox"]:focus + label .custom-checkbox {
+          transform: scale(1.2);
+          color: var(--darkModeTxtClr);
+        }
+        [type="checkbox"]:checked + label .custom-checkbox {
+          background: var(--darkModeTxtClr);
+          border-color: var(--darkModeTxtClr);
+          box-shadow: inset 0 0 0px 2px var(--darkModeTxtClr);
+        }
+        .task label:after {
+          content: "";
+          position: absolute;
+          left: 1.5em;
+          right: 0;
+          top: 50%;
+          height: 3px;
+          background: currentColor;
+          transform: scale(0);
+          transform-origin: right;
+          transition: transform 250ms ease-in-out;
+        }
+        [type="checkbox"]:checked + label:after {
+          transform: scale(1);
+          transform-origin: left;
+        }
+        .delete-stuff {
+          display: flex;
+          justify-content: space-evenly;
+          position: absolute;
+          width: 100%;
+          left: 0;
+          bottom: -35px;
+          color: var(--darkModeTxtClr);
+        }
+      }
+    }
+  }
+}
+// Web Players
+.webPlayerProject {   
+    .playerV2 {
+      position: relative;
+      max-width: 600px;
+      height: 200px;
+      margin: auto;
+      border-radius: 2rem;
+      background-color: #e3e3e3;
+      #analyzerBox {
+        position: absolute;
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0.5rem;
+        width: 80%;
+        #graphics {
+          width: 100%;
+          height: 75px;
+          background-color: rgb(0, 253, 14);
+          border-radius: 0.5rem 0.5rem 0 0;
+        }
+      }
+      .btn {
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        background-color: black;
+        color: rgb(0, 253, 14);
+        font-size: calc(0.5vw + 0.75rem);
+        outline: none;
+        border: 2px solid rgb(0, 253, 14);
+        border-radius: 50%;
+      }
+      .btn-playPause {
+        position: absolute;
+        bottom: calc(0.2vw + 0.2rem);
+        left: calc(1vw + 0.5rem);
+      }
+      .btn-mute {
+        position: absolute;
+        bottom: calc(0.2vw + 0.2rem);
+        right: calc(1vw + 0.5rem);
+      }
+      input {
+        outline: none;
+      }
+      input[type="range"]::-moz-range-thumb {
+        width: 13px;
+        height: 13px;
+        background-color: rgb(0, 253, 14);
+        border-radius: 50%;
+      }
+      input[type="range"]::-moz-range-track {
+        background-color: rgba(0, 253, 14, 0.6);
+      }
+      input[type="range"] {
+        background-color: black;
+      }
+      #seekSlider2 {
+        position: absolute;
+        width: 150px;
+        height: 20px;
+        bottom: 30px;
+        left: 150px;
+        border-radius: 0.25rem 0 0 0.25rem;
+      }
+      #volumeSlider2 {
+        position: absolute;
+        top: 55px;
+        background: none;
+        right: -15px;
+        width: 100px;
+        transform: rotateZ(-90deg);
+      }
+      #timeBox2 {
+        position: absolute;
+        bottom: 28px;
+        left: 300px;
+        background-color: black;
+        padding: 0.25rem;
+        color: rgb(0, 253, 14);
+        width: 125px;
+        height: 27px;
+        text-align: center;
+        border-radius: 0.2rem 0.5rem 0.5rem 0.2rem;
+      }
+    }
+    #trackBox{
+      padding: 1rem;
+      .trackBar {
+        background: #ddd;
+        font-family: "audiowide";
+      }
+      .playButton {
+        opacity: 0.8;
+        display: block;
+        background: #000;
+        color: white;
+        width: 50px;
+        padding: 5px;
+        margin: 14px 0px 0px 14px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+      }
+      .playButton:hover {
+        opacity: 1;
+      }
+      .trackName {
+        color: #000;
+        margin: 12px 0px 0px 14px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .trackBar:nth-child(even) {
+        background: #eee;
+      }
+    }
+}
+// UI Trends

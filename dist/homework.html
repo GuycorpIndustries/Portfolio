@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        
+    <title>Home Work</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon2.jpg" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <script type="module" src="main.js" defer></script>
+    <script src="js/buttons.js" defer></script>
+    <script src="js/header.js" defer></script>
+    <script src="js/audioPlayer.js" defer></script>
+</head>
+
+<body data-darkMode="light" data-theme="default">
+    <header>
+        <span class="page-header hwHeader" id="hwPage"></span>
+        <div class="themeToggles">
+            <div class="colorMode modeBtn">
+                <button id="colorModeBtn" class="toggle"></button>
+            </div>
+            <ul class="colorThemes">
+                <li class="themeDots" id="default" title="Default"></li>
+                <li class="themeDots" id="red" title="HTML Color Theme"></li>
+                <li class="themeDots" id="blue" title="CSS Color Theme"></li>
+                <li class="themeDots" id="pink" title="SASS Color Theme"></li>
+                <li class="themeDots" id="yellow" title="JavaScript Color Theme"></li>
+            </ul>
+            <div class="darkMode modeBtn">
+                <button id="darkModeBtn" class="toggle"></button>
+            </div>
+            <a class="topBtn" href="#hwPage">^</a>
+        </div>
+        <div class="navBar-container" id="navBarCont">
+            <nav class="navBarPage" aria-label="pageNav" title="Current Page Chapters">
+                <ul class="navBarPage__list" id="navBar">
+                    <li><a href="#animationProject">Animations</a></li>
+                    <li><a href="#buttonProject">Buttons</a></li>
+                    <li><a href="#localStorageProject">LocalStorage</a></li>
+                    <li><a href="#webPlayerProject">Web Players</a></li>
+                    <li><a href="#uiTrendsProject">UI Trends</a></li>
+                </ul>
+            </nav>
+            <nav class="navBarSite" aria-label="siteNav" title="Web Navigation">
+                <ul class="navBarSite__list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="theprogram.html">The Program</a></li>
+                    <li><a class="activePage" href="#">Home Work</a></li>
+                </ul>
+            </nav>
+            <div class="navBarBtn">
+                <button id="navBarShowBtn" type="button" title="Show Menu"><span class="navBarArrowL"></span>MENU<span
+                        class="navBarArrowR"></span></button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1 class="projects-header" id="projects">Home Work</h1>
+        <p class="homeWork-article__para">WHY?</p>
+        <article class="homeWork-article">
+            <picture class="homeWork-article__img">
+                <img src="img/tech_img/annie-spratt-4-4WPFLVhAY-unsplash.jpg" alt="">
+            </picture>
+            <picture class="homeWork-article__img">
+                <img src="img/tech_img/dollar-gill-9SF_lNr5Cz8-unsplash.jpg" alt="">
+            </picture>
+            <picture class="homeWork-article__img">
+                <img src="img/tech_img/monika-kozub-qEO1NR2i3gM-unsplash.jpg" alt="">
+            </picture>
+            <picture class="homeWork-article__img">
+                <img src="img/tech_img/mwesigwa-joel-FXdIjVRFh24-unsplash.jpg" alt="">
+            </picture>
+            <picture class="homeWork-article__img">
+                <img src="img/tech_img/mwesigwa-joel-jHvedTh-avo-unsplash.jpg" alt="">
+            </picture>
+            <picture class="homeWork-article__img">
+                <img src="img/tech_img/valentino-mazzariello-Ndm1hhIcwHc-unsplash.jpg" alt="">
+            </picture>
+            <picture class="homeWork-article__img">
+                <img src="img/tech_img/sai-kiran-anagani-5Ntkpxqt54Y-unsplash.jpg" alt="">
+            </picture>
+        </article>
+        <section class="HWprojects">
+            <section class="animationProject" id="animationProject">
+                <section class="animationProject__secBanner secBanner">
+                    <div class="bannerTop">
+                        <div class="logo-bar__img">
+                            <img src="img/HTML5_logo.svg.png" alt="HTML Logo" width="100px">
+                            <img src="img/CSS.3b.svg.png" alt="CSS Logo" width="71px">
+                            <img src="img/sass-1.svg" alt="" width="110px">
+                            <img src="img/Javascript-logo.svg.png" alt="javaScript Logo" width="90px">
+                        </div>
+                        <div class="imgDiv">
+                            <picture>
+                                <p>“My interest is in the future because I am going to spend the rest of my life there.”
+                                </p>
+                                <h4>Anonymous</h4>
+                                <img class="bannerImg" src="img/clouds-72634.jpg" alt="">
+                            </picture>
+                        </div>
+                        <h1>Home Work Projects</h1>
+                    </div>
+                    <div class="bannerTitle">
+                        <h2>Animations</h2>
+                        <div class="profileImg">
+                            <img src="img/sliderImg/markus.jpg" alt="Selfie" width="300" height="300">
+                        </div>
+                    </div>
+                </section>
+                <h1 class="pHeader">Animation Projects</h1>
+                <section class="animationProject__cont-1 pContainer">
+                    <h1>On Hover</h1>
+                    <section class="animationProject__cont-1__wrapper1 wrapper">
+                        <p>Inspired by Kyle at Web Dev Simplified</p>
+                        <div class="shadowBox">
+                            <div class="animationProject__cont-1__wrapper1__container1">
+                                <div>
+                                    <div
+                                        class="animationProject__cont-1__wrapper1__container1__item1 animationProject__cont-1__wrapper1__container1__item">
+                                        <div class="hoverBox"></div>
+                                    </div>
+                                    <h3>Transform</h3>
+                                </div>
+                                <div>
+                                    <div
+                                        class="animationProject__cont-1__wrapper1__container1__item2 animationProject__cont-1__wrapper1__container1__item">
+                                        <div class="hoverBox"></div>
+                                    </div>
+                                    <h3>Transition</h3>
+                                </div>
+                                <div>
+                                    <div
+                                        class="animationProject__cont-1__wrapper1__container1__item3 animationProject__cont-1__wrapper1__container1__item">
+                                        <div class="hoverBox"></div>
+                                    </div>
+                                    <h3>Animation</h3>
+                                </div>
+                            </div>
+                            <div class="tributeBox">
+                                <picture class="tributeBox__video">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YszONjKpgg4"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </picture>
+                                <div class="tributeBox__bio">
+                                    <h3 class="tributeBox__header">Web Dev Simplified</h3>
+                                    <div class="trubteBox__bio__text">
+                                        <p>para</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="animationProject__cont-1__wrapper2 wrapper">
+                        <p>Inspired by the Net Ninja</p>
+                        <div class="shadowBox">
+                            <div class="animationProject__cont-1__wrapper2__container2">
+                                <div class="animationProject__cont-1__wrapper2__container2__item1">
+                                    <div class="ninjaBox">
+                                        <div class="ninjaBox__header">
+                                            <div class="screw">I</div>
+                                            <h3>Guycorp Industries</h3>
+                                            <div class="screw">I</div>
+                                        </div>
+                                        <h4>When Quality</h4>
+                                        <p>Counts</p>
+                                    </div>
+                                </div>
+                                <h3>Multiple @keyframes</h3>
+                            </div>
+                            <div class="tributeBox">
+                                <picture class="tributeBox__video">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/B0_M1y4aFAQ"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </picture>
+                                <div class="tributeBox__bio">
+                                    <h3 class="tributeBox__header">The Net Ninja</h3>
+                                    <div class="trubteBox__bio__text">
+                                        <p>para</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </section>
+            <br>
+            <section class="buttonProject" id="buttonProject">
+                <section class="buttonProject__secBanner secBanner">
+                    <div class="bannerTop">
+                        <div class="logo-bar__img">
+                            <img src="img/HTML5_logo.svg.png" alt="HTML Logo" width="100px">
+                            <img src="img/CSS.3b.svg.png" alt="CSS Logo" width="71px">
+                            <img src="img/sass-1.svg" alt="" width="110px">
+                            <img src="img/Javascript-logo.svg.png" alt="javaScript Logo" width="90px">
+                        </div>
+                        <div class="imgDiv">
+                            <picture>
+                                <p>“My interest is in the future because I am going to spend the rest of my life there.”
+                                </p>
+                                <h4>Anonymous</h4>
+                                <img class="bannerImg" src="img/clouds-72634.jpg" alt="">
+                            </picture>
+                        </div>
+                        <h1>Home Work Projects</h1>
+                    </div>
+                    <div class="bannerTitle">
+                        <h2>Buttons</h2>
+                        <div class="profileImg">
+                            <img src="img/sliderImg/markus.jpg" alt="Selfie" width="300" height="300">
+                        </div>
+                    </div>
+                </section>
+                <h1 class="pHeader">"Click Event Buttons"</h1>
+                <section class="buttonProject__Cont-1 pContainer" id="btn">
+                    <h2>Attribute</h2>
+                    <section class="buttonProject__Cont-1__wrapper2 wrapper">
+                        <div class="btns">
+                            <div class="motto">
+                                <p>One <span
+                                        style="color: green; font-weight: 600; letter-spacing: .1rem;">Attribute</span>
+                                    to Rule them
+                                    All
+                                </p>
+                                <div>
+                                    <span style="font-weight: 600; letter-spacing: .1rem;"><span
+                                            style="color:green">class
+                                        </span><span>=</span><span style="color: orange;"> "btn"</span></span>
+                                </div>
+                            </div>
+                            <div class="btnReg">
+                                <h2>Regular Buttons</h2>
+                                <div class="btnDiv ">
+                                    <div class="messageBox">
+                                        <div class="activeButton">
+                                            <h4>btn 100</h4>
+                                            <ul>
+                                                <li>btn</li>
+                                            </ul>
+                                        </div>
+                                        <div class="activeButton">
+                                            <h4>btn 105</h4>
+                                            <ul>
+                                                <li>btn</li>
+                                                <li>btn-active</li>
+                                            </ul>
+                                        </div>
+                                        <div class="activeButton">
+                                            <h4>btn 110</h4>
+                                            <ul>
+                                                <li>btn</li>
+                                                <li>btn-caution</li>
+                                            </ul>
+                                        </div>
+                                        <div class="activeButton">
+                                            <h4>btn 115</h4>
+                                            <ul>
+                                                <li>btn</li>
+                                                <li>btn-danger</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="reg-btn btn-cont">
+                                        <div class="btn-box">
+                                            <button class="btn">Click Me!</button>
+                                        </div>
+                                        <div class="btn-box">
+                                            <button class="btn btn-active">Click Me!</button>
+                                        </div>
+                                        <div class="btn-box">
+                                            <button class="btn btn-caution">Click Me!</button>
+                                        </div>
+                                        <div class="btn-box">
+                                            <button class="btn btn-danger">Click Me!</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2>Rounded Corners</h2>
+                                <div class="btnDiv">
+                                    <div class="messageBox">
+                                        <div class="activeButton">
+                                            <h4>btn 200</h4>
+                                            <ul>
+                                                <li>btn</li>
+                                                <li>btn-rndCorner</li>
+                                            </ul>
+                                        </div>
+                                        <div class="activeButton">
+                                            <h4>btn 205</h4>
+                                            <ul>
+                                                <li>btn</li>
+                                                <li>btn-rndCorner</li>
+                                                <li>btn-active</li>
+                                            </ul>
+                                        </div>
+                                        <div class="activeButton">
+                                            <h4>btn 210</h4>
+                                            <ul>
+                                                <li>btn</li>
+                                                <li>btn-rndCorner</li>
+                                                <li>btn-caution</li>
+                                            </ul>
+                                        </div>
+                                        <div class="activeButton">
+                                            <h4>btn 215</h4>
+                                            <ul>
+                                                <li>btn</li>
+                                                <li>btn-rndCorner</li>
+                                                <li>btn-danger</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="rndCorner-btn btn-cont">
+                                        <div class="btn-box">
+                                            <button class="btn btn-rndCorner btn-reg ">Click Me!</button>
+                                        </div>
+                                        <div class="btn-box">
+                                            <button class="btn  btn-reg btn-active btn-rndCorner">Click Me!</button>
+                                        </div>
+                                        <div class="btn-box">
+                                            <button class="btn  btn-reg btn-caution btn-rndCorner">Click Me!</button>
+                                        </div>
+                                        <div class="btn-box">
+                                            <button class="btn  btn-reg btn-danger btn-rndCorner">Click Me!</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2>Round Buttons Small</h2>
+                                <div class="btnDiv">
+                                    <div class="messageBox">
+                                        <div class="activeButton">
+                                            <h4>btn 300</h4>
+                                            <ul>
+                                                <li>btn</li>
+                                                <li>btn-smRnd</li>
+                                            </ul>
+                                        </div>
+                                        <div class="activeButton">
+                                            <h4>btn 305</h4>
+                                            <ul>
+                                                <li>btn</li>
+                                                <li>btn-smRnd</li>
+                                                <li>btn-active</li>
+                                            </ul>
+                                        </div>
+                                        <div class="activeButton">
+                                            <h4>btn 310</h4>
+                                            <ul>
+                                                <li>btn</li>
+                                                <li>btn-smRnd</li>
+                                                <li>btn-caution</li>
+                                            </ul>
+                                        </div>
+                                        <div class="activeButton">
+                                            <h4>btn 315</h4>
+                                            <ul>
+                                                <li>btn</li>
+                                                <li>btn-smRnd</li>
+                                                <li>btn-danger</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="Rnd-btn btn-cont">
+                                        <div class="btn-box">
+                                            <button class="btn btn-smRnd"></button>
+                                        </div>
+                                        <div class="btn-box">
+                                            <button class="btn btn-active btn-smRnd"></button>
+                                        </div>
+                                        <div class="btn-box">
+
+                                            <button class="btn btn-caution btn-smRnd "></button>
+                                        </div>
+                                        <div class="btn-box">
+
+                                            <button class="btn btn-danger btn-smRnd"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2>Round Buttons Large</h2>
+                                <div class="btnDiv">
+                                    <div class="messageBox">
+                                        <div class="activeButton">
+                                            <h4>btn 400</h4>
+                                            <ul>
+                                                <li>btn</li>
+                                                <li>btn-lgRnd</li>
+                                            </ul>
+                                        </div>
+                                        <div class="activeButton">
+                                            <h4>btn 405</h4>
+                                            <ul>
+                                                <li>btn</li>
+                                                <li>btn-lgRnd</li>
+                                                <li>btn-active</li>
+                                            </ul>
+                                        </div>
+                                        <div class="activeButton">
+                                            <h4>btn 410</h4>
+                                            <ul>
+                                                <li>btn</li>
+                                                <li>btn-smRnd</li>
+                                                <li>btn-caution</li>
+                                            </ul>
+                                        </div>
+                                        <div class="activeButton">
+                                            <h4>btn 415</h4>
+                                            <ul>
+                                                <li>btn</li>
+                                                <li>btn-lgRnd</li>
+                                                <li>btn-danger</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="Rnd-btn btn-cont">
+                                        <div class="btn-box">
+                                            <button class="btn btn-lgRnd"></button>
+                                        </div>
+                                        <div class="btn-box">
+                                            <button class="btn btn-active btn-lgRnd"></button>
+                                        </div>
+                                        <div class="btn-box">
+                                            <button class="btn btn-caution btn-lgRnd "></button>
+                                        </div>
+                                        <div class="btn-box">
+                                            <button class="btn btn-danger btn-lgRnd"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h4>Softcorp Industries</h4>
+                    </section>
+                </section>
+                <h1 class="pHeader">Toggle Buttons</h1>
+                <section class="buttonProject__Cont-2 pContainer">
+                    <section class="buttonProject__Cont-2__wrapper1 wrapper" id="toggleBtns">
+                        <h4>Softcorp Industries</h4>
+                        <div class="shadowBox">
+                            <div class="toggleBtns">
+                                <div class="toggle1 toggle-container">
+                                    <h4>Button Toggle 1</h4>
+                                    <div class="toggle">
+                                        <button class="toggle__btn" type="button"></button>
+                                    </div>
+                                </div>
+                                <div class="toggle2 toggle-container">
+                                    <h4>Button Toggle 2</h4>
+                                    <div class="toggle">
+                                        <button class="toggle__btn" type="button"></button>
+                                    </div>
+                                </div>
+                                <div class="toggle3 toggle-container">
+                                    <h4>Button Toggle 3</h4>
+                                    <div class="toggle">
+                                        <button class="toggle__btn" type="button"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="buttonProject__Cont-2__wrapper2 wrapper">
+                        <h4>Softcorp Industries</h4>
+                        <div class="shadowBox">
+                            <div id="toggleInputs" class="toggleBtns toggleInputs">
+                                <div class="toggle3 toggle-container">
+                                    <h4>Checkbox Toggle 1</h4>
+                                    <div class="toggle toggleInput1">
+                                        <input type="checkbox"><label for=""></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <h1 class="pHeader">Menu Buttons</h1>
+                <section class="buttonProject__Cont-3 pContainer">
+                    <section class="buttonProject__Cont-3__wrapper1 wrapper">
+                        <h4>Softcorp Industries</h4>
+                        <div class="shadowBox">
+                            <div class="projectBox">
+                                <section class="card-container" id="Plain_Burger">
+                                    <div>
+                                        <div class="card">
+                                            <h1>Plain Burger</h1>
+                                            <div class="btn" id="menu1-btn" onclick="menuClick()">
+                                                <div class="line lineTop"></div>
+                                                <div class="line lineCenter"></div>
+                                                <div class="line lineBottom"></div>
+                                            </div>
+                                            <div class="menu5B-items">
+                                                <ul>
+                                                    <li>3 Div Selection</li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="card-container" id="Cheese_Burger">
+                                    <div>
+                                        <div class="card">
+                                            <h1>Cheese Burger</h1>
+                                            <div class="btn" id="menu2-btn" onclick="menuClick">
+                                                <div class="line lineTop"></div>
+                                                <div class="line lineCenter"></div>
+                                                <div class="line lineBottom"></div>
+                                            </div>
+                                            <div class="menu5B-items">
+                                                <ul>
+                                                    <li>3 Div Selection</li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="card-container" id="Double_Burger">
+                                    <div>
+                                        <div class="card">
+                                            <h1>Double Burger</h1>
+                                            <div class="btn" id="menu3-btn" onclick="menuClick()">
+                                                <div class="line lineTop"></div>
+                                                <div class="line lineCenter"></div>
+                                                <div class="line lineBottom"></div>
+                                            </div>
+                                            <div class="menu5B-items">
+                                                <ul>
+                                                    <li>3 Div Selection</li>
+                                                    <li>onClick function ()</li>
+                                                    <li></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="card-container" id="DoubleCheese_Burger">
+                                    <div class="card">
+                                        <h1>Double Cheese Burger</h1>
+                                        <div class="btn" id="menu4-btn">
+                                            <div class="line lineTop"></div>
+                                            <div class="line lineCenter"></div>
+                                            <div class="line lineBottom"></div>
+                                        </div>
+                                        <div class="menu5B-items">
+                                            <ul>
+                                                <li>3 Div Selection</li>
+                                                <li></li>
+                                                <li></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="card-container" id="Triple_Burger">
+                                    <div>
+                                        <div class="card">
+                                            <h1>Triple Burger</h1>
+                                            <div class="btn" id="menu4-btn">
+                                                <div class="line lineTop"></div>
+                                                <div class="line lineCenter"></div>
+                                                <div class="line lineBottom"></div>
+                                            </div>
+                                            <div class="menu5B-items">
+                                                <ul>
+                                                    <li>3 Div Selection</li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="buttonProject__Cont-3__wrapper2 wrapper">
+                        <div class="shadowBox">
+                            <div class="projectBox">
+                                <section class="navBar2">
+                                    <div class="navBar2-menu">
+                                        <div class="navBar2-menu__btn"></div>
+                                    </div>
+                                    <ul class="navBar2-list">
+                                        <li class="navBar2-list__home listItem active">
+                                            <a class="" href="#mainHeader">Home</a>
+                                        </li>
+                                        <li class="navBar2-list__about listItem">
+                                            <a href="#about">About</a>
+                                        </li>
+                                        <li class="navBar2-list__projects listItem">
+                                            <a href="#projects">Projects</a>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <br>
+                <section class="localStorageProject" id="localStorageProject">
+                    <section class="localStorageProject__secBanner secBanner">
+                        <div class="bannerTop">
+                            <div class="logo-bar__img">
+                                <img src="img/HTML5_logo.svg.png" alt="HTML Logo" width="100px">
+                                <img src="img/CSS.3b.svg.png" alt="CSS Logo" width="71px">
+                                <img src="img/sass-1.svg" alt="" width="110px">
+                                <img src="img/Javascript-logo.svg.png" alt="javaScript Logo" width="90px">
+                            </div>
+                            <div class="imgDiv">
+                                <picture>
+                                    <p>“My interest is in the future because I am going to spend the rest of my life
+                                        there.”
+                                    </p>
+                                    <h4>Anonymous</h4>
+                                    <img class="bannerImg" src="img/clouds-72634.jpg" alt="">
+                                </picture>
+                            </div>
+                            <h1>Home Work Projects</h1>
+                        </div>
+                        <div class="bannerTitle">
+                            <h2>Local Storage</h2>
+                            <div class="profileImg">
+                                <img src="img/sliderImg/markus.jpg" alt="Selfie" width="300" height="300">
+                            </div>
+                        </div>
+                    </section>
+                    <h1 class="pHeader">Todo Lists</h1>
+                    <section class="localStorageProject__cont-1 pContainer">
+                        <section class="localStorageProject__cont-1__wrapper1 wrapper">
+                            <p>Inspired by Kyle at Web Dev Simplified</p>
+                            <p>&</p>
+                            <p>Inspired by Kevin Powell</p>
+                            <div class="shadowBox">
+                                <div class="localStorageProject__cont-1__wrapper1__container1 container">
+                                    <h1 class="title">Stuff I need to do</h1>
+                                    <div class="all-tasks">
+                                        <h2 class="task-list-title">My Lists</h2>
+                                        <ul class="task-list" data-lists></ul>
+                                        <form action="" data-new-list-form>
+                                            <input type="text" class="new list" data-new-list-input
+                                                placeholder="new list item" aria-label="new list name" />
+                                            <button class="btn create" aria-label="create new list">+</button>
+                                        </form>
+                                    </div>
+                                    <div class="todo-list" data-list-display-container>
+                                        <div class="todo-header">
+                                            <h2 class="list-title" data-list-title>YouTube</h2>
+                                            <p class="task-count" data-list-count>3 Tasks Remaining</p>
+                                        </div>
+                                        <div class="todo-body">
+                                            <div class="tasks" data-tasks>
+                                            </div>
+                                            <div class="new-task-creator">
+                                                <form action="" data-new-task-form>
+                                                    <input type="text" data-new-task-input class="new task"
+                                                        placeholder="enter new task" aria-label="enter new task" />
+                                                    <button class="btn create" aria-label="create new task">+</button>
+                                                </form>
+                                            </div>
+                                            <div class="delete-stuff">
+                                                <button class="btn delete" data-clear-complete-tasks-button>clear
+                                                    completed
+                                                    tasks</button>
+                                                <button class="btn delete" data-delete-list-button>delete list</button>
+                                            </div>
+                                        </div>
+                                        <template id="task-template">
+                                            <div class="task">
+                                                <input type="checkbox" />
+                                                <label>
+                                                    <span class="custom-checkbox"></span>
+                                                </label>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </div>
+                                <div class="tributeBox">
+                                    <picture class="tributeBox__video">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/IhmSidOJSeE"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </picture>
+                                    <div class="tributeBox__bio">
+                                        <h3 class="tributeBox__header">Kevin Powell</h3>
+                                        <div class="trubteBox__bio__text">
+                                            <p>para</p>
+                                        </div>
+                                    </div>
+                                    <picture class="tributeBox__video">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/W7FaYfuwu70"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </picture>
+                                    <div class="tributeBox__bio">
+                                        <h3 class="tributeBox__header">Web Dev Simplified</h3>
+                                        <div class="trubteBox__bio__text">
+                                            <p>para</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </section>
+                </section>
+                <br>
+                <section class="webPlayerProject" id="webPlayerProject">
+                    <section class="webPlayerProject__secBanner secBanner">
+                        <section class="bannerTop">
+                            <div class="logo-bar__img">
+                                <img src="img/HTML5_logo.svg.png" alt="HTML Logo" width="100px">
+                                <img src="img/CSS.3b.svg.png" alt="CSS Logo" width="71px">
+                                <img src="img/sass-1.svg" alt="" width="110px">
+                                <img src="img/Javascript-logo.svg.png" alt="javaScript Logo" width="90px">
+                            </div>
+                            <div class="imgDiv">
+                                <picture>
+                                    <p>“My interest is in the future because I am going to spend the rest of my life
+                                        there.”
+                                    </p>
+                                    <h4>Anonymous</h4>
+                                    <img class="bannerImg" src="img/clouds-72634.jpg" alt="">
+                                </picture>
+                            </div>
+                            <h1>Home Work Projects</h1>
+                        </section>
+                        <section class="bannerTitle">
+                            <h2>Web Players</h2>
+                            <div class="profileImg">
+                                <img src="img/sliderImg/markus.jpg" alt="Selfie" width="300" height="300">
+                            </div>
+                        </section>
+                    </section>
+                    <h1 class="pHeader">Custom Audio Player</h1>
+                    <section class="webPlayerProject__cont-1 pContainer">
+                        <div class="webPlayerProject__cont-1__wrapper1 wrapper">
+                            <h2>Audio Player V1</h2>
+                            <h4>inspired by Adam Khoury</h4>
+                            <div class="shadowBox">
+                                <div class="projectBox">
+                                    <button class="btn btn-playPause" id="playPauseBtn">Play</button>
+                                    <div class="player__tapeDeck">
+                                        <input id="seekSlider" type="range" min="0" max="100" value="0" step="1">
+                                        <div id="timeBox">
+                                            <span id="curTimeText">00:00</span> / <span id="durTimeText">00:00</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-mute" id="muteBtn">Mute</button>
+                                    <input id="volumeSlider" type="range" min="0" max="100" value="100" step="1" />
+                                </div>
+                                <div class="tributeBox">
+                                    <picture class="tributeBox__video">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/hsSXzdn_0Gg"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </picture><br>
+                                    <picture class="tributeBox__video">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/L5rnkFNSnE8"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </picture><br>
+                                    <picture class="tributeBox__video">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/uxOnTwUNxl8"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </picture><br>
+                                    <picture class="tributeBox__video">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/jACx3PZ2_CA"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </picture><br>
+                                    <div class="tributeBox__bio">
+                                        <h3 class="tributeBox__header">Adam Khoury</h3>
+                                        <div class="trubteBox__bio__text">
+                                            <p>para</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <section class="webPlayerProject__cont-1__wrapper2 wrapper">
+                            <h2>Audio Player V2</h2>
+                            <h4>Softcorp Industries</h4>
+                            <div class="shadowBox">
+                                <div class="projectBox">
+                                    <div class="playerV2">
+                                        <div id="analyzerBox">
+                                            <canvas id="graphics"></canvas>
+                                        </div>
+                                        <button class="btn btn-playPause" id="playPauseBtn2">Play</button>
+                                        <div class="player__tapeDeck">
+                                            <input id="seekSlider2" type="range" min="0" max="100" value="0" step="1">
+                                            <div id="timeBox2">
+                                                <span id="curTimeText2"></span> <span id="durTimeText2"></span>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-mute" id="muteBtn2">Mute</button>
+                                        <input id="volumeSlider2" type="range" min="0" max="100" value="100" step="1" />
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="webPlayerProject__cont-1__wrapper3 wrapper">
+                            <h2>Audio Track Library V1</h2>
+                            <h4>inspired by Adam Khoury</h4>
+                            <div class="shadowBox">
+                                <div class="projectBox">
+                                    <div id="trackBox"></div>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+                <br>
+                <section class="uiTrendsProject" id="uiTrendsProject">
+                    <section class="uiTrendsProject__secBanner secBanner">
+                        <div class="bannerTop">
+                            <div class="logo-bar__img">
+                                <img src="img/HTML5_logo.svg.png" alt="HTML Logo" width="100px">
+                                <img src="img/CSS.3b.svg.png" alt="CSS Logo" width="71px">
+                                <img src="img/sass-1.svg" alt="" width="110px">
+                                <img src="img/Javascript-logo.svg.png" alt="javaScript Logo" width="90px">
+                            </div>
+                            <div class="imgDiv">
+                                <picture>
+                                    <p>“My interest is in the future because I am going to spend the rest of my life
+                                        there.”
+                                    </p>
+                                    <h4>Anonymous</h4>
+                                    <img class="bannerImg" src="img/clouds-72634.jpg" alt="">
+                                </picture>
+                            </div>
+                            <h1>Home Work Projects</h1>
+                        </div>
+                        <div class="bannerTitle">
+                            <h2>UI Trends</h2>
+                            <div class="profileImg">
+                                <img src="img/sliderImg/markus.jpg" alt="Selfie" width="300" height="300">
+                            </div>
+                        </div>
+                    </section>
+                    <h1 class="pHeader">UI Trends</h1>
+                    <section class="uiTrendsProject__cont-1 pContainer">
+                        <div class="uiTrendsProject__cont-1__wrapper1 wrapper">
+
+                        </div>
+                    </section>
+                </section>
+            </section>
+    </main>
+    <div class="spacer"></div>
+    <footer>Copyright &copy; 2021, Christopher T. Guy <span>O/A</span> Guycorp Industries</footer>
+</body>
+
+</html>
