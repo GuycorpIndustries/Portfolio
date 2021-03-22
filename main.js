@@ -1,4 +1,36 @@
 import * as DarkMode from './js/darkMode.js';
+import {
+  loadTopHeader,
+  loadHwHeader,
+  loadPrHeader,
+  enableNavBar,
+  enableDevBtn,
+} from "./js/header.js";
+
+loadTopHeader();
+loadHwHeader();
+loadPrHeader();
+enableNavBar();
+enableDevBtn();
+
+// Show Carousel
+/*
+const imgCarousel = document.querySelector(".imgCarrouselShow");
+const imgCarouselBtn = document.getElementById('showCarousel');
+let carouselShow = false;
+imgCarouselBtn.addEventListener("click", () => {
+  if (!carouselShow) {
+    console.log("hey");
+    imgCarousel.classList.add("showCarousel");
+    imgCarouselBtn.classList.add("projectBtnActive");
+    carouselShow = true;
+  } else {
+    imgCarousel.classList.remove("showCarousel");
+    imgCarouselBtn.classList.remove("projectBtnActive");
+    carouselShow = false;
+  }
+});
+
 
 const devBtn = document.querySelector("#devBar-bar");
 let devOpen = false;
@@ -11,6 +43,8 @@ devBtn.addEventListener("click", () => {
     devOpen = false;
   }
 });
+*/
+
 // Digital Clock
 class DigitalClock {
   constructor(element) {
@@ -117,70 +151,6 @@ document.getElementById("month").innerHTML = months[month.getMonth()];
 // Year
 var year = new Date();
 document.getElementById("year").innerHTML = year.getFullYear();
-
-// Show Carousel
-const imgCarousel = document.querySelector(".imgCarrouselShow");
-const imgCarouselBtn = document.getElementById('showCarousel');
-let carouselShow = false;
-showCarousel.addEventListener("click", () => {
-  if (!carouselShow) {
-    imgCarousel.classList.add("showCarousel");
-    imgCarouselBtn.classList.add("projectBtnActive");
-    carouselShow = true;
-  } else {
-    imgCarousel.classList.remove("showCarousel");
-    imgCarouselBtn.classList.remove("projectBtnActive");
-    carouselShow = false;
-  }
-});
-
-// Show Slider
-const imgSlider = document.querySelector(".imgSliderShow");
-const sliderBtn = document.getElementById('showSlider');
-let sliderShow = false;
-showSlider.addEventListener("click", () => {
-  if (!sliderShow) {
-    imgSlider.classList.add("showSlider");
-    sliderBtn.classList.add("projectBtnActive")
-    sliderShow = true;
-  } else {
-    imgSlider.classList.remove("showSlider");
-    sliderBtn.classList.remove("projectBtnActive")
-    sliderShow = false;
-  }
-});
-
-// Show Gallery
-const imgGallery = document.querySelector(".imgGalleryShow");
-const galleryBtn = document.getElementById('showGallery');
-let galleryShow = false;
-showGallery.addEventListener("click", () => {
-  if (!galleryShow) {
-    imgGallery.classList.add("showGallery");
-    galleryBtn.classList.add("projectBtnActive")
-    galleryShow = true;
-  } else {
-    imgGallery.classList.remove("showGallery");
-    galleryBtn.classList.remove("projectBtnActive")
-    galleryShow = false;
-  }
-});
-
-// Show Product Gallery
-const productGallery = document.querySelector(".imgProductGalleryShow");
-const productBtn = document.getElementById('showProduct');
-let productShow = false;
-showProduct.addEventListener("click", () => {
-  if (!productShow) {
-    productGallery.classList.add("showProduct");
-    productBtn.classList.add('projectBtnActive');
-    productShow = true;
-  } else {
-    productGallery.classList.remove("showProduct");
-    productBtn.classList.remove('projectBtnActive');
-    productShow = false;
-  }
-});
 
 const fwdBtn = document.querySelector(".fwdBtn");
 const rwdBtn = document.querySelector(".rwdBtn");
@@ -358,3 +328,54 @@ showTimeAnimation.addEventListener("click", () => {
   }
 });
 
+/*
+
+
+// Show Slider
+const imgSlider = document.querySelector(".imgSliderShow");
+const sliderBtn = document.getElementById('showSlider');
+let sliderShow = false;
+showSlider.addEventListener("click", () => {
+  if (!sliderShow) {
+    imgSlider.classList.add("showSlider");
+    sliderBtn.classList.add("projectBtnActive")
+    sliderShow = true;
+  } else {
+    imgSlider.classList.remove("showSlider");
+    sliderBtn.classList.remove("projectBtnActive")
+    sliderShow = false;
+  }
+});
+
+// Show Gallery
+const imgGallery = document.querySelector(".imgGalleryShow");
+const galleryBtn = document.getElementById('showGallery');
+let galleryShow = false;
+showGallery.addEventListener("click", () => {
+  if (!galleryShow) {
+    imgGallery.classList.add("showGallery");
+    galleryBtn.classList.add("projectBtnActive")
+    galleryShow = true;
+  } else {
+    imgGallery.classList.remove("showGallery");
+    galleryBtn.classList.remove("projectBtnActive")
+    galleryShow = false;
+  }
+});
+
+// Show Product Gallery
+const productGallery = document.querySelector(".imgProductGalleryShow");
+const productBtn = document.getElementById('showProduct');
+let productShow = false;
+showProduct.addEventListener("click", () => {
+  if (!productShow) {
+    productGallery.classList.add("showProduct");
+    productBtn.classList.add('projectBtnActive');
+    productShow = true;
+  } else {
+    productGallery.classList.remove("showProduct");
+    productBtn.classList.remove('projectBtnActive');
+    productShow = false;
+  }
+});
+*/

@@ -4,17 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
         href="https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-
+        rel="stylesheet" />
     <title>The Program</title>
     <link rel="shortcut icon" type="image/png" href="img/favicon2.jpg" />
     <link rel="stylesheet" type="text/css" href="main.css" />
     <script type="module" src="main.js" defer></script>
-    <script src="js/header.js" defer></script>
 </head>
 
 <body data-darkMode="light" data-theme="default">
@@ -22,7 +19,7 @@
         <span class="page-header prHeader" id="prPage"></span>
         <div class="themeToggles">
             <div class="colorMode modeBtn">
-                <button id="colorModeBtn" class="toggle"></button>
+                <button id="colorModeBtn" class="colorModeBtn"></button>
             </div>
             <ul class="colorThemes">
                 <li class="themeDots" id="default" title="Default"></li>
@@ -47,103 +44,274 @@
             <nav class="navBarSite" aria-label="siteNav" title="Web Navigation">
                 <ul class="navBarSite__list">
                     <li><a href="index.html">Home</a></li>
-                    <li><a class="activePage" href="#">The Program</a></li>
                     <li><a href="homework.html">Home Work</a></li>
+                    <li><a class="activePage" href="#">The Program</a></li>
                 </ul>
             </nav>
             <div class="navBarBtn">
-                <button id="navBarShowBtn" type="button" title="Show Menu"><span class="navBarArrowL"></span>MENU<span
-                        class="navBarArrowR"></span></button>
+                <button id="navBarShowBtn" type="button" title="Show Menu">
+                    <span class="navBarArrowL"></span>MENU<span class="navBarArrowR"></span>
+                </button>
             </div>
         </div>
     </header>
-    <h1 class="theProgram-h1" id="theProgram">The Program</h1>
-    <p>C.R.U.D</p>
     <article class="theProgram-article article">
-        <picture class="theProgram-article__img">
-            <img src="img/tech_img/fotis-fotopoulos-6sAl6aQ4OWI-unsplash.jpg" alt="">
-        </picture>
-        <picture class="theProgram-article__img">
-            <img src="img/tech_img/thisisengineering-raeng-yhCHx8Mc-Kc-unsplash.jpg" alt="">
-        </picture>
-        <picture class="theProgram-article__img">
-            <img src="img/tech_img/florian-olivo-4hbJ-eymZ1o-unsplash.jpg" alt="">
-        </picture>
-        <picture class="theProgram-article__img">
-            <img src="img/tech_img/ferenc-almasi-L8KQIPCODV8-unsplash.jpg" alt="">
-        </picture>
-        <picture class="theProgram-article__img">
-            <img src="img/tech_img/imgix-klWUhr-wPJ8-unsplash.jpg" alt="">
-        </picture>
-        <picture class="theProgram-article__img">
-            <img src="img/tech_img/roman-synkevych-vXInUOv1n84-unsplash.jpg" alt="">
-        </picture>
-        <picture class="theProgram-article__img">
-            <img src="img/tech_img/sai-kiran-anagani-5Ntkpxqt54Y-unsplash.jpg" alt="">
-        </picture>
-        <picture class="theProgram-article__img">
-            <img src="img/tech_img/ilya-pavlov-OqtafYT5kTw-unsplash.jpg" alt="">
-        </picture>
-        <div class="missionStatement">
-            <article class="art1">
-                <h2>What is "Self taught"</h2>
-                <p>Get with "The Program"</p>
-                <p>Learn To "Code"</p>
-            </article>
+        <h1 class="theProgram-h1" id="theProgram">
+            Hello, Welcome to <span>"The Program"</span>
+        </h1>
+        <p></p>
+        <div class="imgs">
+            <picture class="img1 img">
+                <img src="img/tech_img/sai-kiran-anagani-5Ntkpxqt54Y-unsplash.jpg" alt="" />
+            </picture>
+            <picture class="img2 img">
+                <img src="img/tech_img/imgix-klWUhr-wPJ8-unsplash.jpg" alt="" />
+            </picture>
+            <picture class="img3 img">
+                <img src="img/tech_img/ferenc-almasi-L8KQIPCODV8-unsplash.jpg" alt="" />
+            </picture>
         </div>
     </article>
     <main>
-        <section id="forms">
-            <section class="forms__banner banner">
-                <div class="banner__top">
-                    <div class="imgDiv">
-                        <picture>
-                            <p>“My interest is in the future because I am going to spend the rest of my life there.”</p>
-                            <h4>Anonymous</h4>
-                            <img class="bannerImg" src="img/clouds-72634.jpg" alt="">
-                        </picture>
+        <section class="HWprojects">
+            <section id="tables" class="tables">
+                <section class="tables__banner banner">
+                    <div class="banner__top">
+                        <div class="imgDiv">
+                            <picture>
+                                <p>
+                                    “My interest is in the future because I am going to spend
+                                    the rest of my life there.”
+                                </p>
+                                <h4>Anonymous</h4>
+                                <img class="bannerImg" src="img/clouds-72634.jpg" alt="" />
+                            </picture>
+                        </div>
+                        <h1>The Program</h1>
                     </div>
-                    <h1>The Program</h1>
-                </div>
-                <div class="banner__title">
-                    <h2>Forms</h2>
-                    <div class="profileImg">
-                        <img src="img/tech_img/domenico-loia-hGV2TfOh0ns-unsplash.jpg" alt="Selfie" width="450"
-                            height="300">
-                    </div>
-                </div>
-            </section>
-            <div class="form">
-                <h1>Forms</h1>
-                <section class="formProject">
-                    <div class="form-container">
-                        <form id="shortProfile" class="form" name="profile" action="">
-                            <div class="form-box">
-                                <label for="Title">First</label>
-                                <input id="firstName1" placeholder="Name" type="text" />
-                            </div>
-                            <div class="form-box">
-                                <label for="yr">Last</label>
-                                <input id="lastName1" placeholder="Name" type="text" />
-                            </div>
-                            <div class="form-box">
-                                <button class="btn" type="button" id="btn">Click to Add</button>
-                            </div>
-                        </form>
-                        <div id="obj">
-                            <pre></pre>
+                    <div class="banner__title">
+                        <h2>Tables</h2>
+                        <div class="missionStatement">
+                            <h3 class="missionStatement__h3">"Self-Taught"</h3>
+                            <p class="missionStatement__p1">Get with <span>"The Program"</span></p>
+                            <p class="missionStatement__p2">Learn To <span>"Code"</span></p>
                         </div>
                     </div>
                 </section>
-                <section class="formProject">
-                    <div class="form-container">
-                        <form id="newEmployee" class="form">
-                            <div class="form-header">
+                <h1>Tables</h1>
+                <section class="pContainer">
+                    <div class="wrapper">
+                        <div class="shadowBox">
+                            <h2>Employees</h2>
+                            <table class="table tableEmployees">
+                                <caption>
+                                    Employees
+                                </caption>
+                                <thead>
+                                    <tr>
+                                        <th>Employee ID</th>
+                                        <th>Name</th>
+                                        <th>Position</th>
+                                        <th>Contact #</th>
+                                        <th>Email</th>
+                                        <th>Admin</th>
+                                        <th>Active</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>787757</td>
+                                        <td>Lori</td>
+                                        <td>Head Master</td>
+                                        <td>411</td>
+                                        <td>@ca.com</td>
+                                        <td>yes</td>
+                                        <td>yes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>751286</td>
+                                        <td>Sheldon</td>
+                                        <td>Field Supervisor</td>
+                                        <td>780</td>
+                                        <td>@ca.com</td>
+                                        <td>no</td>
+                                        <td>yes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>542288</td>
+                                        <td>Christopher</td>
+                                        <td>Service Tech Level-1</td>
+                                        <td>587</td>
+                                        <td>@ca.com</td>
+                                        <td>no</td>
+                                        <td>no</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br />
+                        <div class="shadowBox">
+                            <h2>Tools</h2>
+                            <table class="table tableTools">
+                                <caption>
+                                    Tools
+                                </caption>
+                                <thead>
+                                    <tr>
+                                        <th>Tool ID</th>
+                                        <th>Make</th>
+                                        <th>Model</th>
+                                        <th>Type</th>
+                                        <th>Serial Number</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>6788</td>
+                                        <td>RIGID</td>
+                                        <td>P 700</td>
+                                        <td>Power Threader</td>
+                                        <td>77774xc333</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7675</td>
+                                        <td>DeWalt</td>
+                                        <td>DWCD-6500</td>
+                                        <td>Cordless Drill</td>
+                                        <td>DW990777</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4564</td>
+                                        <td>DeWalt</td>
+                                        <td>DWRS-5350</td>
+                                        <td>Rotary Sander</td>
+                                        <td>DW998865</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br />
+                        <div class="shadowBox">
+                            <h2>Vehicles</h2>
+                            <table class="table tableVehicles">
+                                <caption>
+                                    Vehicles
+                                </caption>
+                                <thead>
+                                    <tr>
+                                        <th>Vehicle ID</th>
+                                        <th>VIN #</th>
+                                        <th>Make</th>
+                                        <th>Model</th>
+                                        <th>Year</th>
+                                        <th>Color</th>
+                                        <th>Fuel Type</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>765439</td>
+                                        <td>751-286-556</td>
+                                        <td>Ford</td>
+                                        <td>F-150 4X4</td>
+                                        <td>2018</td>
+                                        <td>Light Brown</td>
+                                        <td>Diesel</td>
+                                    </tr>
+                                    <tr>
+                                        <td>958834</td>
+                                        <td>679-339-999</td>
+                                        <td>Crysler</td>
+                                        <td>Lebaron</td>
+                                        <td>2011</td>
+                                        <td>Silver</td>
+                                        <td>Natural Gas</td>
+                                    </tr>
+                                    <tr>
+                                        <td>544458</td>
+                                        <td>773-339-298</td>
+                                        <td>Tesla</td>
+                                        <td>The really cool One</td>
+                                        <td>2021</td>
+                                        <td>Purple</td>
+                                        <td>Electric</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br />
+                    </div>
+                </section>
+            </section>
+            <section id="forms" class="forms">
+                <section class="forms__banner banner">
+                    <div class="banner__top">
+                        <div class="imgDiv">
+                            <picture>
+                                <p>
+                                    “My interest is in the future because I am going to spend
+                                    the rest of my life there.”
+                                </p>
+                                <h4>Anonymous</h4>
+                                <img class="bannerImg" src="img/clouds-72634.jpg" alt="" />
+                            </picture>
+                        </div>
+                        <h1>The Program</h1>
+                    </div>
+                    <div class="banner__title">
+                        <h2>Forms</h2>
+                        <div class="missionStatement">
+                            <h3 class="missionStatement__h3">"Self-Taught"</h3>
+                            <p class="missionStatement__p1">Get with <span>"The Program"</span></p>
+                            <p class="missionStatement__p2">Learn To <span>"Code"</span></p>
+                        </div>
+                    </div>
+                </section>
+                <h1>Forms</h1>
+                <section class="pContainer">
+                    <div class="wrapper simpleForm">
+                        <form id="simpleForm" class="form shadowBox">
+                            <div class="form__header">
+                                <h1>Simple Form</h1>
+                                <h3>Guycorp Industries</h3>
+                            </div>
+                            <div class="form__body">
+                                <div class="form-box">
+                                    <label for="first">First</label>
+                                    <input id="firstName1" placeholder="Name" type="text" />
+                                </div>
+                                <div class="form-box">
+                                    <label for="last">Last</label>
+                                    <input id="lastName1" placeholder="Name" type="text" />
+                                </div>
+                                <div class="form-box">
+                                    <button class="btn" type="button" id="btn">
+                                        Click to Add
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form__resultBox" id="obj">
+                                <pre>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </pre>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="wrapper newEmployee">
+                        <form id="newEmployee" class="form shadowBox newEmployee">
+                            <div class="form__header">
                                 <h1>New Hire</h1>
                                 <h3>Guycorp Industries</h3>
                             </div>
-                            <div class="newEmployee__sections">
-                                <div class="contact__section section">
+                            <div class="form__body">
+                                <div class="newEmployee__contact">
                                     <h3>Contact Information</h3>
                                     <div class="form-box">
                                         <label for="firstName">First Name</label>
@@ -166,59 +334,263 @@
                                         <input type="email" id="email" name="email" />
                                     </div>
                                 </div>
+                                <button class="btn" type="submit">Submit</button>
                             </div>
-                            <button class="btn" type="submit">Submit</button>
                         </form>
                     </div>
                 </section>
-            </div>
+            </section>
         </section>
-        <section id="tables" class="employeeSection section">
-            <section class="tables__banner banner">
+        <section id="crud" class="HWprojects">
+            <section class="crud__banner banner">
                 <div class="banner__top">
                     <div class="imgDiv">
                         <picture>
-                            <p>“My interest is in the future because I am going to spend the rest of my life there.”</p>
+                            <p>
+                                “My interest is in the future because I am going to spend the
+                                rest of my life there.”
+                            </p>
                             <h4>Anonymous</h4>
-                            <img class="bannerImg" src="img/clouds-72634.jpg" alt="">
+                            <img class="bannerImg" src="img/clouds-72634.jpg" alt="" />
                         </picture>
                     </div>
                     <h1>The Program</h1>
                 </div>
                 <div class="banner__title">
-                    <h2>Tables</h2>
-                    <div class="profileImg">
-                        <img src="img/tech_img/domenico-loia-EhTcC9sYXsw-unsplash.jpg" alt="Selfie" width="450"
-                            height="300">
+                    <h2>C.R.U.D</h2>
+                    <div class="missionStatement">
+                        <h3 class="missionStatement__h3">"Self-Taught"</h3>
+                        <p class="missionStatement__p1">Get with <span>"The Program"</span></p>
+                        <p class="missionStatement__p2">Learn To <span>"Code"</span></p>
                     </div>
                 </div>
             </section>
-            <section class="table">
-                <h2>Employee Table</h2>
-                <div class="table__">
-                    <table class="table">
-                        <caption>Test</caption>
-                        <thead>
-                            <tr>
-                                <th>First Name</th>
-                                <th>Middle Name</th>
-                                <th>Last Name</th>
-                                <th>Phone Number</th>
-                                <th>E-Mail</th>
-                                <th>Age</th>
-                            </tr>
-                        </thead>
-                        <tbody id="employee-list">
-                            <tr>
-                                <td>Christopher</td>
-                                <td>Thomas</td>
-                                <td>Guy</td>
-                                <td>587 579 2490</td>
-                                <td>guycorpindustries@gmail.com</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <h1>Final Exam</h1>
+            <section>
+                <div class="pContainer version1">
+                    <div class="wrapper">
+                        <section>
+                            <h2>Employee Table</h2>
+                            <table id="employeeTable" class="table employeeTable">
+                                <caption>
+                                    Test Table
+                                </caption>
+                                <thead>
+                                    <tr>
+                                        <th>Employee ID</th>
+                                        <th>Name</th>
+                                        <th>Position</th>
+                                        <th>Contact #</th>
+                                        <th>Email</th>
+                                        <th>Admin</th>
+                                        <th>Active</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>787757</td>
+                                        <td>Lori</td>
+                                        <td>Head Master</td>
+                                        <td>411</td>
+                                        <td>@ca.com</td>
+                                        <td>yes</td>
+                                        <td>yes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>751286</td>
+                                        <td>Sheldon</td>
+                                        <td>Field Supervisor</td>
+                                        <td>780</td>
+                                        <td>@ca.com</td>
+                                        <td>no</td>
+                                        <td>yes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>542288</td>
+                                        <td>Christopher</td>
+                                        <td>Service Tech Level-1</td>
+                                        <td>587</td>
+                                        <td>@ca.com</td>
+                                        <td>no</td>
+                                        <td>no</td>
+                                    </tr>
+                                    <tr>
+                                        <td>752638</td>
+                                        <td>Jane Doe</td>
+                                        <td>Administrative Assistant</td>
+                                        <td>404 Not Found</td>
+                                        <td>@ca.com</td>
+                                        <td>no</td>
+                                        <td>no</td>
+                                    </tr>
+                                </tbody>
+                                <button id="btnExportCsv" type="button" class="btn">
+                                    Export to CSV
+                                </button>
+                            </table>
+                        </section>
+                        <br />
+                        <section class="shadowBox">
+                            <h2>Employee Form</h2>
+                            <form id="employeeForm" class="employeeForm form">
+                                <div class="form-box">
+                                    <label for="EmpId">Employee ID</label>
+                                    <input id="EmpId" type="text" />
+                                </div>
+                                <div class="form-box">
+                                    <label for="name">Name</label>
+                                    <input id="name" type="text" />
+                                </div>
+                                <div class="form-box">
+                                    <label for="position">Position</label>
+                                    <input id="position" type="text" />
+                                </div>
+                                <div class="form-box">
+                                    <label for="contact">Contact #</label>
+                                    <input id="contact" type="text" />
+                                </div>
+                                <div class="form-box">
+                                    <label for="email">Email</label>
+                                    <input id="email" type="text" />
+                                </div>
+                                <div class="form-box">
+                                    <label for="aa">Administrative Access</label>
+                                    <input id="aa" type="text" />
+                                </div>
+                                <div class="form-box">
+                                    <label for="active">Active</label>
+                                    <input id="active" type="text" />
+                                </div>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+                <div class="pContainer version2">
+                    <div class="wrapper">
+                        <section>
+                            <h2>Vehicle Table</h2>
+                            <table id="vehicleTable" class="table vehicleTable">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Position</th>
+                                        <th>Contact #</th>
+                                        <th>Email</th>
+                                        <th>First-Aid</th>
+                                        <th>Active</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                        <br />
+                        <section class="shadowBox">
+                            <h2>Vehicle Form</h2>
+                            <form id="vehicleForm" class="vehicleForm form">
+                                <div>
+                                    <label for="EmpId">Employee ID</label>
+                                    <input id="EmpId" type="text" />
+                                </div>
+                                <div>
+                                    <label for="name">Name</label>
+                                    <input id="name" type="text" />
+                                </div>
+                                <div>
+                                    <label for="position">Position</label>
+                                    <input id="position" type="text" />
+                                </div>
+                                <div>
+                                    <label for="contact">Contact #</label>
+                                    <input id="contact" type="text" />
+                                </div>
+                                <div>
+                                    <label for="email">Email</label>
+                                    <input id="email" type="text" />
+                                </div>
+                                <div>
+                                    <label for="aa">Administrative Access</label>
+                                    <input id="aa" type="text" />
+                                </div>
+                                <div>
+                                    <label for="active">Active</label>
+                                    <input id="active" type="text" />
+                                </div>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+                <div class="pContainer version3">
+                    <div class="wrapper">
+                        <section>
+                            <h2>Tool Table</h2>
+                            <table id="toolTable" class="table toolTable">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Position</th>
+                                        <th>Contact #</th>
+                                        <th>Email</th>
+                                        <th>First-Aid</th>
+                                        <th>Active</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                        <br />
+                        <section class="shadowBox">
+                            <h2>Tool Form</h2>
+                            <form id="toolForm" class="toolForm form">
+                                <div>
+                                    <label for="EmpId">Employee ID</label>
+                                    <input id="EmpId" type="text" />
+                                </div>
+                                <div>
+                                    <label for="name">Name</label>
+                                    <input id="name" type="text" />
+                                </div>
+                                <div>
+                                    <label for="position">Position</label>
+                                    <input id="position" type="text" />
+                                </div>
+                                <div>
+                                    <label for="contact">Contact #</label>
+                                    <input id="contact" type="text" />
+                                </div>
+                                <div>
+                                    <label for="email">Email</label>
+                                    <input id="email" type="text" />
+                                </div>
+                                <div>
+                                    <label for="aa">Administrative Access</label>
+                                    <input id="aa" type="text" />
+                                </div>
+                                <div>
+                                    <label for="active">Active</label>
+                                    <input id="active" type="text" />
+                                </div>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </section>
+                    </div>
                 </div>
             </section>
             <section class="employeeCard" id="employeeCard">
@@ -234,213 +606,11 @@
                     </div>
                 </div>
                 <div class="employeeCard__back card">
-                    <h2>Employee Profile Card</h2>
+                    <h2>Employee Card Back</h2>
                     <div class="profileCard-info">
-                        <span class="employeeId">Employee Id</span>
-                        <span class="fullName">Full Name</span>
-                        <span class="employeePosition">Employee Position</span>
                         <div>
                             <span id="trainingCertification">Training Certification</span>
                         </div>
-                    </div>
-                </div>
-            </section>
-            <div class="version version1">
-                <section id="section-tableV1_0_1">
-                    <h2>Table V1</h2>
-                    <table class="table table-V1">
-                        <caption>Test Table</caption>
-                        <thead>
-                            <tr>
-                                <th>Employee ID</th>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Contact #</th>
-                                <th>Email</th>
-                                <th>Admin</th>
-                                <th>Active</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>787757</td>
-                                <td>Lori</td>
-                                <td>Head Master</td>
-                                <td>411</td>
-                                <td>@ca.com</td>
-                                <td>yes</td>
-                                <td>yes</td>
-                            </tr>
-                            <tr>
-                                <td>751286</td>
-                                <td>Sheldon</td>
-                                <td>Field Supervisor</td>
-                                <td>780</td>
-                                <td>@ca.com</td>
-                                <td>no</td>
-                                <td>yes</td>
-                            </tr>
-                            <tr>
-                                <td>542288</td>
-                                <td>Christopher</td>
-                                <td>Service Tech Level-1</td>
-                                <td>587</td>
-                                <td>@ca.com</td>
-                                <td>no</td>
-                                <td>no</td>
-                            </tr>
-                            <tr>
-                                <td>752638</td>
-                                <td>Jane Doe</td>
-                                <td>Administrative Assistant</td>
-                                <td>404 Not Found</td>
-                                <td>@ca.com</td>
-                                <td>no</td>
-                                <td>no</td>
-                            </tr>
-                        </tbody>
-                        <button id="btnExportCsv" type="button" class="btn">Export to CSV</button>
-                    </table>
-                </section>
-                <form id="formV1_0_1" class="formV1_0_1 form">
-                    <div>
-                        <label for="EmpId">Employee ID</label>
-                        <input id="EmpId" type="text">
-                    </div>
-                    <div>
-                        <label for="name">Name</label>
-                        <input id="name" type="text">
-                    </div>
-                    <div>
-                        <label for="position">Position</label>
-                        <input id="position" type="text">
-                    </div>
-                    <div>
-                        <label for="contact">Contact #</label>
-                        <input id="contact" type="text">
-                    </div>
-                    <div>
-                        <label for="email">Email</label>
-                        <input id="email" type="text">
-                    </div>
-                    <div>
-                        <label for="aa">Administrative Access</label>
-                        <input id="aa" type="text">
-                    </div>
-                    <div>
-                        <label for="active">Active</label>
-                        <input id="active" type="text">
-                    </div>
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-            <div class="version version2">
-                <section id="tableV2_0_1">
-                    <h2>Table V2</h2>
-                    <div>
-                        <table class="table table-V2">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Contact #</th>
-                                    <th>Email</th>
-                                    <th>First-Aid</th>
-                                    <th>Active</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-                <br>
-                <section id="formV2_0_1">
-                    <h2>Table Input V2</h2>
-                    <div>
-
-                    </div>
-                </section>
-            </div>
-            <div class="version version3">
-                <section id="tableV3_0_1">
-                    <h2>Table V3</h2>
-                    <div>
-                        <table class="table table-V3">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Contact #</th>
-                                    <th>Email</th>
-                                    <th>First-Aid</th>
-                                    <th>Active</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-                <br>
-                <section id="formV3_0_1">
-                    <h2>Table Input V3</h2>
-                    <div></div>
-                </section>
-            </div>
-        </section>
-        <section id="crud">
-            <section class="crud__banner banner">
-                <div class="banner__top">
-                    <div class="imgDiv">
-                        <picture>
-                            <p>“My interest is in the future because I am going to spend the rest of my life there.”</p>
-                            <h4>Anonymous</h4>
-                            <img class="bannerImg" src="img/clouds-72634.jpg" alt="">
-                        </picture>
-                    </div>
-                    <h1>The Program</h1>
-                </div>
-                <div class="banner__title">
-                    <h2>C.R.U.D</h2>
-                    <div class="profileImg">
-                        <img src="img/tech_img/roman-synkevych-vXInUOv1n84-unsplash.jpg" alt="Selfie" width="450"
-                            height="300">
                     </div>
                 </div>
             </section>
@@ -452,7 +622,10 @@
         </form>
     </div>
     <div class="spacer"></div>
-    <footer>Copyright &copy; 2021, Christopher T. Guy <span>O/A</span> Guycorp Industries</footer>
+    <footer>
+        Copyright &copy; 2021, Christopher T. Guy <span>O/A</span> Guycorp
+        Industries
+    </footer>
 </body>
 
 </html>
