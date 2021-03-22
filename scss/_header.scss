@@ -19,8 +19,8 @@
   .nameBanner {
     position: absolute;
     top: 35%;
-    right: 50%;
-    transform: translateX(50%);
+    width: 100%;
+    text-align: center;
     font-size: calc(2.25vw + 0.75rem);
     letter-spacing: 0.1rem;
     color: var(--darkModeTxtClr);
@@ -30,7 +30,7 @@
   // DEVBAR STYLE //
   .devBar-bar {
     position: absolute;
-    bottom: 15%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%);
     font-family: "audiowide", cursive;
@@ -63,12 +63,12 @@
     }
     &__html {
       position: absolute;
-      top: 47%;
+      top: 45%;
       left: 35%;
     }
     &__css {
       position: absolute;
-      top:  47%;
+      top:  45%;
       right: 35%;
     }
     &__sass {
@@ -126,58 +126,65 @@
 
 // MEDIA QUERIES
 // Tablet Portrait
-@media (max-width: 1000px) {
-  .devBar-list__html {
-    top: 27%;
-    left: 15%;
-  }
-  .devBar-list__css {
-    top: 27%;
-    left: 70%;
-  }
-  .devBar-list__sass {
-    top: 78%;
-    left: 17%;
+@media (max-width: 1100px) {
+  .mainHeader{
+    .devBar-list__sass {
+      top: 62%;
+    }
+    .devBar-list__javaScript {
+      top: 60%;
+    }
   }
 }
+@media (max-width: 750px) {
+  .mainHeader{
 
-@media (max-width: 700px) {
-  .nameBanner {
-    position: absolute;
-    top: 2%;
-    left: -40%;
+    .nameBanner {
+      top: 18%;
+    }
+    .devBar-bar{
+      top: 50%;
+    }
+    .devBar-list__html {
+      top: 62%;
+      left: 25%;
+    }
+    .devBar-list__css {
+      top: 62%;
+      right: 25%;
+    }
+    .devBar-list__sass {
+      top: 77%;
+      left: 10%;
+    }
+    .devBar-list__javaScript {
+      top: 75%;
+      right: 10%;
+    }
   }
 }
 
 // Phone Portrait
 @media (max-width: 450px) {
-  .devBar-bar__btn {
-    top: 75%;
-  }
-
-  .devBar-list__html {
-    top: 20%;
-    left: 2%;
-  }
-  .devBar-list__css {
-    top: 30%;
-    left: 2%;
-  }
-  .devBar-list__sass {
-    left: 2%;
-    top: 40%;
-  }
-  .devBar-list__javaScript {
-    top: 50%;
-    left: 2%;
+  .mainHeader{
+    .devBar-list__html {
+      left: 10%;
+    }
+    .devBar-list__css {
+      right: 10%;
+    }
+    .devBar-list__sass {
+      left: 10%;
+    }
+    .devBar-list__javaScript {
+      right: 10%;
+    }
   }
 }
 
 // Phone Landscape
 @media (max-height: 450px) {
-  .devBar-bar {
-    top: 87%;
-  }
+  
   .devBar-list__html {
     top: 18%;
     left: 2%;

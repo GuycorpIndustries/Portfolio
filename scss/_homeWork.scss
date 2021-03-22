@@ -1,20 +1,27 @@
 // Home Work Projects
-.HWprojects, .myProjects {
+.HWprojects {
+  h1 {
+    color: var(--darkModeTxtClr);
+  }
   .pContainer {
+    @include darkMode;
     width: 95vw;
     height: auto;
     margin: auto;
-    background-color: #e9e9e9;
+    background-color: var(--darkModeBg);
     padding: 2rem;
+    
     border-radius: 2rem;
-    box-shadow: 0px 0px 10px var(--darkModeTxtClr);
     margin-bottom: 100px;
     p {
       margin-bottom: 5px;
     }
-    .wrapper {
+    
+  }
+}
+.wrapper {
       @include shadowLg-inset;
-      width: 80%;
+      max-width: 80vw;
       margin: auto;
       padding: 2rem;
       border-radius: 2rem;
@@ -43,9 +50,14 @@
         }
       }
     }
-  }
-}
 // Animations
+
+.pHeader {
+  color: var(--darkModeTxtClr);
+  margin: 20px auto;
+  text-align: center;
+  font-size: calc(2vw + 2rem);
+}
 .animationProject__cont-1 {
   &__wrapper1 {
     &__container1 {
@@ -167,6 +179,67 @@
       }
     }
   }
+  &__wrapper3 {
+    padding: 50px;
+    text-align: center;
+    .dropDown {
+      padding: 50px;
+      text-align: center;
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        background: #ddd;
+        border-radius: 5px;
+        li {
+          float: left;
+          width: 150px;
+          height: 65px;
+          line-height: 65px;
+          position: relative;
+          text-transform: uppercase;
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.7);
+          cursor: pointer;
+        }
+        li:hover {
+          background-color: #d5d5d5;
+          border-radius: 5px;
+        }
+      }
+      ul.drop-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 0;
+
+        li {
+          background: #666;
+          color: rgba(255, 255, 255, 0.7);
+        }
+
+        li:hover {
+          background-color: #606060;
+        }
+
+        li:last-child {
+          border-radius: 0px 0px 5px 5px;
+        }
+      }
+      // Default Trigger
+
+      ul.drop-menu li {
+        display: none; //Hide
+      }
+
+      li:hover > ul.drop-menu li {
+        //selects the elements to display > selects child
+        display: block; //Show
+      }
+    }
+  }
   // Project 1 WDS Animation Project
   @keyframes aquarnd {
     0% {
@@ -259,6 +332,113 @@
     100% {
       transform: translateY(0px);
       opacity: 1;
+    }
+  }
+
+  // Project 1 Drop Down Menu
+  // Demo 1
+  li:hover > ul.drop-menu.menu-1 {
+    perspective: 1000px;
+
+    li {
+      opacity: 0;
+    }
+    @for $i from 1 through 5 {
+      li:nth-child(#{$i}) {
+        animation: demo1 300ms ease-in-out forwards;
+        animation-delay: (150ms * $i) -
+          300ms; // next li starts halfway through first turn
+      }
+    }
+  }
+  @keyframes demo1 {
+    0% {
+      opacity: 0;
+      transform: rotateY(-90deg) translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: rotateY(0deg) translateY(0px);
+    }
+  }
+  // Demo 2
+  li:hover > ul.drop-menu.menu-2 {
+    perspective: 1000px;
+    li {
+      opacity: 0;
+      transform-origin: top center;
+    }
+    @for $i from 1 through 5 {
+      li:nth-child(#{$i}) {
+        animation: demo2 300ms ease-in-out forwards;
+        animation-delay: (150ms * $i) -
+          300ms; // next li starts halfway through first turn
+      }
+    }
+  }
+  @keyframes demo2 {
+    0% {
+      opacity: 0;
+      transform: rotatex(-90deg);
+    }
+    60% {
+      transform: rotateX(50deg);
+    }
+    100% {
+      opacity: 1;
+      transform: rotatex(0deg);
+    }
+  }
+  // Demo 3
+  li:hover > ul.drop-menu.menu-3 {
+    perspective: 1000px;
+    li {
+      opacity: 0;
+    }
+    @for $i from 1 through 5 {
+      li:nth-child(#{$i}) {
+        animation: demo3 300ms ease-in-out forwards;
+        animation-delay: (150ms * $i) -
+          300ms; // next li starts halfway through first turn
+      }
+    }
+  }
+  @keyframes demo3 {
+    0% {
+      opacity: 0;
+      transform: scale(0.3) translateY(-60px);
+    }
+    60% {
+      transform: scale(1.2) translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0px);
+    }
+  }
+  // Demo 4
+  li:hover > ul.drop-menu.menu-4 {
+    perspective: 1000px;
+    li {
+      opacity: 0;
+      transform-origin: top right;
+    }
+    @for $i from 1 through 5 {
+      li:nth-child(#{$i}) {
+        animation: demo4 300ms ease-in-out forwards;
+        animation-delay: (150ms * $i) -
+          300ms; // next li starts halfway through first turn
+      }
+    }
+  }
+  @keyframes demo4 {
+    0% {
+      opacity: 0;
+      transform: rotate(-30deg) translateX(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: rotate(0deg) translateX(0px);
     }
   }
 }
@@ -367,7 +547,7 @@
               background-color: #e3e3e3;
               border-radius: 1rem;
               .btn-box {
-                 display: flex;
+                display: flex;
                 align-items: center;
                 justify-content: center;
                 text-align: center;
@@ -392,20 +572,20 @@
               .btn-rndCorner {
                 border-radius: 1rem;
               }
-              
-            .btn-caution {
-              color: yellow;
+
+              .btn-caution {
+                color: yellow;
+              }
+              .btn-danger {
+                color: orangered;
+              }
+              .btn-active {
+                opacity: 0.7;
+              }
             }
-            .btn-danger {
-              color: orangered;
-            }
-            .btn-active {
-              opacity: 0.7;
-            }
-          }
-          // Round Button Override Style
-          .btn-cont.Rnd-btn {
-            .btn-smRnd {
+            // Round Button Override Style
+            .btn-cont.Rnd-btn {
+              .btn-smRnd {
                 width: 25px;
                 height: 25px;
                 border-radius: 50%;
@@ -434,10 +614,10 @@
           height: 150px;
           border-radius: 1.5rem;
           h4 {
+            color: rgb(54, 54, 54);
             padding: 0.5rem;
             text-align: center;
-          }
-          .toggle {
+          }.btn-container {
             @include shadowSm-inset;
             content: "";
             display: flex;
@@ -446,34 +626,37 @@
             width: 200px;
             height: 100px;
             margin: auto;
-            background-color: var(--darkModeBgOp);
+            background-color: #e9e9e9;
             border-radius: 100px;
-            &__btn {
+            .toggle {
               @include shadowSm;
-              margin-left: 10px;
-              width: 85px;
-              height: 85px;
-              border-radius: 50%;
-              border: none;
-              outline: none;
+                cursor: pointer;
+                margin-left: 10px;
+                width: 85px;
+                height: 85px;
+                border-radius: 50%;
+                border: none;
+                outline: none;
             }
           }
         }
       }
     }
-    &__wrapper2{
+    &__wrapper2 {
       .toggleInputs {
         .toggle-container {
+          @include shadowSm-inset;
           margin: auto;
           width: 300px;
           height: 150px;
-          background-color: lightgrey;
+          background-color: #e9e9e9;
           border-radius: 1.5rem;
           h4 {
             padding: 0.5rem;
             text-align: center;
           }
           .toggleInput1 {
+            @include shadowSm-inset;
             content: "";
             display: flex;
             align-items: center;
@@ -481,9 +664,10 @@
             width: 200px;
             height: 100px;
             margin: auto;
-            background-color: var(--darkModeBgOp);
+            background-color: #e9e9e9;
             border-radius: 100px;
             input[type="checkbox"] {
+              cursor: pointer;
               width: 90px;
               height: 90px;
               border: none;
@@ -500,98 +684,91 @@
           }
         }
       }
-
     }
   }
   &__Cont-3 {
     // Project 2 Wrapper 4 Menu Buttons
     &__wrapper1 {
-      .projectBox{
+      .projectBox {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
-      }
-      .card-container {
-        @include shadowSm-inset;
-        position: relative;
-        width: 300px;
-        height: 250px;
-        margin: 5% auto;
-        border-radius: 1rem;
-        .card {
-          h1 {
-            position: absolute;
-            width: 100%;
-            font-size: calc(0.75vw + 1rem);
-            left: 50%;
-            transform: translateX(-50%);
-            color: var(--darkModeTxtClr);
-          }
-          .btn {
-            position: absolute;
-            width: auto;
-            background: none;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%);
-            cursor: pointer;
-            .line {
-              background-color: var(--darkModeTxtClr);
-              width: 80px;
-              height: 6px;
+        gap: 20px;
+        .card-container {
+          @include shadowSm-inset;
+          border-radius: 1rem;
+          .menuCard {
+            padding: 2rem;
+            height: 250px;
+            h1 {
+              @include darkMode;
+              height: 100px;
+              font-size: calc(0.75vw + 1rem);
+              text-align: center;
+              padding: 1rem;
+              margin-bottom: 3rem;
+              color: var(--themeTxtClr);
+              text-shadow: 0px 0px 2px var(--black);
+              background-image: url("img/background_2.png");
+              background-size: cover;
               border-radius: 1rem;
             }
-            .lineTop {
+            .btn {
+              cursor: pointer;
+              width:80px;
+              margin: auto;
+              .line {
+                background-color: var(--darkModeTxtClr);
+                width: 80px;
+                height: 6px;
+                border-radius: 1rem;
+              }
+              .lineTop {
+                transform: translateY(-5px);
+              }
+              .lineCenter {
+                background-color: var(--themeBdr);
+              }
+              .lineBottom {
+                transform: translateY(5px);
+              }
+            }
+            #menu2-btn .lineTop {
               transform: translateY(-5px);
             }
-            .lineCenter {
-              background-color: var(--themeBdr);
+            #menu2-btn .lineCenter {
+              background-color: orange;
             }
-            .lineBottom {
+            #menu2-btn .lineBottom {
               transform: translateY(5px);
             }
-          }
-          #menu2-btn .lineTop {
-            transform: translateY(-5px);
-          }
-          #menu2-btn .lineCenter {
-            background-color: orange;
-          }
-          #menu2-btn .lineBottom {
-            transform: translateY(5px);
-          }
-          #menu3-btn .lineTop {
-            transform: translateY(-5px);
-          }
-          #menu3-btn .lineBottom {
-            transform: translateY(5px);
-          }
-          .menuClicked .lineTop {
-            height: 6px;
-            transform: translateY(8.5px) rotate(45deg);
-          }
-          .menuClicked .lineBottom {
-            height: 6px;
-            transform: translateY(-8.5) rotate(-45deg);
-          }
-          .menuClicked .lineCenter {
-            opacity: 0;
-          }
-          .menuClicked.header3 {
-            background-color: var(--themeBdr);
-            transition: all 300ms ease-in-out;
-          }
-          .menu5B-items {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
+            #menu3-btn .lineTop {
+              transform: translateY(-5px);
+            }
+            #menu3-btn .lineBottom {
+              transform: translateY(5px);
+            }
+            .menuClicked .lineTop {
+              height: 6px;
+              transform: translateY(8.5px) rotate(45deg);
+            }
+            .menuClicked .lineBottom {
+              height: 6px;
+              transform: translateY(-8.5) rotate(-45deg);
+            }
+            .menuClicked .lineCenter {
+              opacity: 0;
+            }
+            .menuClicked.header3 {
+              background-color: var(--themeBdr);
+              transition: all 300ms ease-in-out;
+            }
+            
           }
         }
       }
     }
-    &__wrapper2{
-      .projectBox{
+    &__wrapper2 {
+      .projectBox {
         padding: 1rem;
         .navBar2 {
           height: 60px;
@@ -654,7 +831,7 @@
             display: block;
             text-decoration: none;
           }
-    
+
           .listItem:hover {
             box-shadow: 0px 0px 20px var(--darkModeTxtClr);
           }
@@ -716,9 +893,7 @@
             transform: rotateY(0deg) translateY(0px);
           }
         }
-
       }
-
     }
   }
 }
@@ -923,124 +1098,237 @@
   }
 }
 // Web Players
-.webPlayerProject {   
-    .playerV2 {
-      position: relative;
-      max-width: 600px;
-      height: 200px;
+.webPlayerProject {
+  .playerV2 {
+    position: relative;
+    max-width: 600px;
+    height: 200px;
+    margin: auto;
+    border-radius: 2rem;
+    background-color: #e3e3e3;
+    #analyzerBox {
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0.5rem;
+      width: 80%;
+      #graphics {
+        width: 100%;
+        height: 75px;
+        background-color: rgb(0, 253, 14);
+        border-radius: 0.5rem 0.5rem 0 0;
+      }
+    }
+    .btn {
+      cursor: pointer;
+      width: 60px;
+      height: 60px;
+      background-color: black;
+      color: rgb(0, 253, 14);
+      font-size: calc(0.5vw + 0.75rem);
+      outline: none;
+      border: 2px solid rgb(0, 253, 14);
+      border-radius: 50%;
+    }
+    .btn-playPause {
+      position: absolute;
+      bottom: calc(0.2vw + 0.2rem);
+      left: calc(1vw + 0.5rem);
+    }
+    .btn-mute {
+      position: absolute;
+      bottom: calc(0.2vw + 0.2rem);
+      right: calc(1vw + 0.5rem);
+    }
+    input {
+      outline: none;
+    }
+    input[type="range"]::-moz-range-thumb {
+      width: 13px;
+      height: 13px;
+      background-color: rgb(0, 253, 14);
+      border-radius: 50%;
+    }
+    input[type="range"]::-moz-range-track {
+      background-color: rgba(0, 253, 14, 0.6);
+    }
+    input[type="range"] {
+      background-color: black;
+    }
+    #seekSlider2 {
+      position: absolute;
+      width: 150px;
+      height: 20px;
+      bottom: 30px;
+      left: 150px;
+      border-radius: 0.25rem 0 0 0.25rem;
+    }
+    #volumeSlider2 {
+      position: absolute;
+      top: 55px;
+      background: none;
+      right: -15px;
+      width: 100px;
+      transform: rotateZ(-90deg);
+    }
+    #timeBox2 {
+      position: absolute;
+      bottom: 28px;
+      left: 300px;
+      background-color: black;
+      padding: 0.25rem;
+      color: rgb(0, 253, 14);
+      width: 125px;
+      height: 27px;
+      text-align: center;
+      border-radius: 0.2rem 0.5rem 0.5rem 0.2rem;
+    }
+  }
+  #trackBox {
+    padding: 1rem;
+    .trackBar {
+      background: #ddd;
+      font-family: "audiowide";
+    }
+    .playButton {
+      opacity: 0.8;
+      display: block;
+      background: #000;
+      color: white;
+      width: 50px;
+      padding: 5px;
+      margin: 14px 0px 0px 14px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+    }
+    .playButton:hover {
+      opacity: 1;
+    }
+    .trackName {
+      color: #000;
+      margin: 12px 0px 0px 14px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .trackBar:nth-child(even) {
+      background: #eee;
+    }
+  }
+}
+.imgProject {
+  &__container {
+    h1 {
+      padding-top: 50px;
+    }
+    .sectionHeader h1 {
+      font-size: calc(2vw + 2rem);
+      letter-spacing: 0.25rem;
+      color: var(--darkModeTxtClr);
+      margin-bottom: calc(0.5vw + 0.5rem);
+      text-align: center;
+      text-shadow: 0px 0px 5px var(--themeTxtClr);
+    }
+    .sectionHeader h2 {
       margin: auto;
-      border-radius: 2rem;
-      background-color: #e3e3e3;
-      #analyzerBox {
-        position: absolute;
-        top: 15px;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 0.5rem;
-        width: 80%;
-        #graphics {
-          width: 100%;
-          height: 75px;
-          background-color: rgb(0, 253, 14);
-          border-radius: 0.5rem 0.5rem 0 0;
+      font-size: calc(1vw + 1rem);
+      text-align: center;
+      letter-spacing: 0.1rem;
+      color: var(--darkModeTxtClr);
+      margin-bottom: 25px;
+    }
+    .section-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding-top: calc(1.75vw + 1.75rem);
+      margin-bottom: calc(0.5vw + 0.5rem);
+      .projectBtn {
+        margin: auto;
+        cursor: pointer;
+        max-width: 300px;
+        font-family: "audiowide", cursive;
+        font-size: calc(0.5vw + 0.75rem);
+        border-radius: 1rem;
+        background-color: var(--darkModeBg);
+        text-shadow: 0px 0px 2px var(--black);
+        letter-spacing: 0.25rem;
+        border: 2px solid var(--themeBdr);
+        a {
+          display: block;
+          width: 300px;
+          text-align: center;
+          color: var(--themeTxtClr);
+          padding: 0.25rem 1rem;
+          text-decoration: none;
         }
       }
-      .btn {
-        cursor: pointer;
-        width: 60px;
-        height: 60px;
-        background-color: black;
-        color: rgb(0, 253, 14);
-        font-size: calc(0.5vw + 0.75rem);
-        outline: none;
-        border: 2px solid rgb(0, 253, 14);
-        border-radius: 50%;
+      .projectBtn:hover {
+        opacity: 0.6;
       }
-      .btn-playPause {
-        position: absolute;
-        bottom: calc(0.2vw + 0.2rem);
-        left: calc(1vw + 0.5rem);
-      }
-      .btn-mute {
-        position: absolute;
-        bottom: calc(0.2vw + 0.2rem);
-        right: calc(1vw + 0.5rem);
-      }
-      input {
-        outline: none;
-      }
-      input[type="range"]::-moz-range-thumb {
-        width: 13px;
-        height: 13px;
-        background-color: rgb(0, 253, 14);
-        border-radius: 50%;
-      }
-      input[type="range"]::-moz-range-track {
-        background-color: rgba(0, 253, 14, 0.6);
-      }
-      input[type="range"] {
-        background-color: black;
-      }
-      #seekSlider2 {
-        position: absolute;
-        width: 150px;
-        height: 20px;
-        bottom: 30px;
-        left: 150px;
-        border-radius: 0.25rem 0 0 0.25rem;
-      }
-      #volumeSlider2 {
-        position: absolute;
-        top: 55px;
-        background: none;
-        right: -15px;
-        width: 100px;
-        transform: rotateZ(-90deg);
-      }
-      #timeBox2 {
-        position: absolute;
-        bottom: 28px;
-        left: 300px;
-        background-color: black;
-        padding: 0.25rem;
-        color: rgb(0, 253, 14);
-        width: 125px;
-        height: 27px;
-        text-align: center;
-        border-radius: 0.2rem 0.5rem 0.5rem 0.2rem;
+      .projectBtn.projectBtnActive {
+        box-shadow: 0px 0px 15px var(--darkModeTxtClr);
       }
     }
-    #trackBox{
-      padding: 1rem;
-      .trackBar {
-        background: #ddd;
-        font-family: "audiowide";
-      }
-      .playButton {
-        opacity: 0.8;
-        display: block;
-        background: #000;
-        color: white;
-        width: 50px;
-        padding: 5px;
-        margin: 14px 0px 0px 14px;
-        cursor: pointer;
-        border: none;
-        border-radius: 5px;
-        outline: none;
-      }
-      .playButton:hover {
-        opacity: 1;
-      }
-      .trackName {
-        color: #000;
-        margin: 12px 0px 0px 14px;
-        font-size: 20px;
-        font-weight: bold;
-      }
-      .trackBar:nth-child(even) {
-        background: #eee;
-      }
-    }
+  }
 }
 // UI Trends
+.myProjects {
+
+  .pContainer {
+    width: 95vw;
+    height: auto;
+    margin: auto;
+    background-color: #e9e9e9;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 10px var(--darkModeTxtClr);
+    margin-bottom: 100px;
+    p {
+      margin-bottom: 5px;
+    }
+    .wrapper {
+      @include shadowLg-inset;
+      width: 80%;
+      margin: auto;
+      padding: 2rem;
+      border-radius: 2rem;
+      margin-bottom: 50px;
+      background-color: #e9e9e9;
+      .shadowBox {
+        padding: 1rem;
+        background-color: #e9e9e9;
+        @include shadowLg;
+        border-radius: 2rem;
+        .tributeBox {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          margin: auto;
+          padding: 2rem;
+          &__video {
+            width: 400px;
+            height: 225px;
+            iframe {
+              width: 100%;
+              height: 100%;
+              border-radius: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .HWprojects {
+    .pContainer {
+      .wrapper {
+        max-width: 100vw;
+      }
+    }
+  }
+}

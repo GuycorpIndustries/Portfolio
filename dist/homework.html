@@ -15,7 +15,6 @@
     <link rel="stylesheet" type="text/css" href="main.css" />
     <script type="module" src="main.js" defer></script>
     <script src="js/buttons.js" defer></script>
-    <script src="js/header.js" defer></script>
     <script src="js/audioPlayer.js" defer></script>
 </head>
 
@@ -24,7 +23,7 @@
         <span class="page-header hwHeader" id="hwPage"></span>
         <div class="themeToggles">
             <div class="colorMode modeBtn">
-                <button id="colorModeBtn" class="toggle"></button>
+                <button id="colorModeBtn" class="colorModeBtn"></button>
             </div>
             <ul class="colorThemes">
                 <li class="themeDots" id="default" title="Default"></li>
@@ -41,18 +40,18 @@
         <div class="navBar-container" id="navBarCont">
             <nav class="navBarPage" aria-label="pageNav" title="Current Page Chapters">
                 <ul class="navBarPage__list" id="navBar">
+                    <li><a href="#imgProject">Images</a></li>
                     <li><a href="#animationProject">Animations</a></li>
                     <li><a href="#buttonProject">Buttons</a></li>
-                    <li><a href="#localStorageProject">LocalStorage</a></li>
+                    <li><a href="#localStorageProject">ToDo</a></li>
                     <li><a href="#webPlayerProject">Web Players</a></li>
-                    <li><a href="#uiTrendsProject">UI Trends</a></li>
                 </ul>
             </nav>
             <nav class="navBarSite" aria-label="siteNav" title="Web Navigation">
                 <ul class="navBarSite__list">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="theprogram.html">The Program</a></li>
                     <li><a class="activePage" href="#">Home Work</a></li>
+                    <li><a href="theprogram.html">The Program</a></li>
                 </ul>
             </nav>
             <div class="navBarBtn">
@@ -61,40 +60,259 @@
             </div>
         </div>
     </header>
-    <h1 class="homeWork-h1" id="homeWork">Home Work</h1>
-    <p class="homeWork-article__para">Hello, Welcome to my "Home Work" page</p>
     <article class="homeWork-article article">
-        <picture class="homeWork-article__img">
-            <img src="img/tech_img/annie-spratt-4-4WPFLVhAY-unsplash.jpg" alt="">
-        </picture>
-        <picture class="homeWork-article__img">
-            <img src="img/tech_img/dollar-gill-9SF_lNr5Cz8-unsplash.jpg" alt="">
-        </picture>
-        <picture class="homeWork-article__img">
-            <img src="img/tech_img/monika-kozub-qEO1NR2i3gM-unsplash.jpg" alt="">
-        </picture>
-        <picture class="homeWork-article__img">
-            <img src="img/tech_img/mwesigwa-joel-FXdIjVRFh24-unsplash.jpg" alt="">
-        </picture>
-        <picture class="homeWork-article__img">
-            <img src="img/tech_img/mwesigwa-joel-jHvedTh-avo-unsplash.jpg" alt="">
-        </picture>
-        <picture class="homeWork-article__img">
-            <img src="img/tech_img/valentino-mazzariello-Ndm1hhIcwHc-unsplash.jpg" alt="">
-        </picture>
-        <picture class="homeWork-article__img">
-            <img src="img/tech_img/sai-kiran-anagani-5Ntkpxqt54Y-unsplash.jpg" alt="">
-        </picture>
-        <div class="missionStatement">
-            <article class="art1">
-                <h2>What is "Self taught"</h2>
-                <p>Get with "The Program"</p>
-                <p>Learn To "Code"</p>
-            </article>
+        <h1 class="homeWork-h1" id="homeWork">Hello, Welcome to my <span>"Home Work"</span> page</h1>
+        <p class="homeWork-article__para"></p>
+        <div class="imgs">
+            <picture class="img1 img">
+                <img src="img/tech_img/annie-spratt-4-4WPFLVhAY-unsplash.jpg" alt="">
+            </picture>
+            <picture class="img2 img">
+                <img src="img/tech_img/dollar-gill-9SF_lNr5Cz8-unsplash.jpg" alt="">
+            </picture>
+            <picture class="img3 img">
+                <img src="img/tech_img/monika-kozub-qEO1NR2i3gM-unsplash.jpg" alt="">
+            </picture>
+
         </div>
     </article>
     <main>
         <section class="HWprojects">
+            <section class="imgProject" id="imgProject">
+                <section class="imgProject__banner banner">
+                    <div class="banner__top">
+                        <div class="logo-bar__img">
+                            <img src="img/HTML5_logo.svg.png" alt="HTML Logo" width="100px">
+                            <img src="img/CSS.3b.svg.png" alt="CSS Logo" width="71px">
+                            <img src="img/sass-1.svg" alt="" width="110px">
+                            <img src="img/Javascript-logo.svg.png" alt="javaScript Logo" width="90px">
+                        </div>
+                        <h1>Home Work Projects</h1>
+                    </div>
+                    <div class="banner__title">
+                        <h2>Images</h2>
+                    </div>
+                </section>
+                <section class="imgProject__container">
+                    <div class="sectionHeader" id="sectionButtons">
+                        <h1>Image Projects</h1>
+                    </div>
+                    <div class="section-buttons">
+                        <button class="projectBtn" id="showCarousel"><a href="#sectionButtons">Image
+                                Carousel</a></button>
+                        <button class="projectBtn" id="showSlider"><a href="#sectionButtons">Image Slider</a></button>
+                        <button class="projectBtn" id="showGallery"><a href="#sectionButtons">Image Gallery</a></button>
+                        <button class="projectBtn" id="showProduct"><a href="#sectionButtons">Product
+                                Gallery</a></button>
+                        <button class="projectBtn" id="showTimeAnimation"><a href="#sectionButtons">Time
+                                Animation</a></button>
+                        <button class="projectBtn" id="showAudioPlayer"><a href="#sectionButtons">Audio
+                                Player</a></button>
+                        <button class="projectBtn" id="showVideoPlayer"><a href="#sectionButtons">Video
+                                Player</a></button>
+                        <button class="projectBtn" id="showPdfViewer"><a href="#sectionButtons">PDF Viewer</a></button>
+                    </div>
+                    <section class="imgCarrouselShow pContainer">
+                        <div class="imgCarrousel wrapper">
+                            <div class="sectionHeader">
+                                <h2>Image Carousel</h2>
+                            </div>
+                            <div class="imgCarrousel-content">
+                                <div class="content__carrousel imgAnimation">
+                                    <figure class="shadow">
+                                        <img src="img/chandler-cruttenden-unsplash_img1.jpg" alt="Anorei Collins" />
+                                        <figcaption>Photo by Chandler Cruttenden</figcaption>
+                                    </figure>
+                                    <figure class="shadow">
+                                        <img src="img/laura-chouette-unsplash_img2.jpg" alt="Anorei Collins" />
+                                        <figcaption>Photo by Laura Chouette</figcaption>
+                                    </figure>
+                                    <figure class="shadow">
+                                        <img src="img/daniel-sessler-unsplash_img3.jpg" alt="Anorei Collins" />
+                                        <figcaption>Photo by Daniel Sessler</figcaption>
+                                    </figure>
+                                    <figure class="shadow">
+                                        <img src="img/jarrad-horne-c-unsplash_img4.jpg" alt="Anorei Collins" />
+                                        <figcaption>Photo by Jarrad Horne</figcaption>
+                                    </figure>
+                                    <figure class="shadow">
+                                        <img src="img/quaid-lagan-unsplash_img5.jpg" alt="Anorei Collins" />
+                                        <figcaption>Photo by Quaid Lagan</figcaption>
+                                    </figure>
+                                    <figure class="shadow">
+                                        <img src="img/sebastien-jermer-unsplash_img6.jpg" alt="Anorei Collins" />
+                                        <figcaption>Photo by Sebastien Jermer</figcaption>
+                                    </figure>
+                                    <figure class="shadow">
+                                        <img src="img/lewis-roberts-unsplash_img7.jpg" alt="Anorei Collins" />
+                                        <figcaption>Photo by Lewis Roberts</figcaption>
+                                    </figure>
+                                    <figure class="shadow">
+                                        <img src="img/nicolas-i-unsplash_img8.jpg" alt="Anorei Collins" />
+                                        <figcaption>Photo by Nicolas I</figcaption>
+                                    </figure>
+                                    <figure class="shadow">
+                                        <img src="img/sajad-nori-unsplash_img9.jpg" alt="Anorei Collins" />
+                                        <title>Photo by Sajad Nori</title>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="player">
+                                <div class="player__btn rwdActive">
+                                    <div class="btn rwdBtn">
+                                    </div>
+                                </div>
+                                <div class="player__btn">
+                                    <div class="btn stopBtn"><span class="stop"></span></div>
+                                </div>
+                                <div class="player__btn">
+                                    <div class="btn pauseBtn">II</div>
+                                </div>
+                                <div class="player__btn fwdActive">
+                                    <div class="btn fwdBtn"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="imgSliderShow pContainer">
+                        <div class="imgSlider wrapper">
+                            <div class="sectionHeader">
+                                <h2>Image Slider</h2>
+                            </div>
+                            <div class="projectBox">
+                                <div class="imgContainer">
+                                    <div class="slide current">
+                                        <div class="content">
+                                            <h2>Slide 1</h2>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+                                                excepturi!
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="content">
+                                            <h2>Slide 2</h2>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+                                                excepturi!
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="content">
+                                            <h2>Slide 3</h2>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+                                                excepturi!
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="content">
+                                            <h2>Slide 4</h2>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+                                                excepturi!
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="content">
+                                            <h2>Slide 5</h2>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+                                                excepturi!
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="content">
+                                            <h2>Slide 6</h2>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+                                                excepturi!
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="content">
+                                            <h2>Slide 7</h2>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+                                                excepturi!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="buttons">
+                                    <button class="btn" id="prevBtn">
+                                    </button>
+                                    <button class="btn" id="nextBtn">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="imgGalleryShow pContainer">
+                        <div class="imgGallery wrapper">
+                            <div class="sectionHeader">
+                                <h2>Image Gallery</h2>
+                            </div>
+                            <div class="shadowBox">
+                                <div class="projectBox">
+                                    <div class="galleryContainer">
+                                        <div class="featureImg">
+                                            <img src="img/blueprints/sample_bluePrint_img1-500px.jpg" alt="Img1"
+                                                id="currentImg" />
+                                        </div>
+                                        <div class="galleryGrid">
+                                            <img src="img/blueprints/sample_bluePrint_img1-500px.jpg" alt="" />
+                                            <img src="img/blueprints/sample_bluePrint_img2-500px.jpg" alt="" />
+                                            <img src="img/blueprints/sample_bluePrint_img3-500px.jpg" alt="" />
+                                            <img src="img/blueprints/sample_bluePrint_img4-500px.jpg" alt="" />
+                                            <img src="img/blueprints/Sample-Architecture_plan-500px.jpg" alt="" />
+                                            <img src="img/blueprints/a03_plans_leitch_bentor_final-003-main-floor-plan-11-500px.jpg"
+                                                alt="" />
+                                            <img src="img/blueprints/download-500px.jpg" alt="" />
+                                            <img src="img/blueprints/Barnett_Concept_P1-500px.jpg" alt="" />
+                                            <img src="img/blueprints/Improvement-5-Sample-Sewer-Plan-500px.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="imgProductGalleryShow pContainer">
+                        <div class="imgProductGallery wrapper">
+                            <div class="sectionHeader">
+                                <h2>Product Gallery</h2>
+                            </div>
+                            <div class="shadowBox">
+                                <div class="projectBox">
+                                    <div class="productSlider">
+                                        <div class="productFeatureImg">
+                                            <img id="productFeature" src="img/Kid_Condo_001.jpg" alt="" />
+                                        </div>
+                                        <div id="productContainer">
+                                            <div id="btnL"></div>
+                                            <div id="productImgs" class="productImgs">
+                                                <img class="productImg activeProduct" src="img/Kid_Condo_001.jpg"
+                                                    alt="" />
+                                                <img class="productImg" src="img/Kid_Condo_002.jpg" alt="" />
+                                                <img class="productImg" src="img/Kid_Condo_003.jpg" alt="" />
+                                                <img class="productImg" src="img/Kid_Condo_004.jpg" alt="" />
+
+                                            </div>
+                                            <div id="btnR"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </section>
             <section class="animationProject" id="animationProject">
                 <section class="animationProject__banner banner">
                     <div class="banner__top">
@@ -104,26 +322,72 @@
                             <img src="img/sass-1.svg" alt="" width="110px">
                             <img src="img/Javascript-logo.svg.png" alt="javaScript Logo" width="90px">
                         </div>
-                        <div class="imgDiv">
-                            <picture>
-                                <p>“My interest is in the future because I am going to spend the rest of my life there.”
-                                </p>
-                                <h4>Anonymous</h4>
-                                <img class="bannerImg" src="img/clouds-72634.jpg" alt="">
-                            </picture>
-                        </div>
                         <h1>Home Work Projects</h1>
                     </div>
                     <div class="banner__title">
                         <h2>Animations</h2>
-                        <div class="profileImg">
-                            <img src="img/sliderImg/markus.jpg" alt="Selfie" width="300" height="300">
-                        </div>
                     </div>
                 </section>
-                <h1 class="pHeader">Animation Projects</h1>
+                <h1 class="pHeader">On Hover</h1>
                 <section class="animationProject__cont-1 pContainer">
-                    <h1>On Hover</h1>
+                    <section class="animationProject__cont-1__wrapper3 wrapper">
+                        <p>Inspired by Dev-Tips</p>
+                        <div class="shadowBox">
+                            <div class="dropDown">
+                                <ul>
+                                    <li>Demo 1
+                                        <!-- hover trigger -->
+                                        <ul class="drop-menu menu-1">
+                                            <!--selects the list ti iterate-->
+                                            <li>ek</li>
+                                            <li>do</li>
+                                            <li>teen</li>
+                                            <li>chaar</li>
+                                            <li>paanch</li>
+                                        </ul>
+                                    </li>
+                                    <li>Demo 2
+                                        <ul class="drop-menu menu-2">
+                                            <li>uno</li>
+                                            <li>dos</li>
+                                            <li>tres</li>
+                                            <li>cuatro</li>
+                                            <li>cinco</li>
+                                        </ul>
+                                    </li>
+                                    <li>Demo 3
+                                        <ul class="drop-menu menu-3">
+                                            <li>one</li>
+                                            <li>two</li>
+                                            <li>three</li>
+                                            <li>four</li>
+                                            <li>five</li>
+                                        </ul>
+                                    </li>
+                                    <li>Demo 4
+                                        <ul class="drop-menu menu-4">
+                                            <li>un</li>
+                                            <li>deux</li>
+                                            <li>trois</li>
+                                            <li>quatre</li>
+                                            <li>cinq</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tributeBox">
+                                <picture class="tributeBox__video">
+
+                                </picture>
+                                <div class="tributeBox__bio">
+                                    <h3 class="tributeBox__header">Dev-Tips</h3>
+                                    <div class="trubteBox__bio__text">
+                                        <p>para</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                     <section class="animationProject__cont-1__wrapper1 wrapper">
                         <p>Inspired by Kyle at Web Dev Simplified</p>
                         <div class="shadowBox">
@@ -198,6 +462,47 @@
                         </div>
                     </section>
                 </section>
+                <h1 class="pHeader">Canvas</h1>
+                <section class="animationProject__cont-2 pContainer">
+                    <div class="aniMusic__lyric">
+                        <p class="lyric-line1">"<span>Time</span> keeps on</p>
+                        <p class="lyric-line2">slippin,</p>
+                        <p class="lyric-line3">slippin,</p>
+                        <p class="lyric-line4">slippin,</p>
+                        <p class="lyric-line5">into</p>
+                        <p class="lyric-line6">the <span>Future</span>"</p>
+                        <h5>"Fly like an eagle - Steve Miller Band"</h5>
+                    </div>
+                    <div class="aniMusic__time">
+                        <div class="digitalClockV1">
+                            <span class="digitalClockV1__time"></span>
+                            <span class="digitalClockV1__ampm"></span>
+                        </div>
+                        <div class="analogClock__face">
+                            <div class="hand hour-hand" data-hour-hand></div>
+                            <div class="hand minute-hand" data-minute-hand></div>
+                            <div class="hand second-hand" data-second-hand></div>
+                            <div class="number number1">I</div>
+                            <div class="number number2">I</div>
+                            <div class="number number3">|</div>
+                            <div class="number number4">I</div>
+                            <div class="number number5">I</div>
+                            <div class="number number6">|</div>
+                            <div class="number number7">I</div>
+                            <div class="number number8">I</div>
+                            <div class="number number9">|</div>
+                            <div class="number number10">I</div>
+                            <div class="number number11">I</div>
+                            <div class="number number12">|</div>
+                        </div>
+                        <div class="weekday">
+                            <div id="day"></div>
+                            <div id="month"></div>
+                            <div id="date"></div>
+                            <div id="year"></div>
+                        </div>
+                    </div>
+                </section>
             </section>
             <br>
             <section class="buttonProject" id="buttonProject">
@@ -209,22 +514,140 @@
                             <img src="img/sass-1.svg" alt="" width="110px">
                             <img src="img/Javascript-logo.svg.png" alt="javaScript Logo" width="90px">
                         </div>
-                        <div class="imgDiv">
-                            <picture>
-                                <p>“My interest is in the future because I am going to spend the rest of my life there.”
-                                </p>
-                                <h4>Anonymous</h4>
-                                <img class="bannerImg" src="img/clouds-72634.jpg" alt="">
-                            </picture>
-                        </div>
                         <h1>Home Work Projects</h1>
                     </div>
                     <div class="banner__title">
                         <h2>Buttons</h2>
-                        <div class="profileImg">
-                            <img src="img/sliderImg/markus.jpg" alt="Selfie" width="300" height="300">
-                        </div>
                     </div>
+                </section>
+                <h1 class="pHeader">Toggle Buttons</h1>
+                <section class="buttonProject__Cont-2 pContainer">
+                    <section class="buttonProject__Cont-2__wrapper1 wrapper" id="toggleBtns">
+                        <h4>Softcorp Industries</h4>
+                        <div class="shadowBox">
+                            <div class="toggleBtns">
+                                <div class="toggle-container">
+                                    <h4 class="toggle1h4">Button Toggle 1</h4>
+                                    <div class="btn-container">
+                                        <button id="toggle1" class="toggle toggle1" type="button"></button>
+                                        </div>
+                                </div>
+                                <div class="toggle-container">
+                                    <h4 class="toggle2h4">Button Toggle 2</h4>
+                                    <div class="btn-container">
+                                        <button id="toggle2"  class="toggle2 toggle " type="button"></button>
+                                    </div>
+                                </div>
+                                <div class="toggle-container">
+                                    <h4 class="toggle3h4">Button Toggle 3</h4>
+                                    <div class="btn-container">
+                                        <button id="toggle3" class="toggle3 toggle" type="button"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="buttonProject__Cont-2__wrapper2 wrapper">
+                        <h4>Design Course</h4>
+                        <div class="shadowBox">
+                            <div id="toggleInputs" class="toggleBtns toggleInputs">
+                                <div class="toggle3 toggle-container">
+                                    <h4>Checkbox Toggle 1</h4>
+                                    <div class="toggle toggleInput1">
+                                        <input type="checkbox"><label for=""></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <h1 class="pHeader">Menu Buttons</h1>
+                <section class="buttonProject__Cont-3 pContainer">
+                    <section class="buttonProject__Cont-3__wrapper1 wrapper">
+                        <h4>Softcorp Industries</h4>
+                        <div class="shadowBox">
+                            <div class="projectBox">
+                                <section class="card-container" id="Plain_Burger">
+                                        <div class="menuCard">
+                                            <h1>Plain Burger</h1>
+                                            <div class="btn" id="menu1-btn" onclick="menuClick()">
+                                                <div class="line lineTop"></div>
+                                                <div class="line lineCenter"></div>
+                                                <div class="line lineBottom"></div>
+                                            </div>
+                                        </div>
+                                </section>
+                                <section class="card-container" id="Cheese_Burger">
+                                    <div>
+                                        <div class="menuCard">
+                                            <h1>Cheese Burger</h1>
+                                            <div class="btn" id="menu2-btn" onclick="menuClick">
+                                                <div class="line lineTop"></div>
+                                                <div class="line lineCenter"></div>
+                                                <div class="line lineBottom"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="card-container" id="Double_Burger">
+                                    <div>
+                                        <div class="menuCard">
+                                            <h1>Double Burger</h1>
+                                            <div class="btn" id="menu3-btn" onclick="menuClick()">
+                                                <div class="line lineTop"></div>
+                                                <div class="line lineCenter"></div>
+                                                <div class="line lineBottom"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="card-container" id="DoubleCheese_Burger">
+                                    <div class="menuCard">
+                                        <h1>Double Cheese Burger</h1>
+                                        <div class="btn" id="menu4-btn">
+                                            <div class="line lineTop"></div>
+                                            <div class="line lineCenter"></div>
+                                            <div class="line lineBottom"></div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="card-container" id="Triple_Burger">
+                                    <div>
+                                        <div class="menuCard">
+                                            <h1>Triple Burger</h1>
+                                            <div class="btn" id="menu4-btn">
+                                                <div class="line lineTop"></div>
+                                                <div class="line lineCenter"></div>
+                                                <div class="line lineBottom"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="buttonProject__Cont-3__wrapper2 wrapper">
+                        <div class="shadowBox">
+                            <div class="projectBox">
+                                <section class="navBar2">
+                                    <div class="navBar2-menu">
+                                        <div class="navBar2-menu__btn"></div>
+                                    </div>
+                                    <ul class="navBar2-list">
+                                        <li class="navBar2-list__home listItem active">
+                                            <a class="" href="#mainHeader">Home</a>
+                                        </li>
+                                        <li class="navBar2-list__about listItem">
+                                            <a href="#about">About</a>
+                                        </li>
+                                        <li class="navBar2-list__projects listItem">
+                                            <a href="#projects">Projects</a>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
                 </section>
                 <h1 class="pHeader">"Click Event Buttons"</h1>
                 <section class="buttonProject__Cont-1 pContainer" id="btn">
@@ -237,10 +660,11 @@
                                     to Rule them
                                     All
                                 </p>
-                                <div>
+                                <div>&lt button
                                     <span style="font-weight: 600; letter-spacing: .1rem;"><span
                                             style="color:green">class
                                         </span><span>=</span><span style="color: orange;"> "btn"</span></span>
+                                    &gt
                                 </div>
                             </div>
                             <div class="btnReg">
@@ -447,172 +871,6 @@
                         <h4>Softcorp Industries</h4>
                     </section>
                 </section>
-                <h1 class="pHeader">Toggle Buttons</h1>
-                <section class="buttonProject__Cont-2 pContainer">
-                    <section class="buttonProject__Cont-2__wrapper1 wrapper" id="toggleBtns">
-                        <h4>Softcorp Industries</h4>
-                        <div class="shadowBox">
-                            <div class="toggleBtns">
-                                <div class="toggle1 toggle-container">
-                                    <h4>Button Toggle 1</h4>
-                                    <div class="toggle">
-                                        <button class="toggle__btn" type="button"></button>
-                                    </div>
-                                </div>
-                                <div class="toggle2 toggle-container">
-                                    <h4>Button Toggle 2</h4>
-                                    <div class="toggle">
-                                        <button class="toggle__btn" type="button"></button>
-                                    </div>
-                                </div>
-                                <div class="toggle3 toggle-container">
-                                    <h4>Button Toggle 3</h4>
-                                    <div class="toggle">
-                                        <button class="toggle__btn" type="button"></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="buttonProject__Cont-2__wrapper2 wrapper">
-                        <h4>Softcorp Industries</h4>
-                        <div class="shadowBox">
-                            <div id="toggleInputs" class="toggleBtns toggleInputs">
-                                <div class="toggle3 toggle-container">
-                                    <h4>Checkbox Toggle 1</h4>
-                                    <div class="toggle toggleInput1">
-                                        <input type="checkbox"><label for=""></label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </section>
-                <h1 class="pHeader">Menu Buttons</h1>
-                <section class="buttonProject__Cont-3 pContainer">
-                    <section class="buttonProject__Cont-3__wrapper1 wrapper">
-                        <h4>Softcorp Industries</h4>
-                        <div class="shadowBox">
-                            <div class="projectBox">
-                                <section class="card-container" id="Plain_Burger">
-                                    <div>
-                                        <div class="card">
-                                            <h1>Plain Burger</h1>
-                                            <div class="btn" id="menu1-btn" onclick="menuClick()">
-                                                <div class="line lineTop"></div>
-                                                <div class="line lineCenter"></div>
-                                                <div class="line lineBottom"></div>
-                                            </div>
-                                            <div class="menu5B-items">
-                                                <ul>
-                                                    <li>3 Div Selection</li>
-                                                    <li></li>
-                                                    <li></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                                <section class="card-container" id="Cheese_Burger">
-                                    <div>
-                                        <div class="card">
-                                            <h1>Cheese Burger</h1>
-                                            <div class="btn" id="menu2-btn" onclick="menuClick">
-                                                <div class="line lineTop"></div>
-                                                <div class="line lineCenter"></div>
-                                                <div class="line lineBottom"></div>
-                                            </div>
-                                            <div class="menu5B-items">
-                                                <ul>
-                                                    <li>3 Div Selection</li>
-                                                    <li></li>
-                                                    <li></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                                <section class="card-container" id="Double_Burger">
-                                    <div>
-                                        <div class="card">
-                                            <h1>Double Burger</h1>
-                                            <div class="btn" id="menu3-btn" onclick="menuClick()">
-                                                <div class="line lineTop"></div>
-                                                <div class="line lineCenter"></div>
-                                                <div class="line lineBottom"></div>
-                                            </div>
-                                            <div class="menu5B-items">
-                                                <ul>
-                                                    <li>3 Div Selection</li>
-                                                    <li>onClick function ()</li>
-                                                    <li></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                                <section class="card-container" id="DoubleCheese_Burger">
-                                    <div class="card">
-                                        <h1>Double Cheese Burger</h1>
-                                        <div class="btn" id="menu4-btn">
-                                            <div class="line lineTop"></div>
-                                            <div class="line lineCenter"></div>
-                                            <div class="line lineBottom"></div>
-                                        </div>
-                                        <div class="menu5B-items">
-                                            <ul>
-                                                <li>3 Div Selection</li>
-                                                <li></li>
-                                                <li></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </section>
-                                <section class="card-container" id="Triple_Burger">
-                                    <div>
-                                        <div class="card">
-                                            <h1>Triple Burger</h1>
-                                            <div class="btn" id="menu4-btn">
-                                                <div class="line lineTop"></div>
-                                                <div class="line lineCenter"></div>
-                                                <div class="line lineBottom"></div>
-                                            </div>
-                                            <div class="menu5B-items">
-                                                <ul>
-                                                    <li>3 Div Selection</li>
-                                                    <li></li>
-                                                    <li></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="buttonProject__Cont-3__wrapper2 wrapper">
-                        <div class="shadowBox">
-                            <div class="projectBox">
-                                <section class="navBar2">
-                                    <div class="navBar2-menu">
-                                        <div class="navBar2-menu__btn"></div>
-                                    </div>
-                                    <ul class="navBar2-list">
-                                        <li class="navBar2-list__home listItem active">
-                                            <a class="" href="#mainHeader">Home</a>
-                                        </li>
-                                        <li class="navBar2-list__about listItem">
-                                            <a href="#about">About</a>
-                                        </li>
-                                        <li class="navBar2-list__projects listItem">
-                                            <a href="#projects">Projects</a>
-                                        </li>
-                                    </ul>
-                                </section>
-                            </div>
-                        </div>
-                    </section>
-                </section>
             </section>
             <br>
             <section class="localStorageProject" id="localStorageProject">
@@ -624,22 +882,10 @@
                             <img src="img/sass-1.svg" alt="" width="110px">
                             <img src="img/Javascript-logo.svg.png" alt="javaScript Logo" width="90px">
                         </div>
-                        <div class="imgDiv">
-                            <picture>
-                                <p>“My interest is in the future because I am going to spend the rest of my life
-                                    there.”
-                                </p>
-                                <h4>Anonymous</h4>
-                                <img class="bannerImg" src="img/clouds-72634.jpg" alt="">
-                            </picture>
-                        </div>
                         <h1>Home Work Projects</h1>
                     </div>
                     <div class="banner__title">
                         <h2>Local Storage</h2>
-                        <div class="profileImg">
-                            <img src="img/sliderImg/markus.jpg" alt="Selfie" width="300" height="300">
-                        </div>
                     </div>
                 </section>
                 <h1 class="pHeader">Todo Lists</h1>
@@ -731,22 +977,10 @@
                             <img src="img/sass-1.svg" alt="" width="110px">
                             <img src="img/Javascript-logo.svg.png" alt="javaScript Logo" width="90px">
                         </div>
-                        <div class="imgDiv">
-                            <picture>
-                                <p>“My interest is in the future because I am going to spend the rest of my life
-                                    there.”
-                                </p>
-                                <h4>Anonymous</h4>
-                                <img class="bannerImg" src="img/clouds-72634.jpg" alt="">
-                            </picture>
-                        </div>
                         <h1>Home Work Projects</h1>
                     </section>
                     <section class="banner__title">
                         <h2>Web Players</h2>
-                        <div class="profileImg">
-                            <img src="img/sliderImg/markus.jpg" alt="Selfie" width="300" height="300">
-                        </div>
                     </section>
                 </section>
                 <h1 class="pHeader">Custom Audio Player</h1>
@@ -839,22 +1073,10 @@
                             <img src="img/sass-1.svg" alt="" width="110px">
                             <img src="img/Javascript-logo.svg.png" alt="javaScript Logo" width="90px">
                         </div>
-                        <div class="imgDiv">
-                            <picture>
-                                <p>“My interest is in the future because I am going to spend the rest of my life
-                                    there.”
-                                </p>
-                                <h4>Anonymous</h4>
-                                <img class="bannerImg" src="img/clouds-72634.jpg" alt="">
-                            </picture>
-                        </div>
                         <h1>Home Work Projects</h1>
                     </div>
                     <div class="banner__title">
                         <h2>UI Trends</h2>
-                        <div class="profileImg">
-                            <img src="img/sliderImg/markus.jpg" alt="Selfie" width="300" height="300">
-                        </div>
                     </div>
                 </section>
                 <h1 class="pHeader">UI Trends</h1>
@@ -863,6 +1085,24 @@
 
                     </div>
                 </section>
+            </section>
+            <br>
+            <section class="canvasProject" id="canvasProject">
+                <section class="uiTrendsProject__banner banner">
+                    <div class="banner__top">
+                        <div class="logo-bar__img">
+                            <img src="img/HTML5_logo.svg.png" alt="HTML Logo" width="100px">
+                            <img src="img/CSS.3b.svg.png" alt="CSS Logo" width="71px">
+                            <img src="img/sass-1.svg" alt="" width="110px">
+                            <img src="img/Javascript-logo.svg.png" alt="javaScript Logo" width="90px">
+                        </div>
+                        <h1>Home Work Projects</h1>
+                    </div>
+                    <div class="banner__title">
+                        <h2>Canvas</h2>
+                    </div>
+                </section>
+               
             </section>
         </section>
     </main>

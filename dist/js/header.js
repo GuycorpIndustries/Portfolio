@@ -9,9 +9,9 @@ function topBanner() {
   let banner = document.createElement("h1");
 
   let sliderDiv = document.createElement("div");
-  let sliderTop = document.createElement("p");
+  // let sliderTop = document.createElement("p");
   let sliderImg = document.createElement("img");
-  let sliderBottom = document.createElement("p");
+  // let sliderBottom = document.createElement("p");
 
   /*
   let imgBar = document.createElement("div");
@@ -28,15 +28,15 @@ function topBanner() {
   //sliderDiv.style.alignItems = "center";
   //sliderDiv.style.justifyContent = "center";
   sliderDiv.style.backgroundColor = "var(--darkModeBg)"
-  sliderDiv.style.top = "calc(4vw + 4rem)";
-  sliderDiv.style.left = "calc(1vw + 1.5rem)";
+  sliderDiv.style.top = "90px";
+  sliderDiv.style.left = "calc(1.5vw + 1.5rem)";
   sliderDiv.style.width = "calc(8.5vw + 8.5rem)";
   sliderDiv.style.height = "calc(5vw + 5rem)";
   sliderDiv.style.fontFamily = "'Audiowide', cursive";
-  sliderDiv.style.border = "5px double var(--darkModeTxtClr)";
+  sliderDiv.style.border = "5px double var(--themeTxtClr)";
   sliderDiv.style.borderRadius = "1rem";
   bannerTop.appendChild(sliderDiv);
-
+/*
   sliderTop.appendChild(document.createTextNode("Guycorp"));
   sliderTop.setAttribute("class", "logo__top");
   sliderTop.style.top = "-40px";
@@ -47,7 +47,7 @@ function topBanner() {
   sliderTop.style.color = "var(--darkModeTxtClr)";
   sliderTop.style.letterSpacing = "0.15rem";
   sliderDiv.appendChild(sliderTop);
-
+*/
   sliderImg.setAttribute("class", "logo__img");
   sliderImg.setAttribute(
     "src",
@@ -59,7 +59,7 @@ function topBanner() {
   sliderImg.style.opacity = "0.8"
   sliderImg.style.borderRadius = ".75rem";
   sliderDiv.appendChild(sliderImg);
-
+/*
   sliderBottom.appendChild(document.createTextNode("Industries"));
   sliderBottom.setAttribute("class", "logo__bottom");
   sliderBottom.style.bottom = "-40px";
@@ -70,7 +70,7 @@ function topBanner() {
   sliderBottom.style.color = "var(--darkModeTxtClr)";
   sliderBottom.style.letterSpacing = "0.15rem";
   sliderDiv.appendChild(sliderBottom);
-  /*
+
   imgBar.setAttribute("class", "icon");
   imgBar.style.position = "absolute";
   imgBar.style.top = "5%";
@@ -106,7 +106,7 @@ function topBanner() {
   banner.style.bottom = "calc(7vw - 0.75rem)";
   banner.style.right = "5%";
   banner.style.transform = "rotate(-3.8deg)";
-  banner.style.fontSize = "calc(1.5vw + 1.5rem)";
+  banner.style.fontSize = "calc(1.5vw + 1.25rem)";
   banner.style.fontFamily = "'Audiowide', cursive";
   banner.style.color = "var(--darkModeTxtClr)";
   bannerDiv.appendChild(banner);
@@ -133,10 +133,10 @@ function hwSection() {
   title.appendChild(document.createTextNode('"Home Work"'));
   title.style.position = "absolute";
   title.style.top = "calc(3vw + 3rem)";
-  title.style.left = "50%";
-  title.style.transform = "translateX(-50%)";
+  title.style.textAlign = "center";
+  title.style.width = "100%";
   title.style.color = "var(--themeTxtClr)";
-  title.style.textShadow = "0px 0px 10px var(--darkModeTxtClr)";
+  title.style.textShadow = "0px 0px 10px var(--black)";
   title.style.fontSize = "calc(2vw + 2rem)";
   title.style.fontFamily = "'Audiowide', cursive";
 
@@ -157,10 +157,10 @@ function prSection() {
   title.appendChild(document.createTextNode('"The Program"'));
   title.style.position = "absolute";
   title.style.top = "calc(3vw + 3rem)";
-  title.style.left = "50%";
-  title.style.transform = "translateX(-50%)";
+  title.style.textAlign = "center";
+  title.style.width = "100%";
   title.style.color = "var(--themeTxtClr)";
-  title.style.textShadow = "0px 0px 10px var(--darkModeTxtClr)";
+  title.style.textShadow = "0px 0px 10px var(--black)";
   title.style.fontSize = "calc(2vw + 2rem)";
   title.style.fontFamily = "'Audiowide', cursive";
 
@@ -174,31 +174,29 @@ function prSection() {
 
   prHeader.appendChild(sectionTitle);
 }
+/*
 function hwTitle() {
     hwSection();
 }
 function prTitle() {
     prSection();
 }
-function loadTopHeader() {
+*/
+export function loadTopHeader() {
   document.addEventListener('DOMContentLoaded', () => {
     topBanner();
   })
 }
-function loadHwHeader() {
+export function loadHwHeader() {
   document.addEventListener('DOMContentLoaded', () => {
-    hwTitle();
+    hwSection();
   })
 }
-function loadPrHeader() {
+export function loadPrHeader() {
   document.addEventListener('DOMContentLoaded', () => {
-    prTitle();
+    prSection();
   })
 }
- loadTopHeader();
- loadHwHeader();
- loadPrHeader();
-
 
 const navBarCont = document.getElementById("navBarCont");
 const navBarShowBtn = document.getElementById("navBarShowBtn");
@@ -241,7 +239,7 @@ if (storeNav === "enabled" && !navBarShow) {
 if (storeNav === "disabled" && navBarShow) {
   navBarInactive();
 }
-function enableNavBar() {
+export function enableNavBar() {
   document.addEventListener("DOMContentLoaded", () => {
     navBarShowBtn.addEventListener("click", () => {
       storeNav = localStorage.getItem("storeNav")
@@ -255,28 +253,22 @@ function enableNavBar() {
     });
   });
 }
-enableNavBar();
 
-const devBtn = document.querySelector(".devBar-bar");
+
+const devBtn = document.querySelector("#devBar-bar");
 let devOpen = false;
-devBtn.addEventListener("click", () => {
-  if (!devOpen) {
-    devBtn.classList.add("openFrontEnd");
-    devOpen = true;
-  } else {
-    devBtn.classList.remove("openFrontEnd");
-    devOpen = false;
-  }
-});
 
-
-/*
-let h2 = document.querySelector('header span.page-header section h2');
-function titleChange() {
-  console.log(h2)
+export function enableDevBtn() {
+  devBtn.addEventListener("click", () => {
+    if (!devOpen) {
+      devBtn.classList.add("openFrontEnd");
+      devOpen = true;
+    } else {
+      devBtn.classList.remove("openFrontEnd");
+      devOpen = false;
+    }
+  });
 }
-titleChange();
-*/
 
 /*
 export {titleSection, topBanner}     USE THIS FOR ALL OTHER EXPORTS

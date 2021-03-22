@@ -34,6 +34,7 @@ function darkMode() {
   });
 }
 darkMode();
+
 let trans = () => {
   document.body.classList.add("transition");
   window.setTimeout(() => {
@@ -263,21 +264,27 @@ let themeModeOn = false;
 
 themeModeBtn.addEventListener('click', () => {
   if(!themeModeOn){
-  themeModeBtn.classList.add("toggleAnim");
-  themeModeBtn.classList.remove("toggleAnimRev");
   defaultThemeBtn.classList.add("dots");
+  defaultThemeBtn.classList.remove("hideDots");
   redThemeBtn.classList.add("dots");
+  redThemeBtn.classList.remove("hideDots");
   blueThemeBtn.classList.add("dots");
+  blueThemeBtn.classList.remove("hideDots");
   pinkThemeBtn.classList.add("dots");
+  pinkThemeBtn.classList.remove("hideDots");
   yellowThemeBtn.classList.add("dots");
+  yellowThemeBtn.classList.remove("hideDots");
   themeModeOn = true;
 } else {
-  themeModeBtn.classList.add("toggleAnimRev");
-  themeModeBtn.classList.remove("toggleAnim");
+  defaultThemeBtn.classList.add("hideDots");
   defaultThemeBtn.classList.remove("dots");
+  redThemeBtn.classList.add("hideDots");
   redThemeBtn.classList.remove("dots");
+  blueThemeBtn.classList.add("hideDots");
   blueThemeBtn.classList.remove("dots");
+  pinkThemeBtn.classList.add("hideDots");
   pinkThemeBtn.classList.remove("dots");
+  yellowThemeBtn.classList.add("hideDots");
   yellowThemeBtn.classList.remove("dots");
   themeModeOn = false;
   }

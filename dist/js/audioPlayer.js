@@ -21,8 +21,7 @@ var audio,
 
 function initAudioPlayer() {
   audio = new Audio();
-  audio.src =
-    "audio/34 - Symphony No 9 in D minor, 1st Movement, Allegro ma non troppo, un poco maestoso.mp3";
+  audio.src = "audio/OOH_LA_LA_Rod_Stewart.mp3";
   audio.loop = true;
 
   analyzerBox = document.getElementById("analyzerBox").appendChild(audio);

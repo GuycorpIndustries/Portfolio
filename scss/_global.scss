@@ -13,6 +13,7 @@ html {
     rgb(110, 110, 110),
     rgb(240, 240, 240)
   );
+  --black: black;
 
   --themeTxtClr: rgb(54, 54, 54);
   --themeBdr: rgb(0, 0, 0);
@@ -35,7 +36,7 @@ body.transition *:after {
 }
 
 body[data-darkMode="dark"] {
-  --darkModeBg: rgb(54, 54, 54);
+  --darkModeBg: rgb(100, 100, 100);
   --darkModeBgblk: rgb(0, 0, 0);
   --darkModeBgOp: rgba(255, 255, 255, 0.6);
   --darkModeTxtClr: white;
@@ -45,11 +46,13 @@ body[data-darkMode="dark"] {
     rgb(110, 110, 110)
   );
   --themeTxtClr: white;
+  --darkModeSec: #e3e3e3;
 }
 body[data-theme="default"] {
   --themeTxtClr: rgb(54, 54, 54);
   --themeBdr: rgb(0, 0, 0);
   --themeBgOp: rgba(255, 255, 255, 0.6);
+  --black: white;
 }
 body[data-theme="red"] {
   --themeTxtClr: rgb(255, 69, 0);
@@ -82,7 +85,7 @@ body[data-theme="yellow"] {
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: var(--darkModeBg);
+  background-color: var(--darkModeBgblk);
 }
 
 h1,
@@ -123,5 +126,16 @@ footer span {
   box-shadow: inset -4px -4px 7px #fff, inset 4px 4px 7px rgba(#000, 0.4);
 }
 @mixin darkMode {
-  box-shadow: inset -3px -3px 5px var(--darkModeBgOp), inset 3px 3px 5px var(--darkModeClrlgtOp);
+  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6),
+    inset 3px 3px 5px rgba(202, 202, 202, 0.6);
+}
+@mixin tablet {
+  box-shadow: inset -3px -3px 6px rgba(202, 202, 202, 0.6),
+    inset 3px 3px 6px rgba(202, 202, 202, 0.6);
+}
+@mixin tabletBtn-inset {
+  box-shadow: inset -2px -2px 3px #fff, inset 2px 2px 3px rgba(#000, 0.4);
+}
+@mixin tabletBox {
+  box-shadow: -4px -4px 7px rgba(#000, 0.4), 4px 4px 7px rgba(#000, 0.4);
 }

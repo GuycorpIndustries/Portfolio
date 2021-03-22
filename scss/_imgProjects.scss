@@ -112,7 +112,6 @@
     }
   }
 }
-
 .playFwd.content__carrousel {
   animation: rotarF 15s infinite linear;
 }
@@ -161,7 +160,7 @@
       height: calc(11vw + 11rem);
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
       overflow: hidden;
       width: calc(15vw + 15rem);
       border-radius: 1rem;
@@ -220,40 +219,40 @@
       }
     }
     .buttons {
-        button.btn {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-          outline: none;
-          border: none;
-          width: 50px;
-          height: 50px;
-          cursor: pointer;
-          background-color: var(--themeTxtClr);
-          border-radius: 50%;
-        }
-        button#prevBtn.btn {
-          left: calc(1.5vw + 1.5rem);
-          clip-path: polygon(50% 0, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
-        }
-        button#prevBtn.btn:hover {
-          transform: scale(1.2);
-        }
-        button#nextBtn.btn {
-          right: calc(1vw + 1rem);
-          clip-path: polygon(
-            75% 0%,
-            100% 50%,
-            75% 100%,
-            50% 100%,
-            75% 50%,
-            50% 0
-          );
-        }
-        button#nextBtn.btn:hover {
-          transform: scale(1.2);
-        }
+      button.btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        outline: none;
+        border: none;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        background-color: var(--themeTxtClr);
+        border-radius: 50%;
       }
+      button#prevBtn.btn {
+        left: calc(1.5vw + 1.5rem);
+        clip-path: polygon(50% 0, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
+      }
+      button#prevBtn.btn:hover {
+        transform: scale(1.2);
+      }
+      button#nextBtn.btn {
+        right: calc(1vw + 1rem);
+        clip-path: polygon(
+          75% 0%,
+          100% 50%,
+          75% 100%,
+          50% 100%,
+          75% 50%,
+          50% 0
+        );
+      }
+      button#nextBtn.btn:hover {
+        transform: scale(1.2);
+      }
+    }
   }
 }
 .imgSliderShow {
@@ -269,10 +268,10 @@ transform: translateY(-50%);
 .imgGalleryShow.showGallery {
   display: block;
 }
-.imgGallery{
+.imgGallery {
   padding: 1rem;
-  .shadowBox{
-    .projectBox{
+  .shadowBox {
+    .projectBox {
       .galleryContainer {
         padding: 0 1.5rem;
         .featureImg {
