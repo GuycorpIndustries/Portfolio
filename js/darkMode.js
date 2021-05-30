@@ -4,14 +4,14 @@ let darkModeSt = localStorage.getItem("darkModeSt");
 let darkModeOn = false;
 const enableDarkMode = () => {
   document.body.setAttribute("data-darkMode", "dark");
-  darkModeBtn.classList.add("toggleAnim");
-  darkModeBtn.classList.remove("toggleAnimRev");
+  //darkModeBtn.classList.add("toggleAnim");
+  //darkModeBtn.classList.remove("toggleAnimRev");
   localStorage.setItem("darkModeSt", "enabled");
 };
 const disableDarkMode = () => {
   document.body.setAttribute("data-darkMode", "light");
-  darkModeBtn.classList.add("toggleAnimRev");
-  darkModeBtn.classList.remove("toggleAnim");
+  //darkModeBtn.classList.add("toggleAnimRev");
+  //darkModeBtn.classList.remove("toggleAnim");
   localStorage.setItem("darkModeSt", "disabled");
 };
 if (darkModeSt === "enabled") {
@@ -289,3 +289,79 @@ themeModeBtn.addEventListener('click', () => {
   themeModeOn = false;
   }
 })
+
+const navBarCont = document.getElementById("navBarCont");
+const navBarShowBtn = document.getElementById("navBarShowBtn");
+const navBarBtn = document.querySelector(".navBarBtn");
+const navBarArrowL = document.querySelector(".navBarArrowL");
+const navBarArrowR = document.querySelector(".navBarArrowR");
+
+let storeNav = localStorage.getItem("storeNav");
+let navBarShow = false;
+
+const navBarActive = () => {
+  navBarShowBtn.classList.add("activeMenu");
+  navBarShowBtn.classList.remove("nonactiveMenu");
+  navBarShowBtn.setAttribute("title", "Show Menu");
+  navBarCont.classList.remove("HideNavBar");
+  navBarCont.classList.add("ShowNavBar");
+  navBarArrowL.classList.remove("arrowHideL");
+  navBarArrowL.classList.add("arrowShowL");
+  navBarArrowR.classList.remove("arrowHideR");
+  navBarArrowR.classList.add("arrowShowR");
+  localStorage.setItem("storeNav", "enabled");
+};
+const navBarInactive = () => {
+  navBarShowBtn.classList.add("nonactiveMenu"); //
+  navBarShowBtn.classList.remove("activeMenu");
+  navBarShowBtn.setAttribute("title", "Hide Menu");
+  navBarCont.classList.remove("ShowNavBar");
+  navBarCont.classList.add("HideNavBar");
+  navBarArrowL.classList.remove("arrowShowL");
+  navBarArrowL.classList.add("arrowHideL");
+  navBarArrowR.classList.remove("arrowShowR");
+  navBarArrowR.classList.add("arrowHideR");
+  localStorage.setItem("storeNav", "disabled");
+};
+if (storeNav === "enabled" && !navBarShow) {
+  navBarActive();
+}
+
+// Used When All Pages are open and one closes the menu, the other Pages will close Menu on Refresh
+if (storeNav === "disabled" && navBarShow) {
+  navBarInactive();
+}
+function enableNavBar() {
+  document.addEventListener("DOMContentLoaded", () => {
+    navBarShowBtn.addEventListener("click", () => {
+      storeNav = localStorage.getItem("storeNav");
+      if (enableNavBar !== "enabled" && !navBarShow) {
+        navBarActive();
+        navBarShow = true;
+      } else {
+        navBarInactive();
+        navBarShow = false;
+      }
+    });
+  });
+}
+
+enableNavBar();
+const devBtn = document.querySelector("#devBar-bar");
+let devOpen = false;
+
+function enableDevBtn() {
+  devBtn.addEventListener("click", () => {
+    if (!devOpen) {
+      themeModeBtn.classList.add("sun");
+      devBtn.classList.add("openFrontEnd");
+      devOpen = true;
+    } else {
+      themeModeBtn.classList.remove("sun");
+      devBtn.classList.remove("openFrontEnd");
+      devOpen = false;
+    }
+  });
+}
+
+enableDevBtn();
