@@ -1,25 +1,20 @@
+@use '_global' as *;
+@use "_mixin" as *;
+
 .dream {
   &__container {
     @include darkMode;
     background-color: var(--darkModeBg);
-    padding: 2rem;
     width: 95%;
-    margin: 100px auto;
+    margin: 50px auto;
     border-radius: 1rem;
-    border: 2px solid var(--themeBdr);
-    &__header {
-      h1 {
-        padding: 2rem;
-        text-align: center;
-        font-size: 40px;
-        color: var(--darkModeTxtClr);
-      }
-    }
+
     &__cardBox {
       @include darkMode;
       padding: 1rem;
       border-radius: 1rem;
       margin-bottom: calc(2.5vw + 2.5rem);
+      width: 100%;
       height: calc(16vw + 16rem);
       transform-style: preserve-3d;
       h1 {
@@ -76,25 +71,24 @@
         background-size: cover;
         width: calc(15vw + 15rem);
         height: calc(9vw + 9rem);
-        border: 2px solid red;
       }
       .card__front-title {
         position: absolute;
         transform: translateZ(2.5rem);
-        top: calc(0.5vw + 0.5rem);
-        left: calc(0.75vw + 0.75rem);
-        color: red;
+        top: calc(1vw + 1rem);
+        left: calc(2vw + 2rem);
+        color: var(--black);
+        text-shadow: 0px 0px 3px var(--themeTxtClr);
         font-size: calc(1vw + 1rem);
-        text-shadow: 0px 0px 20px var(--darkModeTxtClr);
       }
       .card__subtitle {
         transform: translateZ(2.5rem);
         position: absolute;
-        top: calc(7vw + 7rem);
-        left: calc(9vw + 9rem);
+        top: calc(6vw + 6rem);
+        left: calc(7vw + 7rem);
         font-size: calc(1.5vw + 1.5rem);
-        color: red;
-        text-shadow: 0px 0px 20px var(--darkModeTxtClr);
+        color: var(--black);
+        text-shadow: 0px 0px 5px var(--themeTxtClr);
       }
       .card__back-title {
         position: absolute;
@@ -102,8 +96,8 @@
         top: calc(2.5vw + 2.5rem);
         left: calc(0.5vw + 0.5rem);
         font-size: calc(1.5vw + 1.5rem);
-        color: red;
-        text-shadow: 0px 0px 20px var(--darkModeTxtClr);
+        color: var(--black);
+        text-shadow: 0px 0px 5px var(--themeTxtClr);
       }
     }
     &__future {
@@ -135,7 +129,7 @@
         align-items: center;
         justify-content: space-evenly;
         img {
-          width: 350px;
+          width: calc(3vw + 3rem);
           border-radius: 1rem;
           opacity: 0.8;
         }
@@ -148,21 +142,19 @@
 }
 .featureProject {
   margin-bottom: 100px;
-}
-.featureHeader {
-  @include darkMode;
-  text-align: center;
-  margin: auto;
-  padding: 2rem;
-  width: 350px;
-  border-radius: 1rem;
-  background-image: url("img/background_2.png");
-  background-size: cover;
-  margin-bottom: 50px;
-  background-color: white;
+  &__section {
+    .chapterSubHeader {
+      color: var(--white);
+      font-size: 18px;
+    }
+    .chapterHeader {
+      color: var(--white);
+    }
+  }
 }
 .tabletBox {
-  max-width: 640px;
+  display: none;
+  max-width: 575px;
   margin: 50px auto;
   border-radius: 1.5rem;
   .tablet {
@@ -173,9 +165,9 @@
     max-width: 640px;
     text-align: center;
     iframe {
-      max-width: 600px;
+      max-width: 550px;
       width: 95%;
-      height: 900px;
+      height: 720px;
       border-radius: 0.75rem;
       outline: 3px solid var(--themeTxtClr);
       outline-offset: 3px;
@@ -241,297 +233,48 @@
     }
   }
 }
-
 .phones {
   margin: 50px auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   .phone {
-    @include tablet;
-    border-radius: 1rem;
     &__samsung {
       @include tablet;
+      margin: 25px auto;
       border-radius: 1rem;
       padding: 0.5rem 0;
-      width: 300px;
-      height: 500px;
+      width: 160px;
+      height: 300px;
       text-align: center;
       background-color: black;
       iframe {
-        border-radius: 0.4rem;
-        width: 280px;
-        height: 470px;
+        border-radius: 0.75rem;
+        width: 155px;
+        border: none;
+        height: 280px;
       }
     }
     &__apple {
       @include tablet;
+      margin: 25px auto;
       border-radius: 1rem;
       padding: 0.5rem 0;
-      width: 280px;
-      height: 500px;
+      width: 140px;
+      height: 300px;
       text-align: center;
       background-color: black;
       iframe {
-        border-radius: 0.4rem;
-        width: 260px;
-        height: 470px;
+        border-radius: 0.75rem;
+        width: 135px;
+        height: 270px;
+        border: none;
       }
     }
   }
 }
 .about {
-  margin-bottom: 100px;
-  &__banner {
-    .banner__title {
-      .profileImg {
-        top: calc(1.5vw + 1.5rem);
-        height: calc(4vw + 4rem);
-        width: calc(3.25vw + 3.25rem);
-      }
-    }
-  }
+  margin-bottom: 50px;
   &__bio {
-    padding: 2rem;
     a {
       text-decoration: underline;
-    }
-    .container {
-      @include darkMode;
-      background-color: var(--darkModeBg);
-      color: var(--darkModeTxtClr);
-      margin-bottom: 50px;
-      border-radius: 1.5rem;
-      border: 2px solid var(--themeBdr);
-    }
-    .profile {
-      @include darkMode;
-      position: relative;
-      background-color: var(--darkModeBg);
-      margin: auto;
-      max-width: 90%;
-      height: 1350px;
-      border-radius: 1.5rem;
-      border: 2px solid var(--themeBdr);
-      margin-top: 100px;
-      margin-bottom: 100px;
-      .seal {
-        @include darkMode;
-        top: 180px;
-        background-color: #ffffff;
-        opacity: 0.9;
-      }
-      .seal1 {
-        position: absolute;
-        left: 5%;
-        width: calc(5.5vw + 5rem);
-        height: calc(5.5vw + 5rem);
-        padding: 0.25rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        img {
-          width: calc(6.25vw + 6.25rem);
-        }
-      }
-      .seal2 {
-        position: absolute;
-        right: 5%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: calc(5.5vw + 5rem);
-        height: calc(5.5vw + 5rem);
-        border-radius: 50%;
-        img {
-          width: 100%;
-        }
-      }
-      .logo-bar__img {
-        position: absolute;
-        top: 675px;
-        left: 50%;
-        width: 100%;
-        transform: translateX(-50%);
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        img {
-          margin: auto;
-          width: 100px;
-        }
-      }
-      .logo-bar2__img {
-        position: absolute;
-        top: 1100px;
-        width: 50%;
-        left: 50%;
-        transform: translateX(-50%);
-        p {
-          width: 100%;
-          text-align: center;
-          left: 50%;
-          font-size: 22px;
-          letter-spacing: 0.2rem;
-          background-color: #ffffff;
-          opacity: 0.9;
-          color: red;
-        }
-        .imgs {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-          img {
-            margin: auto;
-            width: 100px;
-          }
-        }
-      }
-      p {
-        @include shadowSm-inset;
-        width: 80%;
-        padding: 1rem;
-        color: var(--themeTxtClr);
-        letter-spacing: 0.1rem;
-        line-height: 1.5;
-        text-align: center;
-        text-shadow: 0px 0px 2px var(--black);
-        font-weight: 700;
-        border-radius: 1rem;
-        background-color: #ffffff;
-        opacity: 0.9;
-      }
-      .p1 {
-        position: relative;
-        width: 90%;
-        top: 25px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 17px;
-        background-image: url("img/background_2.png");
-        background-size: cover;
-        background-color: #ffffff;
-        opacity: 0.9;
-        span {
-          display: block;
-          text-shadow: 0px 0px 2px var(--black);
-          font-size: 50px;
-          font-family: "audiowide";
-        }
-      }
-      h3 {
-        position: absolute;
-        width: 100%;
-        top: 180px;
-        text-align: center;
-        font-family: "audiowide";
-        font-size: 40px;
-        color: var(--darkModeTxtClr);
-        text-shadow: 0px 0px 3px var(--darkModeBgblk);
-      }
-      .p2 {
-        position: absolute;
-        top: 550px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 22px;
-        span {
-          text-shadow: 0px 0px 2px var(--darkModeBg);
-          color: red;
-        }
-      }
-      .p3 {
-        position: absolute;
-        top: 875px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 22px;
-        background-color: #ffffff;
-        span {
-          font-family: "audiowide";
-          letter-spacing: 0.2rem;
-          color: var(--black);
-        }
-      }
-      .profileImg {
-        @include darkMode;
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        top: 300px;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 50%;
-        width: calc(12vw + 12rem);
-        height: calc(7vw + 7rem);
-        background-image: url("img/background_2.png");
-        background-size: cover;
-        background-color: #ffffff;
-        opacity: 0.9;
-        img {
-          background-image: url("img/profile_img.jpg");
-          border-radius: 50%;
-          width: calc(5vw + 5rem);
-          box-shadow: 0px 0px 9px var(--darkModeTxtClr);
-        }
-      }
-    }
-    .solar {
-      position: relative;
-      max-width: 90%;
-      background-color: var(--darkModeBg);
-      opacity: 0.8;
-      margin: 100px auto;
-      padding: 2rem;
-      &__article {
-        margin: 50px;
-        p {
-          font-size: 20px;
-          margin: 5px auto;
-          text-align: center;
-        }
-      }
-      &__img {
-        @include darkMode;
-        position: relative;
-        display: block;
-        margin: auto;
-        width: 300px;
-        height: 175px;
-        background-image: url("img/tech_img/manny-becerra-NgdhrwAx0J8-unsplash.jpg");
-        background-size: cover;
-        border-radius: 1rem;
-        h3 {
-          position: absolute;
-          width: 100%;
-          padding: 1rem 0;
-          text-align: center;
-          letter-spacing: 0.15rem;
-          font-size: 15px;
-          color: var(--darkModeBg);
-          text-shadow: 0px 0px 5px var(--darkModeTxtClr);
-        }
-      }
-    }
-    .change {
-      display: block;
-      margin: auto;
-      margin-bottom: 100px;
-      width: 90%;
-      padding: 2rem;
-      p {
-        padding: 1rem;
-        letter-spacing: 0.1rem;
-        line-height: 1.5;
-        font-weight: 500;
-      }
-      &__img {
-        margin: auto;
-        img {
-          max-width: 200px;
-          height: 100px;
-        }
-      }
     }
     &__article {
       margin-bottom: 50px;
@@ -540,6 +283,260 @@
         margin: 5px auto;
         text-align: center;
         color: var(--darkModeTxtClr);
+      }
+    }
+    .profile {
+      @include darkMode;
+      position: relative;
+      background-color: var(--darkModeBg);
+      margin: 50px auto;
+      max-width: 95%;
+      height: 900px;
+      border-radius: 1rem;
+      p {
+      }
+      h3 {
+        position: absolute;
+        width: 100%;
+        top: 30px;
+        text-align: center;
+        font-family: "audiowide";
+        font-size: 24px;
+        color: var(--darkModeTxtClr);
+        text-shadow: 0px 0px 3px var(--darkModeBgblk);
+      }
+      .seal {
+        top: 70px;
+        width: calc(4vw + 4rem);
+        height: calc(4vw + 4rem);
+        opacity: 0.9;
+      }
+      .seal1 {
+        position: absolute;
+        left: 12%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        img {
+          width: calc(5.5vw + 5.5rem);
+        }
+      }
+      .seal2 {
+        position: absolute;
+        right: 12%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        img {
+          width: 100%;
+        }
+      }
+      .profileImg {
+        @include darkMode;
+        position: absolute;
+        top: 230px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.7;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+          background-image: url("img/profile_img.jpg");
+          width: calc(6.5vw + 6.5rem);
+          box-shadow: 0px 0px 9px var(--darkModeTxtClr);
+        }
+      }
+      .p2 {
+        position: absolute;
+        top: 175px;
+        width: 300px;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 16px;
+        span {
+          text-shadow: 0px 0px 2px var(--darkModeBg);
+          color: red;
+        }
+      }
+      .logo-bar__img {
+        position: absolute;
+        top: 540px;
+        left: 50%;
+        width: 300px;
+        transform: translateX(-50%);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+        img {
+          margin: auto;
+          width: 60px;
+        }
+      }
+      .p3 {
+        position: absolute;
+        top: 425px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 280px;
+        letter-spacing: 0.1rem;
+        line-height: 1.25;
+        text-align: center;
+        opacity: 0.9;
+        font-size: 14px;
+        span {
+          font-family: "audiowide";
+          font-size: 16px;
+          letter-spacing: 0.1rem;
+          color: var(--black);
+        }
+      }
+      .logo-bar2__img {
+        position: absolute;
+        top: 685px;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        p {
+          width: 200px;
+          margin: auto;
+          padding: 0.25rem;
+          text-align: center;
+          font-size: 14px;
+          letter-spacing: 0.1rem;
+          background-color: #ffffff;
+          border-radius: 1rem;
+          color: red;
+        }
+        .imgs {
+          margin-top: 15px;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+          gap: 10px;
+          img {
+            margin: auto;
+            width: 75px;
+          }
+        }
+      }
+    }
+    .container {
+      @include darkMode;
+      background-color: var(--darkModeBg);
+      color: var(--black);
+      margin-bottom: 25px;
+      border-radius: 1.5rem;
+    }
+    .solar {
+      position: relative;
+      margin: auto;
+      max-width: 95%;
+      background-color: var(--darkModeBg);
+      margin-bottom: 25px;
+      &__article {
+        padding: 25px;
+        p {
+          margin: auto;
+          font-size: 16px;
+          letter-spacing: 0.1rem;
+          line-height: 1.2;
+          font-weight: 400;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+      }
+      &__img {
+        @include darkMode;
+        position: relative;
+        opacity: 0.8;
+        display: block;
+        margin: auto;
+        width: 150px;
+        height: 100px;
+        background-image: url("img/tech_img/manny-becerra-NgdhrwAx0J8-unsplash.jpg");
+        background-size: cover;
+        border-radius: 1rem;
+        h3 {
+          position: absolute;
+          width: 100%;
+          padding: 0.5rem 0;
+          text-align: center;
+          letter-spacing: 0.15rem;
+          font-size: 10px;
+          color: var(--darkModeBg);
+          text-shadow: 0px 0px 5px var(--darkModeTxtClr);
+        }
+      }
+    }
+    .change {
+      margin: auto;
+      margin-bottom: 50px;
+      width: 95%;
+      p {
+        padding: 1rem;
+        text-align: center;
+        letter-spacing: 0.1rem;
+        line-height: 1.1;
+        font-weight: 400;
+      }
+      &__img {
+        position: relative;
+        top: 25px;
+        height: 100px;
+        margin-bottom: 25px;
+        &__2 {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 75px;
+          height: 55px;
+          border-radius: 0.5rem;
+          overflow: hidden;
+          z-index: 1;
+          img {
+            width: 100%;
+          }
+        }
+        &__1 {
+          position: absolute;
+          width: 140px;
+          left: 7px;
+          border-radius: 1rem;
+          overflow: hidden;
+          img {
+            width: 100%;
+          }
+        }
+        &__3 {
+          position: absolute;
+          width: 140px;
+          right: 7px;
+          border-radius: 1rem;
+          overflow: hidden;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      &__img2 {position: relative;
+        &__5 {
+          position: absolute;
+          width: 100px;
+          height: 65px;
+          img {
+            width: 100%;
+          }
+        }
+        &__4 {
+          position: absolute;
+          width: 100px;
+          height: 65px;
+          img {
+            width: 100%;
+          }
+        }
       }
     }
     .growth {

@@ -1,4 +1,6 @@
-html {
+@use "_mixin" as *;
+
+:root {
   --darkModeBg: #e3e3e3;
   --darkModeBgblk: white;
   --darkModeTxtClr: rgb(54, 54, 54);
@@ -14,7 +16,7 @@ html {
     rgb(240, 240, 240)
   );
   --black: black;
-
+  --white: white;
   --themeTxtClr: rgb(54, 54, 54);
   --themeBdr: rgb(0, 0, 0);
   --themeBgOp: rgba(255, 255, 255, 0.4);
@@ -36,8 +38,8 @@ body.transition *:after {
 }
 
 body[data-darkMode="dark"] {
-  --darkModeBg: rgb(100, 100, 100);
-  --darkModeBgblk: rgb(0, 0, 0);
+  --darkModeBg: rgb(165, 165, 165);
+  --darkModeBgblk: rgb(36, 36, 36);
   --darkModeBgOp: rgba(255, 255, 255, 0.6);
   --darkModeTxtClr: white;
   --darkModeClrlgtOp: rgba(54, 54, 54, 0.6);
@@ -85,6 +87,7 @@ body[data-theme="yellow"] {
 
 body {
   font-family: "Montserrat", sans-serif;
+  font-size: 10px;
   background-color: var(--darkModeBgblk);
 }
 
@@ -96,46 +99,18 @@ h4 {
 }
 
 footer {
+  @include darkMode;
   text-align: center;
   width: 95%;
   margin: auto;
   padding: var(--spacer);
   background-color: var(--darkModeBgOp);
-  font-size: small;
+  font-size: 10px;
   letter-spacing: 0.1rem;
-  color: var(--darkModeBg);
-  font-family: "Audiowide", cursive;
-  border: 2px solid var(--themeBdr);
-  border-radius: 1rem;
-  box-shadow: 0px 0px 5px var(--themeBdr);
+  color: var(--black);
+  border-radius: 1.5rem;
   margin-bottom: 20px;
 }
 footer span {
   color: red;
-}
-@mixin shadowSm {
-  box-shadow: -4px -4px 7px #fff, 4px 4px 7px rgba(#000, 0.4);
-}
-@mixin shadowLg {
-  box-shadow: -8px -8px 9px #fff, 8px 8px 9px rgba(#000, 0.4);
-}
-@mixin shadowLg-inset {
-  box-shadow: inset -8px -8px 9px #fff, inset 8px 8px 9px rgba(#000, 0.4);
-}
-@mixin shadowSm-inset {
-  box-shadow: inset -4px -4px 7px #fff, inset 4px 4px 7px rgba(#000, 0.4);
-}
-@mixin darkMode {
-  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6),
-    inset 3px 3px 5px rgba(202, 202, 202, 0.6);
-}
-@mixin tablet {
-  box-shadow: inset -3px -3px 6px rgba(202, 202, 202, 0.6),
-    inset 3px 3px 6px rgba(202, 202, 202, 0.6);
-}
-@mixin tabletBtn-inset {
-  box-shadow: inset -2px -2px 3px #fff, inset 2px 2px 3px rgba(#000, 0.4);
-}
-@mixin tabletBox {
-  box-shadow: -4px -4px 7px rgba(#000, 0.4), 4px 4px 7px rgba(#000, 0.4);
 }

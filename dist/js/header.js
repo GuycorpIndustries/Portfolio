@@ -28,10 +28,10 @@ function topBanner() {
   //sliderDiv.style.alignItems = "center";
   //sliderDiv.style.justifyContent = "center";
   sliderDiv.style.backgroundColor = "var(--darkModeBg)"
-  sliderDiv.style.top = "90px";
-  sliderDiv.style.left = "calc(1.5vw + 1.5rem)";
-  sliderDiv.style.width = "calc(8.5vw + 8.5rem)";
-  sliderDiv.style.height = "calc(5vw + 5rem)";
+  sliderDiv.style.top = "80px";
+  sliderDiv.style.left = "calc(1.5vw + 1rem)";
+  sliderDiv.style.width = "calc(6.5vw + 6.5rem)";
+  sliderDiv.style.height = "calc(4vw + 4rem)";
   sliderDiv.style.fontFamily = "'Audiowide', cursive";
   sliderDiv.style.border = "5px double var(--themeTxtClr)";
   sliderDiv.style.borderRadius = "1rem";
@@ -115,7 +115,7 @@ function topBanner() {
   bannerTop.setAttribute("class", "topBanner");
   bannerTop.style.position = "relative";
   bannerTop.style.height = "25vw";
-  bannerTop.style.minHeight = "250px";
+  bannerTop.style.minHeight = "225px";
   bannerTop.style.clipPath =
     "polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%)";
   bannerTop.style.marginBottom = "-7vw";
@@ -132,7 +132,7 @@ function hwSection() {
 
   title.appendChild(document.createTextNode('"Home Work"'));
   title.style.position = "absolute";
-  title.style.top = "calc(3vw + 3rem)";
+  title.style.top = "calc(2vw + 2rem)";
   title.style.textAlign = "center";
   title.style.width = "100%";
   title.style.color = "var(--themeTxtClr)";
@@ -143,7 +143,7 @@ function hwSection() {
   sectionTitle.appendChild(title);
   sectionTitle.setAttribute("class", "sectionTitle");
   sectionTitle.style.position = "relative";
-  sectionTitle.style.height = "calc(7vw + 7rem)";
+  sectionTitle.style.height = "calc(5.5vw + 5rem)";
   sectionTitle.style.width = "100%";
   sectionTitle.style.backgroundColor = "var(--darkModeBg)";
   sectionTitle.style.boxShadow = "0px 1px 5px var(--themeTxtClr)";
@@ -182,93 +182,24 @@ function prTitle() {
     prSection();
 }
 */
-export function loadTopHeader() {
+function loadTopHeader() {
   document.addEventListener('DOMContentLoaded', () => {
     topBanner();
   })
 }
-export function loadHwHeader() {
+loadTopHeader();
+function loadHwHeader() {
   document.addEventListener('DOMContentLoaded', () => {
     hwSection();
   })
 }
-export function loadPrHeader() {
+loadHwHeader();
+function loadPrHeader() {
   document.addEventListener('DOMContentLoaded', () => {
     prSection();
   })
 }
-
-const navBarCont = document.getElementById("navBarCont");
-const navBarShowBtn = document.getElementById("navBarShowBtn");
-const navBarBtn = document.querySelector(".navBarBtn");
-const navBarArrowL = document.querySelector(".navBarArrowL");
-const navBarArrowR = document.querySelector(".navBarArrowR");
-
-let storeNav = localStorage.getItem("storeNav");
-let navBarShow = false;
-
-const navBarActive = () => {
-  navBarShowBtn.classList.add("activeMenu");
-  navBarShowBtn.classList.remove("nonactiveMenu");
-  navBarShowBtn.setAttribute('title', 'Hide Menu')
-  navBarCont.classList.remove("HideNavBar");
-  navBarCont.classList.add("ShowNavBar");
-  navBarArrowL.classList.remove("arrowHideL");
-  navBarArrowL.classList.add("arrowShowL");
-  navBarArrowR.classList.remove("arrowHideR");
-  navBarArrowR.classList.add("arrowShowR");
-  localStorage.setItem("storeNav", "enabled");
-};
-const navBarInactive = () => {
-  navBarShowBtn.classList.add("nonactiveMenu");//
-  navBarShowBtn.classList.remove("activeMenu");
-  navBarShowBtn.setAttribute('title', 'Show Menu');
-  navBarCont.classList.remove("ShowNavBar");
-  navBarCont.classList.add("HideNavBar");
-  navBarArrowL.classList.remove("arrowShowL");
-  navBarArrowL.classList.add("arrowHideL");
-  navBarArrowR.classList.remove("arrowShowR");
-  navBarArrowR.classList.add("arrowHideR");
-  localStorage.setItem("storeNav", "disabled");
-};
-if (storeNav === "enabled" && !navBarShow) {
-  navBarActive();
-}
-
-// Used When All Pages are open and one closes the menu, the other Pages will close Menu on Refresh
-if (storeNav === "disabled" && navBarShow) {
-  navBarInactive();
-}
-export function enableNavBar() {
-  document.addEventListener("DOMContentLoaded", () => {
-    navBarShowBtn.addEventListener("click", () => {
-      storeNav = localStorage.getItem("storeNav")
-      if (enableNavBar !== "enabled" && !navBarShow) {
-        navBarActive();
-        navBarShow = true;
-      } else {
-        navBarInactive();
-        navBarShow = false;
-      }
-    });
-  });
-}
-
-
-const devBtn = document.querySelector("#devBar-bar");
-let devOpen = false;
-
-export function enableDevBtn() {
-  devBtn.addEventListener("click", () => {
-    if (!devOpen) {
-      devBtn.classList.add("openFrontEnd");
-      devOpen = true;
-    } else {
-      devBtn.classList.remove("openFrontEnd");
-      devOpen = false;
-    }
-  });
-}
+loadPrHeader();
 
 /*
 export {titleSection, topBanner}     USE THIS FOR ALL OTHER EXPORTS

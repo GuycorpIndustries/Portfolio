@@ -8,17 +8,17 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
-  <title>Portfolio Christopher Guy</title>
+  <title>Portfolio Christopher T Guy</title>
   <link rel="shortcut icon" type="image/png" href="img/favicon2.jpg" />
   <link rel="stylesheet" type="text/css" href="main.css" />
-  <script src="js/buttons.js" defer></script>
   <script type="module" src="main.js"></script>
 </head>
 
 <body data-darkMode="light" data-theme="default">
+
   <header id="mainHeader" class="mainHeader">
     <div class="themeToggles">
-      <div class="colorMode modeBtn">
+      <div class="colorMode">
         <button id="colorModeBtn" class="colorModeBtn"></button>
       </div>
       <ul class="colorThemes">
@@ -28,13 +28,34 @@
         <li id="pink" title="SASS Color Theme" class="themeDots pinkDot"></li>
         <li id="yellow" title="JavaScript Color Theme" class="themeDots yellowDot"></li>
       </ul>
-      <div class="darkMode modeBtn">
+      <div class="darkMode">
         <button id="darkModeBtn" class="toggle"></button>
       </div>
       <a class="topBtn" href="#mainHeader">^</a>
     </div>
-    <div class="backgroundImg"></div>
-    <h1 class="nameBanner">Christopher Guy</h1>
+    <div class="navBar-container" id="navBarCont">
+      <nav class="navBarPage" aria-label="pageNav" title="Current Page Chapters">
+        <ul class="navBarPage__list" id="navBar">
+          <li><a href="#mainHeader">Landing</a></li>
+          <li><a href="#dream">Hero</a></li>
+          <li><a href="#featureproject">Skills</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+      <nav class="navBarSite" aria-label="siteNav" title="Web Navigation">
+        <ul class="navBarSite__list">
+          <li><a class="activePage" href="#">Portfolio</a></li>
+          <li><a href="homework.html">Home Work</a></li>
+          <li><a href="theprogram.html">The Program</a></li>
+        </ul>
+      </nav>
+      <div class="navBarBtn">
+        <button id="navBarShowBtn" type="button" title="Show Menu"><span class="navBarArrowL"></span>MENU<span
+            class="navBarArrowR"></span></button>
+      </div>
+    </div>
+    <div class="mainHeader__img"></div>
+    <h1>Christopher T. Guy</h1>
     <div class="devBar">
       <div class="devBar-bar" id="devBar-bar">
         <div class="devBar-bar__btn">Frontend <span>Web</span> Developer</div>
@@ -55,31 +76,11 @@
       </ul>
     </div>
     <p>Photo by Daniel Seßler</p>
-    <div class="navBar-container" id="navBarCont">
-      <nav class="navBarPage" aria-label="pageNav" title="Current Page Chapters">
-        <ul class="navBarPage__list" id="navBar">
-          <li><a href="#mainHeader">Landing Page</a></li>
-          <li><a href="#dream">Your Web</a></li>
-          <li><a href="#featureproject">Projects</a></li>
-          <li><a href="#about">About</a></li>
-        </ul>
-      </nav>
-      <nav class="navBarSite" aria-label="siteNav" title="Web Navigation">
-        <ul class="navBarSite__list">
-          <li><a class="activePage" href="#">Home</a></li>
-          <li><a href="homework.html">Home Work</a></li>
-          <li><a href="theprogram.html">The Program</a></li>
-        </ul>
-      </nav>
-      <div class="navBarBtn">
-        <button id="navBarShowBtn" type="button" title="Show Menu"><span class="navBarArrowL"></span>MENU<span
-            class="navBarArrowR"></span></button>
-      </div>
-    </div>
   </header>
   <article class="landingPage-article article">
-    <h1>Welcome to my <span>"Portfolio"</span> Web Page.</h1>
-    <p></p>
+    <div class="featureHeader">
+      <h1>Welcome to my <span>"Portfolio"</span></h1>
+    </div>
     <div class="imgs">
       <picture class="img1 img">
         <img src="img/tech_img/florian-olivo-4hbJ-eymZ1o-unsplash.jpg" alt="">
@@ -96,7 +97,7 @@
     <section class="dream" id="dream">
       <section class="dream__banner banner">
         <div class="banner__top">
-          <div class="imgDiv banner__top__imgSlider">
+          <div class="imgDiv banner__top__img">
             <picture class="slide">
               <p>“There is nothing like a dream to create the future.”</p>
               <h4>Victor Hugo</h4>
@@ -112,10 +113,10 @@
         </div>
       </section>
       <section class="dream__container">
-        <div class="dream__container__header">
+        <div class="featureHeader">
           <h1>The Vision</h1>
         </div>
-        <div class="dream__container__cardBox wrapper">
+        <div class="dream__container__cardBox">
           <h2>Connecting You</h2>
           <h1>Safely</h1>
           <div class="cardBox">
@@ -132,7 +133,7 @@
             </div>
           </div>
         </div>
-        <div class="dream__container__header">
+        <div class="featureHeader">
           <h1>The Path</h1>
         </div>
         <div class="dream__container__site wrapper">
@@ -140,7 +141,7 @@
             <h1>Custom Web Sites</h1>
           </div>
         </div>
-        <div class="dream__container__header">
+        <div class="featureHeader">
           <h1>The Future</h1>
         </div>
         <div class="dream__container__future wrapper">
@@ -175,33 +176,37 @@
         </div>
       </section>
     </section>
-    <section class="featureProject" id="featureproject">
+    <section class="featureProject" id="featureProject">
       <section class="featureProject__banner banner">
         <div class="banner__top">
-          <div class="imgDiv banner__top__imgSlider">
+          <div class="imgDiv banner__top__img">
             <picture class="slide">
               <p>“My interest is in the future because I am going to spend the rest of my life there.”</p>
               <h4>Anonymous</h4>
             </picture>
           </div>
-          <h1>Frontend Web Development</h1>
+          <h1>Web Development</h1>
         </div>
         <div class="banner__title">
-          <h2>Feature Projects</h2>
+          <h2>Skills</h2>
         </div>
       </section>
-      <div class="featureproject__section">
-        <article class="article">
-          <div class="missionStatement">
-            <h2>"Self-taught"</h2>
-            <p>Get with <span>"The Program"</span></p>
-            <p>Learn To <span>"Code"</span></p>
-          </div>
-        </article>
+      <div class="featureProject__section">
+        <div class="missionStatement">
+          <h2>"Self-taught"</h2>
+          <p>Get with <span>"The Program"</span></p>
+          <p>Learn To <span>"Code"</span></p>
+        </div>
         <div class="mobileDevice">
-          <div class="featureHeader mobileDeviceShowBtn">
-            <h1>Mobile Devices</h1>
+          <div class="featureHeader">
+            <div>
+              <h1>Mobile Devices</h1>
+            </div>
           </div>
+          <div>
+            <h1 class="chapterHeader">Responsive Designs</h1>
+          </div>
+          <h1 class="chapterSubHeader">Tablets</h1>
           <div class="tabletBox">
             <div class="homeWorkLink tablet">
               <div class="tablet__speakers">
@@ -209,39 +214,45 @@
                 <h5>Softcorp Tablet</h5>
                 <div class="speakerR speaker">**************</div>
               </div>
-              <iframe title="My Home Work" id="githibiframe" src="homework.html"></iframe>
+              <iframe title="My Home Work" id="githibiframe" src="index.html"></iframe>
               <br>
               <div class="tablet__controls">
                 <div class="fullScreen"></div>
-                <a href="homework.html" target="_blank" title="My Home Work">Home Work</a>
+                <a href="index.html" target="_blank" title="My Home Work">Home Work</a>
                 <div class="fullScreen"></div>
               </div>
             </div>
           </div>
+          <h1 class="chapterSubHeader">Phones</h1>
           <div class="phones">
             <div class="phone">
               <div class="phone__samsung">
                 <div>
-                  <iframe title="YouTube" src="homework.html"></iframe>
+                  <iframe title="My Home Work" src="homework.html"></iframe>
                 </div>
               </div>
             </div>
             <div class="phone">
               <div class="phone__apple">
                 <div>
-                  <iframe title="YouTube" src="homework.html"></iframe>
+                  <iframe title="The Program" src="theprogram.html"></iframe>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="webPlayers">
-          <div class="featureHeader webPlayerShowBtn">
-            <h1>Web Player</h1>
+          <div class="featureHeader">
+            <h1>Web Media Players</h1>
           </div>
+          <div>
+            <h1 class="chapterHeader">Custom Web Players</h1>
+          </div>
+          <h1 class="chapterSubHeader">Audio Player</h1>
           <div class="player">
             <div class="player__audio"></div>
           </div>
+          <h1 class="chapterSubHeader">Video Player</h1>
           <div class="player">
             <div class="player__video"></div>
           </div>
@@ -251,7 +262,7 @@
     <section class="about" id="about">
       <section class="about__banner banner">
         <div class="banner__top">
-          <div class="imgDiv banner__top__imgSlider">
+          <div class="banner__top__img">
             <picture class="slide">
               <p>“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.”
               </p>
@@ -266,26 +277,24 @@
       </section>
       <div class="about__bio">
         <div class="profile">
-          <p class="p1">
-            <span>Hello</span>my name is
-          </p>
           <h3>Christopher T. Guy</h3>
           <div class="seal1 seal"><img src="img/icon/red_seal-1.svg" alt=""></div>
           <div class="seal2 seal"><img src="img/icon/AIT-logo3-300x200.png" alt=""></div>
-          <p class="p2">
-            I'm a Certified <span>Red Seal</span> Electrician
-          </p>
+
           <div class="logo-bar__img">
             <img src="img/HTML5_logo.svg.png" alt="HTML Logo" width="100px">
             <img src="img/CSS.3b.svg.png" alt="CSS Logo" width="71px">
             <img src="img/Javascript-logo.svg.png" alt="javaScript Logo" width="90px">
           </div>
           <p class="p3">
-            I also started to write <span>"computer
+            I started to write <span>"computer
               code"</span> and learn <span>"frontend web development"</span> at the
             age of 50.
             &#128525
           </p>
+          <div class="p2">
+            I'm a Certified <span>Red Seal</span> Electrician
+          </div>
           <div class="profileImg">
             <img src="img/profile_img.jpg" alt="">
           </div>
@@ -307,43 +316,36 @@
             <h3>"Make hay while the sun shines"</h3>
           </picture>
           <article class="solar__article">
-            <p>So I built things for 30 years.</p>
-            <p>I learned how to Structure, Plan and Build Construction Projects.</p>
+            <p>I worked construction for 30 years.</p>
+            <p>I learned how to Organize, Plan and Build Construction Projects.</p>
             <p>I grew with my Industry.</p>
           </article>
         </div>
         <div class="change container">
-          <p>I knew the world was Changing.</p>
-          <picture class="change__img">
-            <img src="img/tech_img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="">
-          </picture>
-          <picture class="change__img">
-            <img src="img/tech_img/exclusive-OR-function-built.webp" alt="">
-          </picture>
-          <picture class="change__img">
-            <img src="img/tech_img/sai-kiran-anagani-5Ntkpxqt54Y-unsplash.jpg" alt="">
-          </picture>
+          <p>The world was Changing.</p>
           <p>I needed to change with it.</p>
+          <div class="change__img">
+            <picture class=" change__img__1">
+              <img src="img/tech_img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="">
+            </picture>
+            <picture class="change__img__2">
+              <img src="img/tech_img/exclusive-OR-function-built.webp" alt="">
+            </picture>
+            <picture class="change__img__3">
+              <img src="img/tech_img/sai-kiran-anagani-5Ntkpxqt54Y-unsplash.jpg" alt="">
+            </picture>
+          </div>
           <p>HOW?</p>
-          <picture class="change__img">
-            <img src="img/tech_img/jerry-wang-jfnUC7s3iuw-unsplash.jpg" alt="">
-          </picture>
-          <picture class="change__img">
-            <img src="img/tech_img/69bfd52bbd063c93940798932ca470d7.jpg" alt="">
-          </picture>
+          <div class="change__img2">
+            <picture class="change__img2__5">
+              <img src="img/tech_img/jerry-wang-jfnUC7s3iuw-unsplash.jpg" alt="">
+            </picture>
+            <picture class="change__img2__4">
+              <img src="img/tech_img/69bfd52bbd063c93940798932ca470d7.jpg" alt="">
+            </picture>
+          </div>
         </div>
-        <article class="about__bio__article">
-          <p>
-            When I heard someone say "Computer Programming", </p>
-          <p> I heard
-            gobbledygook <a href="https://en.wikipedia.org/wiki/Gibberish" target="_blank">Gibberish</a>
-            , </p>
-          <p> Computer Programming was a bunch of symbols, letters and numbers
-            which mean absolutely nothing to me. </p>
-          <p> I had some training and experience in logic circuits as an Electrician but nothing
-            indepth, just basic theory with a little Electronics in the mix.
-          </p>
-        </article>
+
         <div class="growth container">
           <div class="p1">
             <h3> "Get with the Program"</h3>
@@ -465,7 +467,7 @@
       </div>
     </section>
   </main>
-  <footer>Copyright &copy; 2021, Christopher T. Guy <span>O/A</span> Softcorp Industries</footer>
+  <footer>Christopher T. Guy <span>O/A</span> Softcorp Industries</footer>
 </body>
 
 </html>

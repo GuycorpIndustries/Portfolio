@@ -10,17 +10,17 @@
         href="https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-    <title>Home Work</title>
-    <link rel="shortcut icon" type="image/png" href="img/favicon2.jpg" />
     <link rel="stylesheet" type="text/css" href="main.css" />
-    <script type="module" src="main.js" defer></script>
+    <link rel="shortcut icon" type="image/png" href="img/favicon2.jpg" />
+    <title>Home Work</title>
     <script src="js/buttons.js" defer></script>
     <script src="js/audioPlayer.js" defer></script>
+    <script type="module" src="main.js" defer></script>
 </head>
 
 <body data-darkMode="light" data-theme="default">
+    
     <header>
-        <span class="page-header hwHeader" id="hwPage"></span>
         <div class="themeToggles">
             <div class="colorMode modeBtn">
                 <button id="colorModeBtn" class="colorModeBtn"></button>
@@ -59,9 +59,21 @@
                         class="navBarArrowR"></span></button>
             </div>
         </div>
+        <section class="banner">
+            <div class="banner__top">
+                <h1>
+                    Christopher T. Guy
+                </h1>
+            </div>
+            <div class="banner__title">
+                <h2>Home Work</h2>
+            </div>
+        </section>
     </header>
+    <div class="featureHeader">
+        <h1 class="homeWork-h1" id="homeWork">Welcome to my <span>"Home Work"</span> page</h1>
+    </div>
     <article class="homeWork-article article">
-        <h1 class="homeWork-h1" id="homeWork">Hello, Welcome to my <span>"Home Work"</span> page</h1>
         <p class="homeWork-article__para"></p>
         <div class="imgs">
             <picture class="img1 img">
@@ -79,7 +91,7 @@
     <main>
         <section class="HWprojects">
             <section class="imgProject" id="imgProject">
-                <section class="imgProject__banner banner">
+                <section class=" banner">
                     <div class="banner__top">
                         <div class="logo-bar__img">
                             <img src="img/HTML5_logo.svg.png" alt="HTML Logo" width="100px">
@@ -93,29 +105,15 @@
                         <h2>Images</h2>
                     </div>
                 </section>
+                <div class="sectionHeader" id="sectionButtons">
+                    <h1>Image Projects</h1>
+                </div>
                 <section class="imgProject__container">
-                    <div class="sectionHeader" id="sectionButtons">
-                        <h1>Image Projects</h1>
-                    </div>
-                    <div class="section-buttons">
-                        <button class="projectBtn" id="showCarousel"><a href="#sectionButtons">Image
-                                Carousel</a></button>
-                        <button class="projectBtn" id="showSlider"><a href="#sectionButtons">Image Slider</a></button>
-                        <button class="projectBtn" id="showGallery"><a href="#sectionButtons">Image Gallery</a></button>
-                        <button class="projectBtn" id="showProduct"><a href="#sectionButtons">Product
-                                Gallery</a></button>
-                        <button class="projectBtn" id="showTimeAnimation"><a href="#sectionButtons">Time
-                                Animation</a></button>
-                        <button class="projectBtn" id="showAudioPlayer"><a href="#sectionButtons">Audio
-                                Player</a></button>
-                        <button class="projectBtn" id="showVideoPlayer"><a href="#sectionButtons">Video
-                                Player</a></button>
-                        <button class="projectBtn" id="showPdfViewer"><a href="#sectionButtons">PDF Viewer</a></button>
-                    </div>
                     <section class="imgCarrouselShow pContainer">
                         <div class="imgCarrousel wrapper">
                             <div class="sectionHeader">
                                 <h2>Image Carousel</h2>
+                                <button class="displayBtn">Display Project</button>
                             </div>
                             <div class="imgCarrousel-content">
                                 <div class="content__carrousel imgAnimation">
@@ -178,6 +176,7 @@
                         <div class="imgSlider wrapper">
                             <div class="sectionHeader">
                                 <h2>Image Slider</h2>
+                                <button class="displayBtn">Display Project</button>
                             </div>
                             <div class="projectBox">
                                 <div class="imgContainer">
@@ -258,8 +257,9 @@
                         <div class="imgGallery wrapper">
                             <div class="sectionHeader">
                                 <h2>Image Gallery</h2>
+                                <button class="displayBtn">Display Project</button>
                             </div>
-                            <div class="shadowBox">
+                            <div>
                                 <div class="projectBox">
                                     <div class="galleryContainer">
                                         <div class="featureImg">
@@ -276,7 +276,8 @@
                                                 alt="" />
                                             <img src="img/blueprints/download-500px.jpg" alt="" />
                                             <img src="img/blueprints/Barnett_Concept_P1-500px.jpg" alt="" />
-                                            <img src="img/blueprints/Improvement-5-Sample-Sewer-Plan-500px.jpg" alt="" />
+                                            <img src="img/blueprints/Improvement-5-Sample-Sewer-Plan-500px.jpg"
+                                                alt="" />
                                         </div>
                                     </div>
                                 </div>
@@ -287,8 +288,9 @@
                         <div class="imgProductGallery wrapper">
                             <div class="sectionHeader">
                                 <h2>Product Gallery</h2>
+                                <button class="displayBtn">Display Project</button>
                             </div>
-                            <div class="shadowBox">
+                            <div>
                                 <div class="projectBox">
                                     <div class="productSlider">
                                         <div class="productFeatureImg">
@@ -330,11 +332,87 @@
                 </section>
                 <h1 class="pHeader">On Hover</h1>
                 <section class="animationProject__cont-1 pContainer">
+                    <section class="animationProject__cont-1__wrapper1 wrapper">
+                        <p>Inspired by Kyle at Web Dev Simplified</p>
+                        <button class="displayBtn">Display Project</button>
+                        <div class="projectBox">
+                            <div class="animationProject__cont-1__wrapper1__container1">
+                                <div>
+                                    <div
+                                        class="animationProject__cont-1__wrapper1__container1__item1 animationProject__cont-1__wrapper1__container1__item">
+                                        <div class="hoverBox"></div>
+                                    </div>
+                                    <h3>Transform</h3>
+                                </div>
+                                <div>
+                                    <div
+                                        class="animationProject__cont-1__wrapper1__container1__item2 animationProject__cont-1__wrapper1__container1__item">
+                                        <div class="hoverBox"></div>
+                                    </div>
+                                    <h3>Transition</h3>
+                                </div>
+                                <div>
+                                    <div
+                                        class="animationProject__cont-1__wrapper1__container1__item3 animationProject__cont-1__wrapper1__container1__item">
+                                        <div class="hoverBox"></div>
+                                    </div>
+                                    <h3>Animation</h3>
+                                </div>
+                            </div>
+                            <div class="tributeBox">
+                                <picture class="tributeBox__video">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YszONjKpgg4"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </picture>
+                                <div class="tributeBox__bio">
+                                    <h3 class="tributeBox__header">Web Dev Simplified</h3>
+                                    <div class="trubteBox__bio__text">
+                                        <p>para</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="animationProject__cont-1__wrapper2 wrapper">
+                        <p>Inspired by the Net Ninja</p>
+                        <button class="displayBtn">Display Project</button>
+                        <div class="projectBox">
+                            <div class="animationProject__cont-1__wrapper2__container2">
+                                <div class="animationProject__cont-1__wrapper2__container2__item1">
+                                    <div class="ninjaBox">
+                                        <div class="ninjaBox__header">
+                                            <div class="screw">I</div>
+                                            <h3>Guycorp Industries</h3>
+                                            <div class="screw">I</div>
+                                        </div>
+                                        <h4>When Quality</h4>
+                                        <p>Counts</p>
+                                    </div>
+                                </div>
+                                <h3>Multiple @keyframes</h3>
+                            </div>
+                            <div class="tributeBox">
+                                <picture class="tributeBox__video">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/B0_M1y4aFAQ"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </picture>
+                                <div class="tributeBox__bio">
+                                    <h3 class="tributeBox__header">The Net Ninja</h3>
+                                    <div class="trubteBox__bio__text">
+                                        <p>para</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                     <section class="animationProject__cont-1__wrapper3 wrapper">
                         <p>Inspired by Dev-Tips</p>
-                        <div class="shadowBox">
-                            <div class="dropDown">
-                                <ul>
+                        <button class="displayBtn">Display Project</button>
+                        <div class="projectBox">
+                            <div>
+                                <ul class="dropDown">
                                     <li>Demo 1
                                         <!-- hover trigger -->
                                         <ul class="drop-menu menu-1">
@@ -388,123 +466,54 @@
                             </div>
                         </div>
                     </section>
-                    <section class="animationProject__cont-1__wrapper1 wrapper">
-                        <p>Inspired by Kyle at Web Dev Simplified</p>
-                        <div class="shadowBox">
-                            <div class="animationProject__cont-1__wrapper1__container1">
-                                <div>
-                                    <div
-                                        class="animationProject__cont-1__wrapper1__container1__item1 animationProject__cont-1__wrapper1__container1__item">
-                                        <div class="hoverBox"></div>
-                                    </div>
-                                    <h3>Transform</h3>
-                                </div>
-                                <div>
-                                    <div
-                                        class="animationProject__cont-1__wrapper1__container1__item2 animationProject__cont-1__wrapper1__container1__item">
-                                        <div class="hoverBox"></div>
-                                    </div>
-                                    <h3>Transition</h3>
-                                </div>
-                                <div>
-                                    <div
-                                        class="animationProject__cont-1__wrapper1__container1__item3 animationProject__cont-1__wrapper1__container1__item">
-                                        <div class="hoverBox"></div>
-                                    </div>
-                                    <h3>Animation</h3>
-                                </div>
-                            </div>
-                            <div class="tributeBox">
-                                <picture class="tributeBox__video">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YszONjKpgg4"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
-                                </picture>
-                                <div class="tributeBox__bio">
-                                    <h3 class="tributeBox__header">Web Dev Simplified</h3>
-                                    <div class="trubteBox__bio__text">
-                                        <p>para</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="animationProject__cont-1__wrapper2 wrapper">
-                        <p>Inspired by the Net Ninja</p>
-                        <div class="shadowBox">
-                            <div class="animationProject__cont-1__wrapper2__container2">
-                                <div class="animationProject__cont-1__wrapper2__container2__item1">
-                                    <div class="ninjaBox">
-                                        <div class="ninjaBox__header">
-                                            <div class="screw">I</div>
-                                            <h3>Guycorp Industries</h3>
-                                            <div class="screw">I</div>
-                                        </div>
-                                        <h4>When Quality</h4>
-                                        <p>Counts</p>
-                                    </div>
-                                </div>
-                                <h3>Multiple @keyframes</h3>
-                            </div>
-                            <div class="tributeBox">
-                                <picture class="tributeBox__video">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/B0_M1y4aFAQ"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
-                                </picture>
-                                <div class="tributeBox__bio">
-                                    <h3 class="tributeBox__header">The Net Ninja</h3>
-                                    <div class="trubteBox__bio__text">
-                                        <p>para</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
                 </section>
                 <h1 class="pHeader">Canvas</h1>
                 <section class="animationProject__cont-2 pContainer">
-                    <div class="aniMusic__lyric">
-                        <p class="lyric-line1">"<span>Time</span> keeps on</p>
-                        <p class="lyric-line2">slippin,</p>
-                        <p class="lyric-line3">slippin,</p>
-                        <p class="lyric-line4">slippin,</p>
-                        <p class="lyric-line5">into</p>
-                        <p class="lyric-line6">the <span>Future</span>"</p>
-                        <h5>"Fly like an eagle - Steve Miller Band"</h5>
-                    </div>
-                    <div class="aniMusic__time">
-                        <div class="digitalClockV1">
-                            <span class="digitalClockV1__time"></span>
-                            <span class="digitalClockV1__ampm"></span>
-                        </div>
-                        <div class="analogClock__face">
-                            <div class="hand hour-hand" data-hour-hand></div>
-                            <div class="hand minute-hand" data-minute-hand></div>
-                            <div class="hand second-hand" data-second-hand></div>
-                            <div class="number number1">I</div>
-                            <div class="number number2">I</div>
-                            <div class="number number3">|</div>
-                            <div class="number number4">I</div>
-                            <div class="number number5">I</div>
-                            <div class="number number6">|</div>
-                            <div class="number number7">I</div>
-                            <div class="number number8">I</div>
-                            <div class="number number9">|</div>
-                            <div class="number number10">I</div>
-                            <div class="number number11">I</div>
-                            <div class="number number12">|</div>
-                        </div>
-                        <div class="weekday">
-                            <div id="day"></div>
-                            <div id="month"></div>
-                            <div id="date"></div>
-                            <div id="year"></div>
+                    <div class="wrapper">
+                        <button class="displayBtn">Display Project</button>
+                        <div class="projectBox">
+                            <div class="aniMusic__lyric">
+                                <p class="lyric-line1">"<span>Time</span> keeps on</p>
+                                <p class="lyric-line2">slippin,</p>
+                                <p class="lyric-line3">slippin,</p>
+                                <p class="lyric-line4">slippin,</p>
+                                <p class="lyric-line5">into</p>
+                                <p class="lyric-line6">the <span>Future</span>"</p>
+                                <h5>"Fly like an eagle - Steve Miller Band"</h5>
+                            </div>
+                            <div class="aniMusic__time">
+                                <div class="digitalClockV1">
+                                    <span class="digitalClockV1__time"></span>
+                                    <span class="digitalClockV1__ampm"></span>
+                                </div>
+                                <div class="analogClock__face">
+                                    <div class="hand hour-hand" data-hour-hand></div>
+                                    <div class="hand minute-hand" data-minute-hand></div>
+                                    <div class="hand second-hand" data-second-hand></div>
+                                    <div class="number number1">I</div>
+                                    <div class="number number2">I</div>
+                                    <div class="number number3">|</div>
+                                    <div class="number number4">I</div>
+                                    <div class="number number5">I</div>
+                                    <div class="number number6">|</div>
+                                    <div class="number number7">I</div>
+                                    <div class="number number8">I</div>
+                                    <div class="number number9">|</div>
+                                    <div class="number number10">I</div>
+                                    <div class="number number11">I</div>
+                                    <div class="number number12">|</div>
+                                </div>
+                                <div class="weekday">
+                                    <div id="day"></div>
+                                    <div id="month"></div>
+                                    <div id="date"></div>
+                                    <div id="year"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
-            </section>
-            <br>
+            </section>         
             <section class="buttonProject" id="buttonProject">
                 <section class="buttonProject__banner banner">
                     <div class="banner__top">
@@ -524,18 +533,19 @@
                 <section class="buttonProject__Cont-2 pContainer">
                     <section class="buttonProject__Cont-2__wrapper1 wrapper" id="toggleBtns">
                         <h4>Softcorp Industries</h4>
-                        <div class="shadowBox">
+                        <button class="displayBtn">Display Project</button>
+                        <div class="projectBox">
                             <div class="toggleBtns">
                                 <div class="toggle-container">
                                     <h4 class="toggle1h4">Button Toggle 1</h4>
                                     <div class="btn-container">
                                         <button id="toggle1" class="toggle toggle1" type="button"></button>
-                                        </div>
+                                    </div>
                                 </div>
                                 <div class="toggle-container">
                                     <h4 class="toggle2h4">Button Toggle 2</h4>
                                     <div class="btn-container">
-                                        <button id="toggle2"  class="toggle2 toggle " type="button"></button>
+                                        <button id="toggle2" class="toggle2 toggle " type="button"></button>
                                     </div>
                                 </div>
                                 <div class="toggle-container">
@@ -549,7 +559,8 @@
                     </section>
                     <section class="buttonProject__Cont-2__wrapper2 wrapper">
                         <h4>Design Course</h4>
-                        <div class="shadowBox">
+                        <button class="displayBtn">Display Project</button>
+                        <div class="projectBox">
                             <div id="toggleInputs" class="toggleBtns toggleInputs">
                                 <div class="toggle3 toggle-container">
                                     <h4>Checkbox Toggle 1</h4>
@@ -565,17 +576,18 @@
                 <section class="buttonProject__Cont-3 pContainer">
                     <section class="buttonProject__Cont-3__wrapper1 wrapper">
                         <h4>Softcorp Industries</h4>
-                        <div class="shadowBox">
+                        <button class="displayBtn">Display Project</button>
+                        <div>
                             <div class="projectBox">
                                 <section class="card-container" id="Plain_Burger">
-                                        <div class="menuCard">
-                                            <h1>Plain Burger</h1>
-                                            <div class="btn" id="menu1-btn" onclick="menuClick()">
-                                                <div class="line lineTop"></div>
-                                                <div class="line lineCenter"></div>
-                                                <div class="line lineBottom"></div>
-                                            </div>
+                                    <div class="menuCard">
+                                        <h1>Plain Burger</h1>
+                                        <div class="btn" id="menu1-btn" onclick="menuClick()">
+                                            <div class="line lineTop"></div>
+                                            <div class="line lineCenter"></div>
+                                            <div class="line lineBottom"></div>
                                         </div>
+                                    </div>
                                 </section>
                                 <section class="card-container" id="Cheese_Burger">
                                     <div>
@@ -627,7 +639,9 @@
                         </div>
                     </section>
                     <section class="buttonProject__Cont-3__wrapper2 wrapper">
-                        <div class="shadowBox">
+                        <h4>Softcorp Industries</h4>
+                        <button class="displayBtn">Display Project</button>
+                        <div>
                             <div class="projectBox">
                                 <section class="navBar2">
                                     <div class="navBar2-menu">
@@ -638,10 +652,10 @@
                                             <a class="" href="#mainHeader">Home</a>
                                         </li>
                                         <li class="navBar2-list__about listItem">
-                                            <a href="#about">About</a>
+                                            <a href="homework.html" target="_blank">About</a>
                                         </li>
                                         <li class="navBar2-list__projects listItem">
-                                            <a href="#projects">Projects</a>
+                                            <a href="theprogram.html" target="_blank">Projects</a>
                                         </li>
                                     </ul>
                                 </section>
@@ -651,218 +665,221 @@
                 </section>
                 <h1 class="pHeader">"Click Event Buttons"</h1>
                 <section class="buttonProject__Cont-1 pContainer" id="btn">
-                    <h2>Attribute</h2>
                     <section class="buttonProject__Cont-1__wrapper2 wrapper">
+                        <h4>Softcorp Industries</h4>
+                        <button class="displayBtn">Display Project</button>
                         <div class="btns">
-                            <div class="motto">
-                                <p>One <span
-                                        style="color: green; font-weight: 600; letter-spacing: .1rem;">Attribute</span>
-                                    to Rule them
-                                    All
-                                </p>
-                                <div>&lt button
-                                    <span style="font-weight: 600; letter-spacing: .1rem;"><span
-                                            style="color:green">class
-                                        </span><span>=</span><span style="color: orange;"> "btn"</span></span>
-                                    &gt
-                                </div>
-                            </div>
-                            <div class="btnReg">
-                                <h2>Regular Buttons</h2>
-                                <div class="btnDiv ">
-                                    <div class="messageBox">
-                                        <div class="activeButton">
-                                            <h4>btn 100</h4>
-                                            <ul>
-                                                <li>btn</li>
-                                            </ul>
-                                        </div>
-                                        <div class="activeButton">
-                                            <h4>btn 105</h4>
-                                            <ul>
-                                                <li>btn</li>
-                                                <li>btn-active</li>
-                                            </ul>
-                                        </div>
-                                        <div class="activeButton">
-                                            <h4>btn 110</h4>
-                                            <ul>
-                                                <li>btn</li>
-                                                <li>btn-caution</li>
-                                            </ul>
-                                        </div>
-                                        <div class="activeButton">
-                                            <h4>btn 115</h4>
-                                            <ul>
-                                                <li>btn</li>
-                                                <li>btn-danger</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="reg-btn btn-cont">
-                                        <div class="btn-box">
-                                            <button class="btn">Click Me!</button>
-                                        </div>
-                                        <div class="btn-box">
-                                            <button class="btn btn-active">Click Me!</button>
-                                        </div>
-                                        <div class="btn-box">
-                                            <button class="btn btn-caution">Click Me!</button>
-                                        </div>
-                                        <div class="btn-box">
-                                            <button class="btn btn-danger">Click Me!</button>
-                                        </div>
+                            <button class="oneBtn">
+                                <div class="motto">
+                                    <p>One <span>Class</span>
+                                        to rule them
+                                        All
+                                    </p>
+                                    <div>&lt button
+                                        <span>class </span><span>=</span><span> "btn"</span></span>
+                                        &gt
                                     </div>
                                 </div>
-                                <h2>Rounded Corners</h2>
-                                <div class="btnDiv">
-                                    <div class="messageBox">
-                                        <div class="activeButton">
-                                            <h4>btn 200</h4>
-                                            <ul>
-                                                <li>btn</li>
-                                                <li>btn-rndCorner</li>
-                                            </ul>
+                            </button>
+                            <div class="projectBox">
+                                <div class="btnReg">
+                                    <h2>Regular Buttons</h2>
+                                    <div class="btnDiv ">
+                                        <div class="messageBox">
+                                            <div class="activeButton">
+                                                <h4>btn 100</h4>
+                                                <ul>
+                                                    <li>btn</li>
+                                                </ul>
+                                            </div>
+                                            <div class="activeButton">
+                                                <h4>btn 105</h4>
+                                                <ul>
+                                                    <li>btn</li>
+                                                    <li>btn-active</li>
+                                                </ul>
+                                            </div>
+                                            <div class="activeButton">
+                                                <h4>btn 110</h4>
+                                                <ul>
+                                                    <li>btn</li>
+                                                    <li>btn-caution</li>
+                                                </ul>
+                                            </div>
+                                            <div class="activeButton">
+                                                <h4>btn 115</h4>
+                                                <ul>
+                                                    <li>btn</li>
+                                                    <li>btn-danger</li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div class="activeButton">
-                                            <h4>btn 205</h4>
-                                            <ul>
-                                                <li>btn</li>
-                                                <li>btn-rndCorner</li>
-                                                <li>btn-active</li>
-                                            </ul>
-                                        </div>
-                                        <div class="activeButton">
-                                            <h4>btn 210</h4>
-                                            <ul>
-                                                <li>btn</li>
-                                                <li>btn-rndCorner</li>
-                                                <li>btn-caution</li>
-                                            </ul>
-                                        </div>
-                                        <div class="activeButton">
-                                            <h4>btn 215</h4>
-                                            <ul>
-                                                <li>btn</li>
-                                                <li>btn-rndCorner</li>
-                                                <li>btn-danger</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="rndCorner-btn btn-cont">
-                                        <div class="btn-box">
-                                            <button class="btn btn-rndCorner btn-reg ">Click Me!</button>
-                                        </div>
-                                        <div class="btn-box">
-                                            <button class="btn  btn-reg btn-active btn-rndCorner">Click Me!</button>
-                                        </div>
-                                        <div class="btn-box">
-                                            <button class="btn  btn-reg btn-caution btn-rndCorner">Click Me!</button>
-                                        </div>
-                                        <div class="btn-box">
-                                            <button class="btn  btn-reg btn-danger btn-rndCorner">Click Me!</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h2>Round Buttons Small</h2>
-                                <div class="btnDiv">
-                                    <div class="messageBox">
-                                        <div class="activeButton">
-                                            <h4>btn 300</h4>
-                                            <ul>
-                                                <li>btn</li>
-                                                <li>btn-smRnd</li>
-                                            </ul>
-                                        </div>
-                                        <div class="activeButton">
-                                            <h4>btn 305</h4>
-                                            <ul>
-                                                <li>btn</li>
-                                                <li>btn-smRnd</li>
-                                                <li>btn-active</li>
-                                            </ul>
-                                        </div>
-                                        <div class="activeButton">
-                                            <h4>btn 310</h4>
-                                            <ul>
-                                                <li>btn</li>
-                                                <li>btn-smRnd</li>
-                                                <li>btn-caution</li>
-                                            </ul>
-                                        </div>
-                                        <div class="activeButton">
-                                            <h4>btn 315</h4>
-                                            <ul>
-                                                <li>btn</li>
-                                                <li>btn-smRnd</li>
-                                                <li>btn-danger</li>
-                                            </ul>
+                                        <div class="reg-btn btn-cont">
+                                            <div class="btn-box">
+                                                <button class="btn">Click Me!</button>
+                                            </div>
+                                            <div class="btn-box">
+                                                <button class="btn btn-active">Click Me!</button>
+                                            </div>
+                                            <div class="btn-box">
+                                                <button class="btn btn-caution">Click Me!</button>
+                                            </div>
+                                            <div class="btn-box">
+                                                <button class="btn btn-danger">Click Me!</button>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="Rnd-btn btn-cont">
-                                        <div class="btn-box">
-                                            <button class="btn btn-smRnd"></button>
+                                    <h2>Rounded Corners</h2>
+                                    <div class="btnDiv">
+                                        <div class="messageBox">
+                                            <div class="activeButton">
+                                                <h4>btn 200</h4>
+                                                <ul>
+                                                    <li>btn</li>
+                                                    <li>btn-rndCorner</li>
+                                                </ul>
+                                            </div>
+                                            <div class="activeButton">
+                                                <h4>btn 205</h4>
+                                                <ul>
+                                                    <li>btn</li>
+                                                    <li>btn-rndCorner</li>
+                                                    <li>btn-active</li>
+                                                </ul>
+                                            </div>
+                                            <div class="activeButton">
+                                                <h4>btn 210</h4>
+                                                <ul>
+                                                    <li>btn</li>
+                                                    <li>btn-rndCorner</li>
+                                                    <li>btn-caution</li>
+                                                </ul>
+                                            </div>
+                                            <div class="activeButton">
+                                                <h4>btn 215</h4>
+                                                <ul>
+                                                    <li>btn</li>
+                                                    <li>btn-rndCorner</li>
+                                                    <li>btn-danger</li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div class="btn-box">
-                                            <button class="btn btn-active btn-smRnd"></button>
+                                        <div class="rndCorner-btn btn-cont">
+                                            <div class="btn-box">
+                                                <button class="btn btn-rndCorner btn-reg ">Click Me!</button>
+                                            </div>
+                                            <div class="btn-box">
+                                                <button class="btn  btn-reg btn-active btn-rndCorner">Click Me!</button>
+                                            </div>
+                                            <div class="btn-box">
+                                                <button class="btn  btn-reg btn-caution btn-rndCorner">Click
+                                                    Me!</button>
+                                            </div>
+                                            <div class="btn-box">
+                                                <button class="btn  btn-reg btn-danger btn-rndCorner">Click Me!</button>
+                                            </div>
                                         </div>
-                                        <div class="btn-box">
+                                    </div>
+                                    <h2>Round Buttons Small</h2>
+                                    <div class="btnDiv">
+                                        <div class="messageBox">
+                                            <div class="activeButton">
+                                                <h4>btn 300</h4>
+                                                <ul>
+                                                    <li>btn</li>
+                                                    <li>btn-smRnd</li>
+                                                </ul>
+                                            </div>
+                                            <div class="activeButton">
+                                                <h4>btn 305</h4>
+                                                <ul>
+                                                    <li>btn</li>
+                                                    <li>btn-smRnd</li>
+                                                    <li>btn-active</li>
+                                                </ul>
+                                            </div>
+                                            <div class="activeButton">
+                                                <h4>btn 310</h4>
+                                                <ul>
+                                                    <li>btn</li>
+                                                    <li>btn-smRnd</li>
+                                                    <li>btn-caution</li>
+                                                </ul>
+                                            </div>
+                                            <div class="activeButton">
+                                                <h4>btn 315</h4>
+                                                <ul>
+                                                    <li>btn</li>
+                                                    <li>btn-smRnd</li>
+                                                    <li>btn-danger</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="Rnd-btn btn-cont">
+                                            <div class="btn-box">
+                                                <button class="btn btn-smRnd"></button>
+                                            </div>
+                                            <div class="btn-box">
+                                                <button class="btn btn-active btn-smRnd"></button>
+                                            </div>
+                                            <div class="btn-box">
 
-                                            <button class="btn btn-caution btn-smRnd "></button>
-                                        </div>
-                                        <div class="btn-box">
+                                                <button class="btn btn-caution btn-smRnd "></button>
+                                            </div>
+                                            <div class="btn-box">
 
-                                            <button class="btn btn-danger btn-smRnd"></button>
+                                                <button class="btn btn-danger btn-smRnd"></button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <h2>Round Buttons Large</h2>
-                                <div class="btnDiv">
-                                    <div class="messageBox">
-                                        <div class="activeButton">
-                                            <h4>btn 400</h4>
-                                            <ul>
-                                                <li>btn</li>
-                                                <li>btn-lgRnd</li>
-                                            </ul>
+                                    <h2>Round Buttons Large</h2>
+                                    <div class="btnDiv">
+                                        <div class="messageBox">
+                                            <div class="activeButton">
+                                                <h4>btn 400</h4>
+                                                <ul>
+                                                    <li>btn</li>
+                                                    <li>btn-lgRnd</li>
+                                                </ul>
+                                            </div>
+                                            <div class="activeButton">
+                                                <h4>btn 405</h4>
+                                                <ul>
+                                                    <li>btn</li>
+                                                    <li>btn-lgRnd</li>
+                                                    <li>btn-active</li>
+                                                </ul>
+                                            </div>
+                                            <div class="activeButton">
+                                                <h4>btn 410</h4>
+                                                <ul>
+                                                    <li>btn</li>
+                                                    <li>btn-smRnd</li>
+                                                    <li>btn-caution</li>
+                                                </ul>
+                                            </div>
+                                            <div class="activeButton">
+                                                <h4>btn 415</h4>
+                                                <ul>
+                                                    <li>btn</li>
+                                                    <li>btn-lgRnd</li>
+                                                    <li>btn-danger</li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div class="activeButton">
-                                            <h4>btn 405</h4>
-                                            <ul>
-                                                <li>btn</li>
-                                                <li>btn-lgRnd</li>
-                                                <li>btn-active</li>
-                                            </ul>
-                                        </div>
-                                        <div class="activeButton">
-                                            <h4>btn 410</h4>
-                                            <ul>
-                                                <li>btn</li>
-                                                <li>btn-smRnd</li>
-                                                <li>btn-caution</li>
-                                            </ul>
-                                        </div>
-                                        <div class="activeButton">
-                                            <h4>btn 415</h4>
-                                            <ul>
-                                                <li>btn</li>
-                                                <li>btn-lgRnd</li>
-                                                <li>btn-danger</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="Rnd-btn btn-cont">
-                                        <div class="btn-box">
-                                            <button class="btn btn-lgRnd"></button>
-                                        </div>
-                                        <div class="btn-box">
-                                            <button class="btn btn-active btn-lgRnd"></button>
-                                        </div>
-                                        <div class="btn-box">
-                                            <button class="btn btn-caution btn-lgRnd "></button>
-                                        </div>
-                                        <div class="btn-box">
-                                            <button class="btn btn-danger btn-lgRnd"></button>
+                                        <div class="Rnd-btn btn-cont">
+                                            <div class="btn-box">
+                                                <button class="btn btn-lgRnd"></button>
+                                            </div>
+                                            <div class="btn-box">
+                                                <button class="btn btn-active btn-lgRnd"></button>
+                                            </div>
+                                            <div class="btn-box">
+                                                <button class="btn btn-caution btn-lgRnd "></button>
+                                            </div>
+                                            <div class="btn-box">
+                                                <button class="btn btn-danger btn-lgRnd"></button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -872,7 +889,6 @@
                     </section>
                 </section>
             </section>
-            <br>
             <section class="localStorageProject" id="localStorageProject">
                 <section class="localStorageProject__banner banner">
                     <div class="banner__top">
@@ -885,7 +901,7 @@
                         <h1>Home Work Projects</h1>
                     </div>
                     <div class="banner__title">
-                        <h2>Local Storage</h2>
+                        <h2>Storage</h2>
                     </div>
                 </section>
                 <h1 class="pHeader">Todo Lists</h1>
@@ -894,7 +910,8 @@
                         <p>Inspired by Kyle at Web Dev Simplified</p>
                         <p>&</p>
                         <p>Inspired by Kevin Powell</p>
-                        <div class="shadowBox">
+                        <button class="displayBtn">Display Project</button>
+                        <div class="projectBox">
                             <div class="localStorageProject__cont-1__wrapper1__container1 container">
                                 <h1 class="title">Stuff I need to do</h1>
                                 <div class="all-tasks">
@@ -967,7 +984,6 @@
 
                 </section>
             </section>
-            <br>
             <section class="webPlayerProject" id="webPlayerProject">
                 <section class="webPlayerProject__banner banner">
                     <section class="banner__top">
@@ -988,7 +1004,8 @@
                     <div class="webPlayerProject__cont-1__wrapper1 wrapper">
                         <h2>Audio Player V1</h2>
                         <h4>inspired by Adam Khoury</h4>
-                        <div class="shadowBox">
+                        <button class="displayBtn">Display Project</button>
+                        <div class="projectBox">
                             <div class="projectBox">
                                 <button class="btn btn-playPause" id="playPauseBtn">Play</button>
                                 <div class="player__tapeDeck">
@@ -1030,10 +1047,11 @@
                             </div>
                         </div>
                     </div>
-                    <section class="webPlayerProject__cont-1__wrapper2 wrapper">
+                    <div class="webPlayerProject__cont-1__wrapper2 wrapper">
                         <h2>Audio Player V2</h2>
                         <h4>Softcorp Industries</h4>
-                        <div class="shadowBox">
+                        <button class="displayBtn">Display Project</button>
+                        <div class="projectBox">
                             <div class="projectBox">
                                 <div class="playerV2">
                                     <div id="analyzerBox">
@@ -1051,19 +1069,29 @@
                                 </div>
                             </div>
                         </div>
-                    </section>
-                    <section class="webPlayerProject__cont-1__wrapper3 wrapper">
+                    </div>
+                    <div class="webPlayerProject__cont-1__wrapper3 wrapper">
                         <h2>Audio Track Library V1</h2>
                         <h4>inspired by Adam Khoury</h4>
-                        <div class="shadowBox">
+                        <button class="displayBtn">Display Project</button>
+                        <div>
                             <div class="projectBox">
                                 <div id="trackBox"></div>
                             </div>
                         </div>
-                    </section>
+                    </div>
+                </section>
+                <h1 class="pHeader">Custom Video Player</h1>
+                <section class="pContainer">
+                    <div class="wrapper">
+                        <h2>Video</h2>
+                        <button class="displayBtn">Display Project</button>
+                        <div class="projectBox">
+                            <h2>Video</h2>
+                        </div>
+                    </div>
                 </section>
             </section>
-            <br>
             <section class="uiTrendsProject" id="uiTrendsProject">
                 <section class="uiTrendsProject__banner banner">
                     <div class="banner__top">
@@ -1082,13 +1110,17 @@
                 <h1 class="pHeader">UI Trends</h1>
                 <section class="uiTrendsProject__cont-1 pContainer">
                     <div class="uiTrendsProject__cont-1__wrapper1 wrapper">
-
+                        <h2>UI Trends</h2>
+                        <h4>inspired by</h4>
+                        <button class="displayBtn">Display Project</button>
+                        <div class="projectBox">
+                            <h2>UI Trends</h2>
+                        </div>
                     </div>
                 </section>
             </section>
-            <br>
             <section class="canvasProject" id="canvasProject">
-                <section class="uiTrendsProject__banner banner">
+                <section class="canvasProject__banner banner">
                     <div class="banner__top">
                         <div class="logo-bar__img">
                             <img src="img/HTML5_logo.svg.png" alt="HTML Logo" width="100px">
@@ -1102,7 +1134,17 @@
                         <h2>Canvas</h2>
                     </div>
                 </section>
-               
+                <h1 class="pHeader">Canvas</h1>
+                <section class="canvasProject__cont-1 pContainer">
+                    <div class="canvasProject__cont-1__wrapper1 wrapper">
+                        <h2>Canvas</h2>
+                        <h4>inspired by</h4>
+                        <button class="displayBtn">Display Project</button>
+                        <div class="shadowBox">
+                            <h2>Canvas</h2>
+                        </div>
+                    </div>
+                </section>
             </section>
         </section>
     </main>

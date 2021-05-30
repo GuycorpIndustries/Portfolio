@@ -1,22 +1,25 @@
+@use "_global" as *;
+@use "_mixin" as *;
 
 .mainHeader {
   height: 100vh;
   position: relative;
-  .backgroundImg {
+  &__img {
+    height: 100vh;
     background-size: cover;
     background-position: center;
-    background-image: url("img/mountains_1500.jpg");
-    height: 100vh;
+    background-image: url("img/landing/mountains_1500.jpg");
     opacity: 0.8;
   }
   p {
     position: absolute;
+    font-size: 14px;
     bottom: calc(1vw + 1rem);
     left: calc(1vw + 1rem);
     color: whitesmoke;
     opacity: 1;
   }
-  .nameBanner {
+  h1 {
     position: absolute;
     top: 35%;
     width: 100%;
@@ -30,22 +33,22 @@
   // DEVBAR STYLE //
   .devBar-bar {
     position: absolute;
-    top: 75%;
+    top: 62%;
     left: 50%;
     transform: translate(-50%);
     font-family: "audiowide", cursive;
-    width: calc(17vw + 17rem);
+    width: 95%;
     &__btn {
       border: 2px solid var(--themeBdr);
       cursor: pointer;
-      font-size: calc(1vw + 0.75rem);
-      font-weight: 700;
+      font-size: calc(1vw + .8em);
+      font-weight: 400;
       letter-spacing: 0.1rem;
       text-align: center;
       border-radius: 2rem;
       width: 100%;
       height: auto;
-      padding: 0.5rem 1.5rem;
+      padding: 0.5rem 1.25rem;
       color: var(--darkModeTxtClr);
       text-shadow: 0px 0px 15px var(--darkModeBg);
       background-color: var(--darkModeClrlgtOp);
@@ -59,27 +62,27 @@
   }
   .devBar-list {
     .listItem img {
-      width: 100px;
+      width: 40px;
     }
     &__html {
       position: absolute;
-      top: 45%;
-      left: 35%;
+      top: 42%;
+      left: 20%;
     }
     &__css {
       position: absolute;
-      top:  45%;
-      right: 35%;
+      top: 42%;
+      right: 20%;
     }
     &__sass {
       position: absolute;
       top: 76%;
-      left: 18%;
+      left: 10%;
     }
     &__javaScript {
       position: absolute;
       top: 73%;
-      right: 18%;
+      right: 10%;
     }
   }
 }
@@ -104,7 +107,7 @@
   perspective: 1000px;
   ~ .devBar-list .listItem {
     opacity: 0;
-    transform-origin: top;
+    transform-origin: center;
   }
   @for $i from 1 through 4 {
     ~ .devBar-list .listItem:nth-child(#{$i}) {
@@ -116,34 +119,38 @@
 @keyframes frontEnd {
   0% {
     opacity: 0;
-    transform: scale(0.4) rotatex(90deg);
+    transform: scale(0.4) rotateY(90deg);
   }
   100% {
     opacity: 1;
-    transform: scale(1) rotatex(0deg);
+    transform: scale(1) rotateY(0deg);
   }
 }
 
-// MEDIA QUERIES
-// Tablet Portrait
-@media (max-width: 1100px) {
+@media (min-width: 320px) {
   .mainHeader{
-    .devBar-list__sass {
-      top: 62%;
+  .devBar-list {
+    .listItem img {
+      min-width: 60px;
     }
-    .devBar-list__javaScript {
-      top: 60%;
+}
+}
+}
+@media (min-width: 400px) {
+  .mainHeader{
+    img{
+      width: 100%;
     }
   }
 }
-@media (max-width: 750px) {
-  .mainHeader{
-
+@media (min-width: 769px) {
+  .mainHeader {
     .nameBanner {
       top: 18%;
     }
-    .devBar-bar{
+    .devBar-bar {
       top: 50%;
+      max-width: 550px;
     }
     .devBar-list__html {
       top: 62%;
@@ -163,42 +170,13 @@
     }
   }
 }
-
-// Phone Portrait
-@media (max-width: 450px) {
-  .mainHeader{
-    .devBar-list__html {
-      left: 10%;
-    }
-    .devBar-list__css {
-      right: 10%;
-    }
-    .devBar-list__sass {
-      left: 10%;
-    }
-    .devBar-list__javaScript {
-      right: 10%;
+@media (min-width: 1024px) {
+  .mainHeader {
+    &__img{
+      background-image: url("img/landing/mountains_1500.jpg");
     }
   }
 }
+@media (min-width: 1200px) {
 
-// Phone Landscape
-@media (max-height: 450px) {
-  
-  .devBar-list__html {
-    top: 18%;
-    left: 2%;
-  }
-  .devBar-list__css {
-    top: 33%;
-    left: 9.5%;
-  }
-  .devBar-list__sass {
-    left: 17%;
-    top: 48%;
-  }
-  .devBar-list__javaScript {
-    top: 63%;
-    left: 2%;
-  }
 }
