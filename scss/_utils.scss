@@ -359,7 +359,7 @@
   width: 100vw;
   clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%);
 }
-nav{
+nav {
   ul {
     list-style: none;
     display: flex;
@@ -381,7 +381,7 @@ nav{
         height: 15px;
         padding: 0px 5px;
         font-size: 8px;
-        letter-spacing: .1em;
+        letter-spacing: 0.1em;
         text-decoration: none;
         text-align: center;
         color: var(--darkModeTxtClr);
@@ -414,9 +414,9 @@ nav{
     justify-content: space-evenly;
     width: 100%;
     height: 17px;
-    font-size: 10px;
+    font-size: 1em;
     font-weight: 600;
-    letter-spacing: 0.25rem;
+    letter-spacing: 0.5em;
     border: 2px solid var(--themeBdr);
     outline: none;
     background-color: var(--darkModeClrlgtOp);
@@ -427,14 +427,7 @@ nav{
       background-color: var(--darkModeTxtClr);
       width: 13px;
       height: 13px;
-      clip-path: polygon(
-        75% 0%,
-        100% 50%,
-        75% 100%,
-        50% 100%,
-        75% 50%,
-        50% 0
-      );
+      clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0);
       transform: rotateZ(90deg);
       transform-origin: center;
     }
@@ -481,6 +474,22 @@ nav{
 @keyframes navMenuHide {
   0% {
     margin-top: (-45px);
+  }
+  100% {
+    margin-top: (0px);
+  }
+}
+@keyframes navMenuShowLg {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: (-55px);
+  }
+}
+@keyframes navMenuHideLg {
+  0% {
+    margin-top: (-55px);
   }
   100% {
     margin-top: (0px);
@@ -671,28 +680,39 @@ nav{
   .navBar-container {
     position: fixed;
     top: 0px;
-    margin-top: -43px;
+    margin-top: -55px;
     width: 100vw;
     z-index: 5;
     clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%);
     ul {
       li {
-
         a {
           font-weight: 400;
           font-size: calc(0.3vw + 0.5rem);
+          font-weight: 600;
           letter-spacing: 2px;
           min-width: 100px;
-        height: 20px;
+          height: 20px;
         }
       }
     }
-    .navBarBtn{
-      button{
-        min-height: 20px;
+    .navBarBtn {
+      button {
+        height: 25px;
+        font-size: 1.1em;
+        span {
+      width: 20px;
+      height: 20px;
+    }
       }
     }
   }
+  .navBar-container.ShowNavBar {
+  animation: navMenuShowLg 750ms ease-in-out forwards;
+}
+.navBar-container.HideNavBar {
+  animation: navMenuHideLg 750ms ease-in-out forwards;
+}
   .banner {
     &__top {
       h1 {
@@ -705,6 +725,15 @@ nav{
   }
 }
 @media (min-width: 550px) {
+  .navBar-container{
+    ul{
+      li{
+        a{
+          min-width: 125px;
+        }
+      }
+    }
+  }
   .banner {
     &__top {
       max-height: 20vw;
@@ -725,13 +754,13 @@ nav{
     width: 80%;
     left: 50%;
     transform: translateX(-50%);
-  ul{
-    li{
-      a{
-        max-width: 150px;
+    ul {
+      li {
+        a {
+          max-width: 150px;
+        }
       }
     }
-  }
   }
 }
 @media (min-width: 1024px) {

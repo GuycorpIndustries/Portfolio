@@ -3428,9 +3428,9 @@ nav ul li:hover a {
   justify-content: space-evenly;
   width: 100%;
   height: 17px;
-  font-size: 10px;
+  font-size: 1em;
   font-weight: 600;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.5em;
   border: 2px solid var(--themeBdr);
   outline: none;
   background-color: var(--darkModeClrlgtOp);
@@ -3516,6 +3516,38 @@ nav ul li:hover a {
 @keyframes navMenuHide {
   0% {
     margin-top: -45px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+@-webkit-keyframes navMenuShowLg {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -55px;
+  }
+}
+@keyframes navMenuShowLg {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -55px;
+  }
+}
+@-webkit-keyframes navMenuHideLg {
+  0% {
+    margin-top: -55px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+@keyframes navMenuHideLg {
+  0% {
+    margin-top: -55px;
   }
   100% {
     margin-top: 0px;
@@ -3822,7 +3854,7 @@ nav ul li:hover a {
   .navBar-container {
     position: fixed;
     top: 0px;
-    margin-top: -43px;
+    margin-top: -55px;
     width: 100vw;
     z-index: 5;
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%);
@@ -3831,12 +3863,28 @@ nav ul li:hover a {
   .navBar-container ul li a {
     font-weight: 400;
     font-size: calc(0.3vw + 0.5rem);
+    font-weight: 600;
     letter-spacing: 2px;
     min-width: 100px;
     height: 20px;
   }
   .navBar-container .navBarBtn button {
-    min-height: 20px;
+    height: 25px;
+    font-size: 1.1em;
+  }
+  .navBar-container .navBarBtn button span {
+    width: 20px;
+    height: 20px;
+  }
+
+  .navBar-container.ShowNavBar {
+    -webkit-animation: navMenuShowLg 750ms ease-in-out forwards;
+            animation: navMenuShowLg 750ms ease-in-out forwards;
+  }
+
+  .navBar-container.HideNavBar {
+    -webkit-animation: navMenuHideLg 750ms ease-in-out forwards;
+            animation: navMenuHideLg 750ms ease-in-out forwards;
   }
 
   .banner__top h1 {
@@ -3847,6 +3895,10 @@ nav ul li:hover a {
   }
 }
 @media (min-width: 550px) {
+  .navBar-container ul li a {
+    min-width: 125px;
+  }
+
   .banner__top {
     max-height: 20vw;
   }
