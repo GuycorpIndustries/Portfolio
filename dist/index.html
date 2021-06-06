@@ -77,10 +77,10 @@
     </div>
     <p>Photo by Daniel Seßler</p>
   </header>
+  <div class="featureHeader">
+    <h1>Welcome to my <span>"Portfolio"</span></h1>
+  </div>
   <article class="landingPage-article article">
-    <div class="featureHeader">
-      <h1>Welcome to my <span>"Portfolio"</span></h1>
-    </div>
     <div class="imgs">
       <picture class="img1 img">
         <img src="img/tech_img/florian-olivo-4hbJ-eymZ1o-unsplash.jpg" alt="">
@@ -92,10 +92,15 @@
         <img src="img/tech_img/fotis-fotopoulos-6sAl6aQ4OWI-unsplash.jpg" alt="">
       </picture>
     </div>
+    <div class="missionStatement">
+      <h2>"Self-taught"</h2>
+      <p>Get with <span>"The Program"</span></p>
+      <p>Learn To <span>"Code"</span></p>
+    </div>
   </article>
   <main>
     <section class="dream" id="dream">
-      <section class="dream__banner banner">
+      <section class="banner">
         <div class="banner__top">
           <div class="imgDiv banner__top__img">
             <picture class="slide">
@@ -104,12 +109,11 @@
             </picture>
           </div>
           <h1>
-            Bringing the Web, to <span
-              style="color: red; text-shadow: 0px 0px 5px var(--themeTxtClr); font-size: larger;"><em>"life"</em></span>
+            Bringing the Web, to <span><em>"life"</em></span>
           </h1>
         </div>
         <div class="banner__title">
-          <h2>Dream</h2>
+          <h2>The Dream</h2>
         </div>
       </section>
       <section class="dream__container">
@@ -136,7 +140,7 @@
         <div class="featureHeader">
           <h1>The Path</h1>
         </div>
-        <div class="dream__container__site wrapper">
+        <div class="dream__container__site">
           <div class="shadowBox">
             <h1>Custom Web Sites</h1>
           </div>
@@ -144,7 +148,7 @@
         <div class="featureHeader">
           <h1>The Future</h1>
         </div>
-        <div class="dream__container__future wrapper">
+        <div class="dream__container__future">
           <div class="hands">
             <div class="hand">
               <img class="hand__right" src="img/tech_img/possessed-photography-jIBMSMs4_kA-unsplash.jpg" alt="">
@@ -172,7 +176,6 @@
               <img src="img/tech_img/valentin-petkov-uKS_wcTAMZU-unsplash.jpg" alt="">
             </div>
           </div>
-        </div>
         </div>
       </section>
     </section>
@@ -206,22 +209,37 @@
           <div>
             <h1 class="chapterHeader">Responsive Designs</h1>
           </div>
+          <div class="showBtn">
+            <button class="showSection">Show Tablets</button>
+          </div>
           <h1 class="chapterSubHeader">Tablets</h1>
           <div class="tabletBox">
-            <div class="homeWorkLink tablet">
+            <div class="tablet">
               <div class="tablet__speakers">
                 <div class="speakerL speaker">**************</div>
                 <h5>Softcorp Tablet</h5>
                 <div class="speakerR speaker">**************</div>
               </div>
-              <iframe title="My Home Work" id="githibiframe" src="index.html"></iframe>
+              <iframe title="My Portfolio" src="index.html"></iframe>
               <br>
               <div class="tablet__controls">
                 <div class="fullScreen"></div>
-                <a href="index.html" target="_blank" title="My Home Work">Home Work</a>
+                <a href="index.html" target="_blank" title="My Portfolio Page">Portfolio</a>
                 <div class="fullScreen"></div>
               </div>
             </div>
+          </div>
+          <div class="iPadBox">
+            <div class="iPad">
+              <div class="iPadNav"></div>
+              <div class="iPad__display">
+                <iframe title="Portfolio" src="index.html"></iframe>
+              </div>
+              <div class="frontCam"></div>
+            </div>
+          </div>
+          <div class="showBtn">
+            <button class="showSection">Show Phones</button>
           </div>
           <h1 class="chapterSubHeader">Phones</h1>
           <div class="phones">
@@ -248,9 +266,15 @@
           <div>
             <h1 class="chapterHeader">Custom Web Players</h1>
           </div>
+          <div class="showBtn">
+            <button class="showSection">Show Audio Player</button>
+          </div>
           <h1 class="chapterSubHeader">Audio Player</h1>
           <div class="player">
             <div class="player__audio"></div>
+          </div>
+          <div class="showBtn">
+            <button class="showSection">Show Video Player</button>
           </div>
           <h1 class="chapterSubHeader">Video Player</h1>
           <div class="player">
@@ -404,9 +428,9 @@
 
           </article>
           <div class="missionStatement">
-            <h3 class="missionStatement__h3">"Self-Taught"</h3>
-            <p class="missionStatement__p1">Get with <span>"The Program"</span></p>
-            <p class="missionStatement__p2">Learn To <span>"Code"</span></p>
+            <h2>"Self-taught"</h2>
+            <p>Get with <span>"The Program"</span></p>
+            <p>Learn To <span>"Code"</span></p>
           </div>
           <h4>My Only Option</h4>
           <h2>Final Exam</h2>

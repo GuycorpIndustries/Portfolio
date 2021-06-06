@@ -19,7 +19,7 @@
 </head>
 
 <body data-darkMode="light" data-theme="default">
-    
+
     <header>
         <div class="themeToggles">
             <div class="colorMode modeBtn">
@@ -66,7 +66,7 @@
                 </h1>
             </div>
             <div class="banner__title">
-                <h2>Home Work</h2>
+                <h2>Learn to "Code"</h2>
             </div>
         </section>
     </header>
@@ -74,7 +74,6 @@
         <h1 class="homeWork-h1" id="homeWork">Welcome to my <span>"Home Work"</span> page</h1>
     </div>
     <article class="homeWork-article article">
-        <p class="homeWork-article__para"></p>
         <div class="imgs">
             <picture class="img1 img">
                 <img src="img/tech_img/annie-spratt-4-4WPFLVhAY-unsplash.jpg" alt="">
@@ -85,7 +84,11 @@
             <picture class="img3 img">
                 <img src="img/tech_img/monika-kozub-qEO1NR2i3gM-unsplash.jpg" alt="">
             </picture>
-
+        </div>
+        <div class="missionStatement">
+            <h2>"Self-taught"</h2>
+            <p>Get with <span>"The Program"</span></p>
+            <p>Learn To <span>"Code"</span></p>
         </div>
     </article>
     <main>
@@ -105,17 +108,19 @@
                         <h2>Images</h2>
                     </div>
                 </section>
-                <div class="sectionHeader" id="sectionButtons">
+                <div class="chapterHeader" id="sectionButtons">
                     <h1>Image Projects</h1>
                 </div>
                 <section class="imgProject__container">
-                    <section class="imgCarrouselShow pContainer">
+                    <section class="pContainer">
+                        <div class="sectionHeader">
+                            <h2>Image Carousel</h2>
+                        </div>
+                        <div class="showBtn">
+                            <button>Display Project</button>
+                        </div>
                         <div class="imgCarrousel wrapper">
-                            <div class="sectionHeader">
-                                <h2>Image Carousel</h2>
-                                <button class="displayBtn">Display Project</button>
-                            </div>
-                            <div class="imgCarrousel-content">
+                            <div class="imgCarrousel-content projectBox">
                                 <div class="content__carrousel imgAnimation">
                                     <figure class="shadow">
                                         <img src="img/chandler-cruttenden-unsplash_img1.jpg" alt="Anorei Collins" />
@@ -172,12 +177,14 @@
                             </div>
                         </div>
                     </section>
-                    <section class="imgSliderShow pContainer">
+                    <section class="pContainer">
+                        <div class="sectionHeader">
+                            <h2>Image Slider</h2>
+                        </div>
+                        <div class="showBtn">
+                            <button>Display Project</button>
+                        </div>
                         <div class="imgSlider wrapper">
-                            <div class="sectionHeader">
-                                <h2>Image Slider</h2>
-                                <button class="displayBtn">Display Project</button>
-                            </div>
                             <div class="projectBox">
                                 <div class="imgContainer">
                                     <div class="slide current">
@@ -253,13 +260,14 @@
                             </div>
                         </div>
                     </section>
-                    <section class="imgGalleryShow pContainer">
-                        <div class="imgGallery wrapper">
-                            <div class="sectionHeader">
-                                <h2>Image Gallery</h2>
-                                <button class="displayBtn">Display Project</button>
-                            </div>
-                            <div>
+                    <section class="pContainer">
+                        <div class="sectionHeader">
+                            <h2>Image Gallery</h2>
+                        </div>
+                        <div class="showBtn">
+                            <button>Display Project</button>
+                        </div>
+                        <div class="imgGallery wrapper"> 
                                 <div class="projectBox">
                                     <div class="galleryContainer">
                                         <div class="featureImg">
@@ -281,16 +289,16 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                     </section>
-                    <section class="imgProductGalleryShow pContainer">
+                    <section class="pContainer">
+                        <div class="sectionHeader">
+                            <h2>Product Gallery</h2>
+                        </div>
+                        <div class="showBtn">
+                            <button>Display Project</button>
+                        </div>
                         <div class="imgProductGallery wrapper">
-                            <div class="sectionHeader">
-                                <h2>Product Gallery</h2>
-                                <button class="displayBtn">Display Project</button>
-                            </div>
-                            <div>
                                 <div class="projectBox">
                                     <div class="productSlider">
                                         <div class="productFeatureImg">
@@ -310,7 +318,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                     </section>
                 </section>
@@ -334,7 +341,9 @@
                 <section class="animationProject__cont-1 pContainer">
                     <section class="animationProject__cont-1__wrapper1 wrapper">
                         <p>Inspired by Kyle at Web Dev Simplified</p>
-                        <button class="displayBtn">Display Project</button>
+                        <div class="showBtn">
+                            <button>Display Project</button>
+                        </div>
                         <div class="projectBox">
                             <div class="animationProject__cont-1__wrapper1__container1">
                                 <div>
@@ -360,11 +369,11 @@
                                 </div>
                             </div>
                             <div class="tributeBox">
-                                <picture class="tributeBox__video">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YszONjKpgg4"
+                                <div class="tributeBox__video">
+                                    <iframe src="https://www.youtube.com/embed/YszONjKpgg4"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen></iframe>
-                                </picture>
+                                </div>
                                 <div class="tributeBox__bio">
                                     <h3 class="tributeBox__header">Web Dev Simplified</h3>
                                     <div class="trubteBox__bio__text">
@@ -376,7 +385,9 @@
                     </section>
                     <section class="animationProject__cont-1__wrapper2 wrapper">
                         <p>Inspired by the Net Ninja</p>
-                        <button class="displayBtn">Display Project</button>
+                        <div class="showBtn">
+                            <button>Display Project</button>
+                        </div>
                         <div class="projectBox">
                             <div class="animationProject__cont-1__wrapper2__container2">
                                 <div class="animationProject__cont-1__wrapper2__container2__item1">
@@ -393,11 +404,11 @@
                                 <h3>Multiple @keyframes</h3>
                             </div>
                             <div class="tributeBox">
-                                <picture class="tributeBox__video">
+                                <div class="tributeBox__video">
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/B0_M1y4aFAQ"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen></iframe>
-                                </picture>
+                                </div>
                                 <div class="tributeBox__bio">
                                     <h3 class="tributeBox__header">The Net Ninja</h3>
                                     <div class="trubteBox__bio__text">
@@ -409,7 +420,9 @@
                     </section>
                     <section class="animationProject__cont-1__wrapper3 wrapper">
                         <p>Inspired by Dev-Tips</p>
-                        <button class="displayBtn">Display Project</button>
+                        <div class="showBtn">
+                            <button>Display Project</button>
+                        </div>
                         <div class="projectBox">
                             <div>
                                 <ul class="dropDown">
@@ -470,7 +483,9 @@
                 <h1 class="pHeader">Canvas</h1>
                 <section class="animationProject__cont-2 pContainer">
                     <div class="wrapper">
-                        <button class="displayBtn">Display Project</button>
+                        <div class="showBtn">
+                            <button>Display Project</button>
+                        </div>
                         <div class="projectBox">
                             <div class="aniMusic__lyric">
                                 <p class="lyric-line1">"<span>Time</span> keeps on</p>
@@ -513,7 +528,7 @@
                         </div>
                     </div>
                 </section>
-            </section>         
+            </section>
             <section class="buttonProject" id="buttonProject">
                 <section class="buttonProject__banner banner">
                     <div class="banner__top">
@@ -533,7 +548,9 @@
                 <section class="buttonProject__Cont-2 pContainer">
                     <section class="buttonProject__Cont-2__wrapper1 wrapper" id="toggleBtns">
                         <h4>Softcorp Industries</h4>
-                        <button class="displayBtn">Display Project</button>
+                        <div class="showBtn">
+                            <button>Display Project</button>
+                        </div>
                         <div class="projectBox">
                             <div class="toggleBtns">
                                 <div class="toggle-container">
@@ -559,7 +576,9 @@
                     </section>
                     <section class="buttonProject__Cont-2__wrapper2 wrapper">
                         <h4>Design Course</h4>
-                        <button class="displayBtn">Display Project</button>
+                        <div class="showBtn">
+                            <button>Display Project</button>
+                        </div>
                         <div class="projectBox">
                             <div id="toggleInputs" class="toggleBtns toggleInputs">
                                 <div class="toggle3 toggle-container">
@@ -576,7 +595,9 @@
                 <section class="buttonProject__Cont-3 pContainer">
                     <section class="buttonProject__Cont-3__wrapper1 wrapper">
                         <h4>Softcorp Industries</h4>
-                        <button class="displayBtn">Display Project</button>
+                        <div class="showBtn">
+                            <button>Display Project</button>
+                        </div>
                         <div>
                             <div class="projectBox">
                                 <section class="card-container" id="Plain_Burger">
@@ -640,7 +661,9 @@
                     </section>
                     <section class="buttonProject__Cont-3__wrapper2 wrapper">
                         <h4>Softcorp Industries</h4>
-                        <button class="displayBtn">Display Project</button>
+                        <div class="showBtn">
+                            <button>Display Project</button>
+                        </div>
                         <div>
                             <div class="projectBox">
                                 <section class="navBar2">
@@ -667,7 +690,9 @@
                 <section class="buttonProject__Cont-1 pContainer" id="btn">
                     <section class="buttonProject__Cont-1__wrapper2 wrapper">
                         <h4>Softcorp Industries</h4>
-                        <button class="displayBtn">Display Project</button>
+                        <div class="showBtn">
+                            <button>Display Project</button>
+                        </div>
                         <div class="btns">
                             <button class="oneBtn">
                                 <div class="motto">
@@ -910,7 +935,9 @@
                         <p>Inspired by Kyle at Web Dev Simplified</p>
                         <p>&</p>
                         <p>Inspired by Kevin Powell</p>
-                        <button class="displayBtn">Display Project</button>
+                        <div class="showBtn">
+                            <button>Display Project</button>
+                        </div>
                         <div class="projectBox">
                             <div class="localStorageProject__cont-1__wrapper1__container1 container">
                                 <h1 class="title">Stuff I need to do</h1>
@@ -981,7 +1008,6 @@
                             </div>
                         </div>
                     </section>
-
                 </section>
             </section>
             <section class="webPlayerProject" id="webPlayerProject">
@@ -1004,7 +1030,9 @@
                     <div class="webPlayerProject__cont-1__wrapper1 wrapper">
                         <h2>Audio Player V1</h2>
                         <h4>inspired by Adam Khoury</h4>
-                        <button class="displayBtn">Display Project</button>
+                        <div class="showBtn">
+                            <button>Display Project</button>
+                        </div>
                         <div class="projectBox">
                             <div class="projectBox">
                                 <button class="btn btn-playPause" id="playPauseBtn">Play</button>
@@ -1050,7 +1078,9 @@
                     <div class="webPlayerProject__cont-1__wrapper2 wrapper">
                         <h2>Audio Player V2</h2>
                         <h4>Softcorp Industries</h4>
-                        <button class="displayBtn">Display Project</button>
+                        <div class="showBtn">
+                            <button>Display Project</button>
+                        </div>
                         <div class="projectBox">
                             <div class="projectBox">
                                 <div class="playerV2">
@@ -1073,7 +1103,9 @@
                     <div class="webPlayerProject__cont-1__wrapper3 wrapper">
                         <h2>Audio Track Library V1</h2>
                         <h4>inspired by Adam Khoury</h4>
-                        <button class="displayBtn">Display Project</button>
+                        <div class="showBtn">
+                            <button>Display Project</button>
+                        </div>
                         <div>
                             <div class="projectBox">
                                 <div id="trackBox"></div>
@@ -1085,7 +1117,9 @@
                 <section class="pContainer">
                     <div class="wrapper">
                         <h2>Video</h2>
-                        <button class="displayBtn">Display Project</button>
+                        <div class="showBtn">
+                            <button>Display Project</button>
+                        </div>
                         <div class="projectBox">
                             <h2>Video</h2>
                         </div>
@@ -1112,7 +1146,9 @@
                     <div class="uiTrendsProject__cont-1__wrapper1 wrapper">
                         <h2>UI Trends</h2>
                         <h4>inspired by</h4>
-                        <button class="displayBtn">Display Project</button>
+                        <div class="showBtn">
+                            <button>Display Project</button>
+                        </div>
                         <div class="projectBox">
                             <h2>UI Trends</h2>
                         </div>
@@ -1139,7 +1175,9 @@
                     <div class="canvasProject__cont-1__wrapper1 wrapper">
                         <h2>Canvas</h2>
                         <h4>inspired by</h4>
-                        <button class="displayBtn">Display Project</button>
+                        <div class="showBtn">
+                            <button>Display Project</button>
+                        </div>
                         <div class="shadowBox">
                             <h2>Canvas</h2>
                         </div>

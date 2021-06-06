@@ -6,29 +6,27 @@
     @include darkMode;
     background-color: var(--darkModeBg);
     width: 95%;
+    max-width: 600px;
     margin: 50px auto;
     border-radius: 1rem;
-
+    padding-top: 1.5em;
     &__cardBox {
-      @include darkMode;
-      padding: 1rem;
-      border-radius: 1rem;
       margin-bottom: calc(2.5vw + 2.5rem);
       width: 100%;
-      height: calc(16vw + 16rem);
+      height: calc(16vw + 16em);
       transform-style: preserve-3d;
       h1 {
         position: absolute;
         bottom: 20px;
         right: 5%;
-        font-size: calc(2vw + 2rem);
+        font-size: 2em;
         letter-spacing: 0.1rem;
         color: var(--themeTxtClr);
         text-shadow: 0px 0px 4px var(--black);
       }
       h2 {
         position: absolute;
-        font-size: calc(1vw + 1.25rem);
+        font-size: 1.5em;
         letter-spacing: 0.1rem;
         top: 3%;
         left: 5%;
@@ -39,9 +37,9 @@
         @include shadowSm-inset;
         cursor: pointer;
         position: absolute;
-        width: calc(15vw + 15rem);
-        height: calc(9vw + 9rem);
-        top: calc(2.5vw + 2.5rem);
+        width: calc(15vw + 15em);
+        height: calc(9vw + 9em);
+        top: calc(2.5vw + 2.5em);
         left: 50%;
         transform: translateX(-50%);
         border-radius: 1rem;
@@ -57,9 +55,13 @@
       }
       .card__front {
         background-image: url("img/crop.php.jpg");
+        background-position: center;
+        background-size: cover;
       }
       .card__back {
         background-image: url("img/crop.php.jpg");
+        background-position: center;
+        background-size: cover;
         transform: rotateY(0.5turn);
       }
       .card__back,
@@ -69,40 +71,40 @@
         border-radius: 1rem;
         backface-visibility: hidden;
         background-size: cover;
-        width: calc(15vw + 15rem);
-        height: calc(9vw + 9rem);
+        width: calc(15vw + 15em);
+        height: calc(9vw + 9em);
       }
       .card__front-title {
         position: absolute;
-        transform: translateZ(2.5rem);
-        top: calc(1vw + 1rem);
-        left: calc(2vw + 2rem);
+        transform: translateZ(2.5em);
+        top: calc(1vw + 1em);
+        left: calc(2vw + 1em);
         color: var(--black);
         text-shadow: 0px 0px 3px var(--themeTxtClr);
-        font-size: calc(1vw + 1rem);
+        font-size: calc(1vw + 1em);
       }
       .card__subtitle {
-        transform: translateZ(2.5rem);
+        transform: translateZ(2.5em);
         position: absolute;
-        top: calc(6vw + 6rem);
-        left: calc(7vw + 7rem);
-        font-size: calc(1.5vw + 1.5rem);
+        top: calc(3.75vw + 3.5em);
+        left: calc(4vw + 4em);
+        font-size: calc(1.5vw + 1.5em);
         color: var(--black);
         text-shadow: 0px 0px 5px var(--themeTxtClr);
       }
       .card__back-title {
         position: absolute;
-        transform: translateZ(2.5rem);
-        top: calc(2.5vw + 2.5rem);
-        left: calc(0.5vw + 0.5rem);
-        font-size: calc(1.5vw + 1.5rem);
+        transform: translateZ(2.5em);
+        top: calc(2vw + 1.5em);
+        left: calc(0.5vw + 0.5em);
+        font-size: calc(1.5vw + 1.5em);
         color: var(--black);
         text-shadow: 0px 0px 5px var(--themeTxtClr);
       }
     }
     &__future {
       @include darkMode;
-      padding: 2rem;
+      padding: 2em;
       border-radius: 1rem;
       .hands {
         display: flex;
@@ -142,19 +144,10 @@
 }
 .featureProject {
   margin-bottom: 100px;
-  &__section {
-    .chapterSubHeader {
-      color: var(--white);
-      font-size: 18px;
-    }
-    .chapterHeader {
-      color: var(--white);
-    }
-  }
 }
 .tabletBox {
   display: none;
-  max-width: 575px;
+  max-width: 475px;
   margin: 50px auto;
   border-radius: 1.5rem;
   .tablet {
@@ -162,12 +155,11 @@
     padding: 0.4rem;
     background-color: rgb(29, 29, 29);
     border-radius: 1.5rem;
-    max-width: 640px;
     text-align: center;
     iframe {
       max-width: 550px;
       width: 95%;
-      height: 720px;
+      height: 530px;
       border-radius: 0.75rem;
       outline: 3px solid var(--themeTxtClr);
       outline-offset: 3px;
@@ -233,23 +225,62 @@
     }
   }
 }
+.iPadBox {
+  display: none;
+  max-width: 655px;
+  margin: auto;
+  .iPad {
+    @include tablet;
+    display: flex;
+    padding: 0.4em;
+    border-radius: 1.5em;
+    height: 460px;
+    &__display{
+      position: relative;
+      width: 565px;
+      height: 452px;
+      background-color: rgb(29, 29, 29);
+      iframe {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 565px;
+        height: 430px;
+        border: none;
+        place-content: center;
+      }
+    }
+    .frontCam {
+      width: 30px;
+      background-color: rgb(29, 29, 29);
+      border-radius: 0em 1em 1em 0em;
+    }
+    .iPadNav {
+      width: 50px;
+      background-color: rgb(29, 29, 29);
+      border-radius: 1em 0em 0em 1em;
+    }
+  }
+}
 .phones {
   margin: 50px auto;
+  
+  max-width: 900px;
   .phone {
     &__samsung {
       @include tablet;
       margin: 25px auto;
       border-radius: 1rem;
-      padding: 0.5rem 0;
-      width: 160px;
-      height: 300px;
+      padding: 0.5em 0;
+      width: 210px;
+      height: 350px;
       text-align: center;
       background-color: black;
       iframe {
         border-radius: 0.75rem;
-        width: 155px;
+        width: 200px;
+        height: 340px;
         border: none;
-        height: 280px;
       }
     }
     &__apple {
@@ -257,14 +288,14 @@
       margin: 25px auto;
       border-radius: 1rem;
       padding: 0.5rem 0;
-      width: 140px;
-      height: 300px;
+      width: 200px;
+      height: 330px;
       text-align: center;
       background-color: black;
       iframe {
         border-radius: 0.75rem;
-        width: 135px;
-        height: 270px;
+        width: 190px;
+        height: 275px;
         border: none;
       }
     }
@@ -520,7 +551,8 @@
           }
         }
       }
-      &__img2 {position: relative;
+      &__img2 {
+        position: relative;
         &__5 {
           position: absolute;
           width: 100px;
@@ -660,4 +692,63 @@
       }
     }
   }
+}
+@media (min-width: 320px) {
+  .phones {
+    .phone {
+      &__samsung {
+        width: 275px;
+        height: 430px;
+        iframe {
+          width: 247px;
+          height: 420px;
+        }
+      }
+      &__apple {
+        width: 250px;
+        height: 470px;
+        iframe {
+          width: 240px;
+          height: 405px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 400px) {
+  .phones {
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  align-items: center;
+    .phone {
+      &__samsung {
+        width: 275px;
+        height: 430px;
+        iframe {
+          width: 247px;
+          height: 420px;
+        }
+      }
+      &__apple {
+        width: 250px;
+        height: 470px;
+        iframe {
+          width: 240px;
+          height: 405px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 550px) {
+  .tabletBox {
+    display: block;
+  }
+}
+@media (min-width: 769px) {
+  .iPadBox {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
 }
