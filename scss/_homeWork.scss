@@ -8,6 +8,10 @@
   h1 {
     color: var(--darkModeTxtClr);
   }
+  h5{
+    color: var(--darkModeTxtClr);
+    letter-spacing: .2em;
+  }
 }
 .imgProject {
   &__container {
@@ -1503,7 +1507,7 @@
       left: 50%;
       transform: translateX(-50%);
       padding: 0.5rem;
-      width: 80%;
+      width: 90%;
       #graphics {
         width: 100%;
         height: 75px;
@@ -1513,8 +1517,8 @@
     }
     .btn {
       cursor: pointer;
-      width: 60px;
-      height: 60px;
+      width: 40px;
+      height: 40px;
       background-color: black;
       color: rgb(0, 253, 14);
       font-size: calc(0.5vw + 0.75rem);
@@ -1524,20 +1528,20 @@
     }
     .btn-playPause {
       position: absolute;
-      bottom: calc(0.2vw + 0.2rem);
+      bottom: calc(0.2vw + 2.5em);
       left: calc(1vw + 0.5rem);
     }
     .btn-mute {
       position: absolute;
-      bottom: calc(0.2vw + 0.2rem);
+      bottom: calc(0.2vw + 2.5em);
       right: calc(1vw + 0.5rem);
     }
     input {
       outline: none;
     }
     input[type="range"]::-moz-range-thumb {
-      width: 13px;
-      height: 13px;
+      width: 10px;
+      height: 10px;
       background-color: rgb(0, 253, 14);
       border-radius: 50%;
     }
@@ -1545,35 +1549,37 @@
       background-color: rgba(0, 253, 14, 0.6);
     }
     input[type="range"] {
-      background-color: black;
+      background: none;
     }
     #seekSlider2 {
       position: absolute;
       width: 150px;
       height: 20px;
-      bottom: 30px;
-      left: 150px;
-      border-radius: 0.25rem 0 0 0.25rem;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      
     }
     #volumeSlider2 {
       position: absolute;
-      top: 55px;
+      top: 105px;
+      left: 50%;
+      transform: translateX(-50%);
       background: none;
-      right: -15px;
       width: 100px;
-      transform: rotateZ(-90deg);
     }
     #timeBox2 {
       position: absolute;
-      bottom: 28px;
-      left: 300px;
+      bottom: 42px;
+      left: 50%;
+      transform: translateX(-50%);
       background-color: black;
       padding: 0.25rem;
       color: rgb(0, 253, 14);
-      width: 125px;
-      height: 27px;
+      width: 80px;
+      height: 20px;
       text-align: center;
-      border-radius: 0.2rem 0.5rem 0.5rem 0.2rem;
+      
     }
   }
   #trackBox {

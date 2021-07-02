@@ -1050,6 +1050,10 @@ footer span {
 .HWprojects h1 {
   color: var(--darkModeTxtClr);
 }
+.HWprojects h5 {
+  color: var(--darkModeTxtClr);
+  letter-spacing: 0.2em;
+}
 
 .imgProject__container {
   max-width: 800px;
@@ -2797,7 +2801,7 @@ footer span {
   left: 50%;
   transform: translateX(-50%);
   padding: 0.5rem;
-  width: 80%;
+  width: 90%;
 }
 .webPlayerProject .playerV2 #analyzerBox #graphics {
   width: 100%;
@@ -2807,8 +2811,8 @@ footer span {
 }
 .webPlayerProject .playerV2 .btn {
   cursor: pointer;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   background-color: black;
   color: #00fd0e;
   font-size: calc(0.5vw + 0.75rem);
@@ -2818,20 +2822,20 @@ footer span {
 }
 .webPlayerProject .playerV2 .btn-playPause {
   position: absolute;
-  bottom: calc(0.2vw + 0.2rem);
+  bottom: calc(0.2vw + 2.5em);
   left: calc(1vw + 0.5rem);
 }
 .webPlayerProject .playerV2 .btn-mute {
   position: absolute;
-  bottom: calc(0.2vw + 0.2rem);
+  bottom: calc(0.2vw + 2.5em);
   right: calc(1vw + 0.5rem);
 }
 .webPlayerProject .playerV2 input {
   outline: none;
 }
 .webPlayerProject .playerV2 input[type=range]::-moz-range-thumb {
-  width: 13px;
-  height: 13px;
+  width: 10px;
+  height: 10px;
   background-color: #00fd0e;
   border-radius: 50%;
 }
@@ -2839,35 +2843,35 @@ footer span {
   background-color: rgba(0, 253, 14, 0.6);
 }
 .webPlayerProject .playerV2 input[type=range] {
-  background-color: black;
+  background: none;
 }
 .webPlayerProject .playerV2 #seekSlider2 {
   position: absolute;
   width: 150px;
   height: 20px;
-  bottom: 30px;
-  left: 150px;
-  border-radius: 0.25rem 0 0 0.25rem;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .webPlayerProject .playerV2 #volumeSlider2 {
   position: absolute;
-  top: 55px;
+  top: 105px;
+  left: 50%;
+  transform: translateX(-50%);
   background: none;
-  right: -15px;
   width: 100px;
-  transform: rotateZ(-90deg);
 }
 .webPlayerProject .playerV2 #timeBox2 {
   position: absolute;
-  bottom: 28px;
-  left: 300px;
+  bottom: 42px;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: black;
   padding: 0.25rem;
   color: #00fd0e;
-  width: 125px;
-  height: 27px;
+  width: 80px;
+  height: 20px;
   text-align: center;
-  border-radius: 0.2rem 0.5rem 0.5rem 0.2rem;
 }
 .webPlayerProject #trackBox {
   padding: 1rem;
@@ -3333,8 +3337,9 @@ footer span {
   background-position: center;
 }
 .homeWork-top h1 {
+  margin-bottom: 5px;
   text-shadow: 0px 0px 2px var(--darkModeBg);
-  color: var(--black);
+  color: var(--white);
   font-weight: 400;
 }
 
@@ -3351,7 +3356,7 @@ footer span {
 }
 .program-top h1 {
   text-shadow: 0px 0px 2px var(--darkModeBg);
-  color: var(--black);
+  color: var(--white);
   font-weight: 400;
 }
 
@@ -3438,7 +3443,7 @@ footer span {
 }
 .missionStatement h2 {
   padding: 0.25em 0.5em;
-  font-size: 22px;
+  font-size: 20px;
 }
 .missionStatement p {
   font-size: 12px;
@@ -3468,12 +3473,12 @@ footer span {
   text-align: center;
   font-family: "audiowide", cursive;
   color: var(--black);
-  font-size: 1.4em;
+  font-size: 16px;
   letter-spacing: 2px;
 }
 .featureHeader h1 span {
   text-shadow: 0px 0px 2px var(--black);
-  font-size: 1.6em;
+  font-size: 22px;
   color: var(--themeTxtClr);
 }
 
@@ -3497,8 +3502,10 @@ footer span {
   box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
   width: 100%;
   cursor: pointer;
-  color: var(--themeTxtClr);
-  letter-spacing: 1px;
+  color: #1653fc;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px 2px var(--black);
+  font-weight: 400;
   padding: 0.25rem 1rem;
   border: none;
   border-radius: 1rem;
@@ -3994,6 +4001,13 @@ nav ul li:hover a {
   .banner__top h1 {
     font-size: 1.5em;
     padding-bottom: 10px;
+  }
+
+  .featureHeader h1 {
+    font-size: 18px;
+  }
+  .featureHeader h1 span {
+    font-size: 28px;
   }
 }
 @media (min-width: 400px) {
