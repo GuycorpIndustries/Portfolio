@@ -289,7 +289,7 @@ themeModeBtn.addEventListener('click', () => {
   themeModeOn = false;
   }
 })
-
+/*
 const navBarCont = document.getElementById("navBarCont");
 const navBarShowBtn = document.getElementById("navBarShowBtn");
 const navBarBtn = document.querySelector(".navBarBtn");
@@ -302,7 +302,7 @@ let navBarShow = false;
 const navBarActive = () => {
   navBarShowBtn.classList.add("activeMenu");
   navBarShowBtn.classList.remove("nonactiveMenu");
-  navBarShowBtn.setAttribute("title", "Show Menu");
+  navBarShowBtn.setAttribute("title", "Hide Menu");
   navBarCont.classList.remove("HideNavBar");
   navBarCont.classList.add("ShowNavBar");
   navBarArrowL.classList.remove("arrowHideL");
@@ -312,9 +312,9 @@ const navBarActive = () => {
   localStorage.setItem("storeNav", "enabled");
 };
 const navBarInactive = () => {
-  navBarShowBtn.classList.add("nonactiveMenu"); //
+  navBarShowBtn.classList.add("nonactiveMenu"); 
   navBarShowBtn.classList.remove("activeMenu");
-  navBarShowBtn.setAttribute("title", "Hide Menu");
+  navBarShowBtn.setAttribute("title", "Show Menu");
   navBarCont.classList.remove("ShowNavBar");
   navBarCont.classList.add("HideNavBar");
   navBarArrowL.classList.remove("arrowShowL");
@@ -347,6 +347,8 @@ function enableNavBar() {
 }
 
 enableNavBar();
+
+*/
 const devBtn = document.querySelector("#devBar-bar");
 let devOpen = false;
 
